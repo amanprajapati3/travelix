@@ -1,0 +1,585 @@
+{
+  "TravelIndustries": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Topbar": "TravelTopbar1",
+          "Header": "TravelHeader1",
+          "Footer": "TravelFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Destinations", "component": "TravelDestinations1" },
+              { "key": "Packages", "component": "TravelPackages1" },
+              { "key": "Services", "component": "TravelServices1" },
+              { "key": "Opportunity", "component": "TravelOpportunity1" },
+              { "key": "CtaBanner", "component": "TravelCtaBanner1" },
+              { "key": "Testimonial", "component": "TravelTestimonial1" },
+              { "key": "Blog", "component": "TravelBlog1" }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "Header": {
+        "variants": {
+          "TravelHeader1": {
+            "site": {
+              "siteName": "Travelix",
+              "tagline": "EXPLORE MORE",
+              "logo": { "light": "/logo.png" },
+              "TopBar": {
+                "address": "123 Travel Street, New Delhi, India",
+                "navLinks": [
+                  { "label": "Explore", "href": "/explore" },
+                  { "label": "Dream", "href": "/dream" },
+                  { "label": "Discover", "href": "/discover" }
+                ],
+                "socialLinks": [
+                  { "label": "facebook", "href": "https://www.facebook.com/" },
+                  { "label": "twitter", "href": "https://www.twitter.com/" },
+                  { "label": "instagram", "href": "https://www.instagram.com/" },
+                  { "label": "youtube", "href": "https://www.youtube.com/" }
+                ],
+                "phone": "+91 98765 43210",
+                "phoneHref": "tel:+919876543210",
+                "email": "hello@travelix.com"
+              },
+              "copyright": "© 2026 Travelix. All Rights Reserved."
+            },
+            "meta": {
+              "siteTitle": "Travelix | Explore More, Live Fuller",
+              "siteDescription": "Travelix offers curated travel packages, destination guides, and unforgettable adventures to help you collect moments, not things.",
+              "keywords": [
+                "travel agency",
+                "travel packages",
+                "holiday tours",
+                "destination guide",
+                "adventure travel",
+                "honeymoon tours",
+                "family tours",
+                "trip planning",
+                "vacation packages",
+                "tour booking"
+              ]
+            },
+            "nav": [
+              { "label": "Home", "href": "/" },
+              { "label": "Destination", "href": "/destination" },
+              { "label": "Services", "href": "/services" },
+              { "label": "About", "href": "/about" },
+              { "label": "FAQ", "href": "/faq" },
+              { "label": "Blog", "href": "/blog" },
+              { "label": "Contact", "href": "/contact" }
+            ],
+            "ctaButton": {
+              "label": "Plan Your Trip",
+              "href": "/plan-your-trip"
+            }
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "TravelFooter1": {
+            "logoImage": "/logo.png",
+            "desc": "At Travelix, we believe travel is more than just a trip — it's a journey to new places, new cultures, and a better you. Let's explore the world together.",
+            "tagline": "Your Journey, Our Passion",
+            "columns": [
+              {
+                "title": "Quick Links",
+                "links": [
+                  { "label": "Home", "href": "/" },
+                  { "label": "About Us", "href": "/about" },
+                  { "label": "Our Services", "href": "/services" },
+                  { "label": "Tour Packages", "href": "/packages" },
+                  { "label": "Destinations", "href": "/destination" },
+                  { "label": "Travel Tips", "href": "/blog/travel-tips" },
+                  { "label": "Blog", "href": "/blog" },
+                  { "label": "Contact Us", "href": "/contact" },
+                  { "label": "Sitemap", "href": "/sitemap" }
+                ]
+              },
+              {
+                "title": "Our Services",
+                "links": [
+                  { "label": "Family Tours", "href": "/services/family-tours" },
+                  { "label": "Honeymoon Tours", "href": "/services/honeymoon-tours" },
+                  { "label": "Group Tours", "href": "/services/group-tours" },
+                  { "label": "Corporate Tours", "href": "/services/corporate-tours" },
+                  { "label": "International Tours", "href": "/services/international-tours" },
+                  { "label": "Adventure Tours", "href": "/services/adventure-tours" },
+                  { "label": "Weekend Getaways", "href": "/services/weekend-getaways" },
+                  { "label": "Custom Tours", "href": "/services/custom-tours" }
+                ]
+              },
+              {
+                "title": "Help & Support",
+                "links": [
+                  { "label": "FAQ", "href": "/faq" },
+                  { "label": "Booking Guide", "href": "/booking-guide" },
+                  { "label": "Cancellation Policy", "href": "/cancellation-policy" },
+                  { "label": "Refund Policy", "href": "/refund-policy" },
+                  { "label": "Privacy Policy", "href": "/privacy-policy" },
+                  { "label": "Terms & Conditions", "href": "/terms" },
+                  { "label": "Travel Insurance", "href": "/travel-insurance" },
+                  { "label": "24/7 Support", "href": "/support" }
+                ]
+              }
+            ],
+            "newsletter": {
+              "title": "Stay Updated",
+              "desc": "Subscribe to our newsletter and get the latest travel deals, destination guides and special offers.",
+              "placeholder": "Enter your email address",
+              "buttonText": "Subscribe"
+            },
+            "footerContact": {
+              "title": "Contact Info",
+              "phone": "+1 123 456 7890",
+              "phoneHref": "tel:+11234567890",
+              "email": "support@travelix.com",
+              "address": "123 Travel Street, New York, USA"
+            },
+            "socialLinks": [
+              { "label": "facebook", "href": "https://www.facebook.com/" },
+              { "label": "twitter", "href": "https://www.twitter.com/" },
+              { "label": "instagram", "href": "https://www.instagram.com/" },
+              { "label": "youtube", "href": "https://www.youtube.com/" },
+              { "label": "linkedin", "href": "https://www.linkedin.com/" }
+            ],
+            "paymentIcons": ["visa", "mastercard", "paypal"],
+            "copyright": "Copyright © 2026. All rights reserved. Powered by Lestow.",
+            "legalLinks": [
+              { "label": "Privacy Policy", "href": "/privacy-policy" },
+              { "label": "Terms & Conditions", "href": "/terms" }
+            ],
+            "sideTagline": "Explore The World"
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "TravelBanner1": {
+            "badge": "A JOURNEY BEYOND BORDERS",
+            "title": "COLLECT",
+            "highlightedTitle": "MOMENTS",
+            "titleLine2": "NOT THINGS",
+            "desc": "Discover breathtaking destinations, unique cultures and once-in-a-lifetime experiences with Travelix.",
+            "buttons": [
+              {
+                "label": "Explore Destinations",
+                "href": "/destination",
+                "variant": "primary"
+              },
+              {
+                "label": "Watch Our Story",
+                "href": "https://youtu.be/-pc8cTYXnYs?si=hum8qzWpbTjcT62Q",
+                "variant": "play"
+              }
+            ],
+            "mainImage": {
+              "src": "/travel/2.jpg",
+              "alt": "Traveler with backpack looking at mountain lake"
+            },
+            "caption": "Travel Farther Live Fuller",
+            "polaroidImages": [
+              { "src": "/travel/place1.jpg", "label": "New Places" },
+              { "src": "/travel/place2.jpg", "label": "New People" },
+              { "src": "/travel/place3.jpg", "label": "New Stories" }
+            ]
+          }
+        }
+      },
+"Destinations": {
+        "variants": {
+          "TravelDestinations1": {
+            "badge": "TOP PLACES",
+            "title": {
+              "normal": "Popular",
+              "highlighted": "Destinations"
+            },
+            "desc": "From serene beaches to vibrant cities, find your next adventure.",
+            "viewAllLink": {
+              "label": "View All Destinations",
+              "href": "/destination"
+            },
+            "destinations": [
+              {
+                "id": 1,
+                "name": "Bali",
+                "country": "Indonesia",
+                "image": "/places/bali.png",
+                "slug": "/destination/bali"
+              },
+              {
+                "id": 2,
+                "name": "Paris",
+                "country": "France",
+                "image": "/places/paris.jpg",
+                "slug": "/destination/paris"
+              },
+              {
+                "id": 3,
+                "name": "Dubai",
+                "country": "UAE",
+                "image": "/places/1.jpg",
+                "slug": "/destination/dubai"
+              },
+              {
+                "id": 4,
+                "name": "Maldives",
+                "country": "Maldives",
+                "image": "/places/maldive.jpg",
+                "slug": "/destination/maldives"
+              },
+              {
+                "id": 5,
+                "name": "Swiss Alps",
+                "country": "Switzerland",
+                "image": "/places/swiss.jpg",
+                "slug": "/destination/swiss-alps"
+              },
+              {
+                "id": 6,
+                "name": "Kyoto",
+                "country": "Japan",
+                "image": "/places/japan.jpg",
+                "slug": "/destination/kyoto"
+              },
+              {
+                "id": 7,
+                "name": "Santorini",
+                "country": "Greece",
+                "image": "/places/santorini.jpg",
+                "slug": "/destination/santorini"
+              },
+              {
+                "id": 8,
+                "name": "New York",
+                "country": "USA",
+                "image": "/places/newyork.jpg",
+                "slug": "/destination/new-york"
+              },
+              {
+                "id": 9,
+                "name": "Rome",
+                "country": "Italy",
+                "image": "/places/rome.jpg",
+                "slug": "/destination/rome"
+              },
+              {
+                "id": 10,
+                "name": "Bangkok",
+                "country": "Thailand",
+                "image": "/travel/bangkok.jpg",
+                "slug": "/destination/bangkok"
+              },
+              {
+                "id": 11,
+                "name": "London",
+                "country": "UK",
+                "image": "/travel/london.jpg",
+                "slug": "/destination/london"
+              },
+              {
+                "id": 12,
+                "name": "Sydney",
+                "country": "Australia",
+                "image": "/travel/sydney.jpg",
+                "slug": "/destination/sydney"
+              }
+            ]
+          }
+        }
+      },
+      "Packages": {
+        "variants": {
+          "TravelPackages1": {
+            "badge": "EXPLORE OUR PACKAGES",
+            "title": {
+              "normal": "Find Your",
+              "highlighted": "Perfect",
+              "normal2": "Escape"
+            },
+            "desc": "Discover thoughtfully crafted travel packages designed for unforgettable experiences, from relaxing getaways to thrilling adventures",
+            "button": {
+              "label": "Read more",
+              "href": "/packages"
+            },
+            "packages": [
+              {
+                "id": 1,
+                "slug": "maldives-paradise-escape",
+                "title": "Maldives Paradise Escape",
+                "location": "Maldives, Asia",
+                "image": "/places/maldive.jpg",
+                "duration": "6 Days - 5 Nights",
+                "price": "499",
+                "priceUnit": "/ Traveler",
+                "rating": "4.9"
+              },
+              {
+                "id": 2,
+                "slug": "dubai-luxury-journey",
+                "title": "Dubai Luxury Journey",
+                "location": "Dubai, UAE",
+                "image": "/places/1.jpg",
+                "duration": "5 Days - 4 Nights",
+                "price": "699",
+                "priceUnit": "/ Traveler",
+                "rating": "4.8"
+              },
+              {
+                "id": 3,
+                "slug": "canadian-nature-tour",
+                "title": "Canadian Nature Tour",
+                "location": "Banff, Canada",
+                "image": "/places/santorini.jpg",
+                "duration": "7 Days - 6 Nights",
+                "price": "799",
+                "priceUnit": "/ Traveler",
+                "rating": "4.9"
+              }
+            ]
+          }
+        }
+      },  
+      "Services": {
+        "variants": {
+          "TravelServices1": {
+            "badge": "WHAT WE DO",
+            "title": "Our Travel Services",
+            "tagline": "Your Journey Our Passion",
+            "services": [
+              {
+                "id": "hotels",
+                "badge": "BEST HOTEL",
+                "iconName": "hotel",
+                "title": "Stay in Exceptional",
+                "highlightedTitle": "Hotels",
+                "image": "/travel/1.jpg",
+                "description": "Comprehensive travel insurance for a worry-free journey.",
+                "button": {
+                  "label": "Explore Now",
+                  "href": "/services/hotels"
+                }
+              },
+              {
+                "id": "insurance",
+                "badge": "TRAVEL INSURANCE",
+                "iconName": "shield-check",
+                "title": "Travel Safe",
+                "highlightedTitle": "Travel Happy",
+                "image": "/travel/2.jpg",
+                "description": "Comprehensive travel insurance for a worry-free journey.",
+                "button": {
+                  "label": "Explore Now",
+                  "href": "/services/travel-insurance"
+                }
+              },
+              {
+                "id": "tour-packages",
+                "badge": "TOUR PACKAGE",
+                "iconName": "map",
+                "title": "Explore More",
+                "highlightedTitle": "With Our Tour Packages",
+                "image": "/travel/3.jpg",
+                "description": "Customized tour packages for families, couples, groups and solo travelers.",
+                "button": {
+                  "label": "Explore Now",
+                  "href": "/services/tour-packages"
+                }
+              },
+              {
+                "id": "airport-transport",
+                "badge": "AIRPORT TRANSPORT",
+                "iconName": "car",
+                "title": "Smooth Rides",
+                "highlightedTitle": "To Your Destination",
+                "description": "Reliable and comfortable airport transfer service, anytime, anywhere.",
+                "image": "/travel/9.jpg",
+                "button": {
+                  "label": "Explore Now",
+                  "href": "/services/airport-transport"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "Opportunity": {
+        "variants": {
+          "TravelOpportunity1": {
+            "smallCaption": "Never stop Exploring",
+            "sideImage": {
+              "src": "/travel/2.jpg",
+              "alt": "Traveler overlooking bay with boats"
+            },
+            "statBadge": {
+              "number": "12,500+",
+              "label": "Travelers Explored The World With Us",
+              "subLabel": "In The Last 24 Hours"
+            },
+            "badge": "Explore the world",
+            "title": {
+              "normal": "Great Opportunity",
+              "normal2": "For",
+              "highlighted": "Adventure",
+              "normal3": "& Travels"
+            },
+            "desc": "Discover new places, meet different cultures and unforgettable memories with our specially curated travel experiences. Let us make your travel dreams come true.",
+            "subheading": "Here's What You Can Experience With Us",
+            "bulletPoints": [
+              "Handpicked destinations for every kind of traveler",
+              "Personalized travel planning and expert guidance",
+              "Unforgettable experiences with complete support"
+            ],
+            "avatars": [
+              "/personImage/man1.png",
+              "/personImage/men2.png",
+              "/personImage/men3.png",
+              "/personImage/women4.png",
+              "/personImage/women3.png",
+              "/personImage/women1.png"
+            ],
+            "button": {
+              "label": "Read more",
+              "href": "/about"
+            }
+          }
+        }
+      },
+      "CtaBanner": {
+        "variants": {
+          "TravelCtaBanner1": {
+            "badge": "READY TO",
+            "title": {
+              "normal": "",
+              "highlighted": "Adventure",
+              "normal2": "And Enjoy Natural"
+            },
+            "desc": "Let's plan your next journey and make unforgettable memories with our exclusive travel experiences.",
+            "button": {
+              "label": "LET'S GET STARTED",
+              "href": "/plan-your-trip"
+            },
+            "bgImageUrl": "/travel/1.jpg",
+            "stats": [
+              {
+                "id": 1,
+                "number": "5,489",
+                "label": "Happy Traveller",
+                "iconName": "hiking"
+              },
+              {
+                "id": 2,
+                "number": "99",
+                "suffix": "%",
+                "label": "Total Positive Reviews",
+                "iconName": "badge-check"
+              },
+              {
+                "id": 3,
+                "number": "190",
+                "suffix": "+",
+                "label": "Tour Completed",
+                "iconName": "compass"
+              },
+              {
+                "id": 4,
+                "number": "5,489",
+                "label": "Awards Winning",
+                "iconName": "award"
+              }
+            ]
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "TravelTestimonial1": {
+            "badge": "TESTIMONIALS",
+            "title": {
+              "normal": "What Our",
+              "highlighted": "Travelers Say"
+            },
+            "tagline": "Your Journey Our Passion",
+            "testimonialItems": [
+              {
+                "id": 1,
+                "name": "Rohit Sharma",
+                "role": "Delhi, India",
+                "image": "/personImage/men3.png",
+                "quote": "Our trip to Bali was simply amazing! Everything from hotels to airport transfers was perfectly arranged. The team was very supportive throughout the journey. Highly recommended!",
+                "rating": 5
+              },
+              {
+                "id": 2,
+                "name": "Priya Mehta",
+                "role": "Mumbai, India",
+                "image": "/personImage/women1.png",
+                "quote": "It was a hassle-free and memorable experience. The tour package was well planned and covered all major attractions. Great service, professional team and quick support. Will definitely travel again!",
+                "rating": 5
+              }
+            ]
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "TravelBlog1": {
+            "badge": "OUR BLOG",
+            "title": {
+              "normal": "Travel Stories &",
+              "highlighted": "Helpful Tips"
+            },
+            "desc": "Get inspired with our latest travel guides, tips and real stories from around the world.",
+            "featuredPost": {
+              "id": 1,
+              "slug": "10-essential-travel-tips-for-a-hassle-free-vacation",
+              "tag": "TRAVEL TIPS",
+              "image": "/travel/blog-mountain-lake.jpg",
+              "author": "Priya Mehta",
+              "comments": "12",
+              "title": "10 Essential Travel Tips For A Hassle-Free Vacation",
+              "description": "From packing smart to staying safe, here are the top travel tips every traveler should know.",
+              "readMoreText": "Read More"
+            },
+            "posts": [
+              {
+                "id": 2,
+                "slug": "top-7-budget-friendly-destinations-for-2025",
+                "image": "/travel/blog-maldives.jpg",
+                "author": "Amit Verma",
+                "comments": "08",
+                "title": "Top 7 Budget Friendly Destinations For 2025",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 3,
+                "slug": "how-to-plan-a-perfect-honeymoon-trip",
+                "image": "/travel/blog-couple-beach.jpg",
+                "author": "Sneha Kapoor",
+                "comments": "15",
+                "title": "How To Plan A Perfect Honeymoon Trip",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 4,
+                "slug": "best-trekking-destinations-in-india",
+                "image": "/travel/blog-trekking.jpg",
+                "author": "Rohit Sharma",
+                "comments": "09",
+                "title": "Best Trekking Destinations In India",
+                "readMoreText": "Read More"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
