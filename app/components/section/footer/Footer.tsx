@@ -134,7 +134,7 @@ export default function Footer() {
                   alt="Travelix"
                   width={140}
                   height={60}
-                  className="h-10 sm:h-12 md:h-20 w-auto object-contain"
+                  className="h-16 md:h-20 w-auto object-contain"
                 />
               ) : (
                 <>

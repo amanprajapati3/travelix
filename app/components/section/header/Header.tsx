@@ -50,13 +50,13 @@ export default function Header() {
     <header className="fixed top-0 left-0 z-50 w-full">
       {/* Top Info Bar */}
       <div
-        className={` w-full border-b-2 border-white/20 - px-4 py-2 text-white/80 transition-all duration-500 ${
+        className={` w-full sm:border-b-2 hidden sm:block border-b-1 border-white/20 - px-4 py-2 text-white/80 transition-all duration-500 ${
           scrolled
             ? "bg-[#05060a]/85 backdrop-blur-xl"
             : "bg-black/85 backdrop-blur-md"
         }`}
       >
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between font-sans text-[14px]">
+        <div className="mx-auto  flex max-w-[1400px] items-center justify-between font-sans text-[14px]">
           <div className="flex items-center gap-4">
             {siteInfo.TopBar?.address && (
               <span className="flex items-center gap-2 text-white">
@@ -158,7 +158,7 @@ export default function Header() {
                   width={140}
                   height={60}
                   sizes="(max-width: 640px) 120px, 160px"
-                  className="h-10 w-auto object-contain sm:h-16 md:h-20"
+                  className="h-16 w-auto object-contain sm:h-16 md:h-20"
                 />
               ) : (
                 <>
@@ -281,7 +281,7 @@ export default function Header() {
                 width={130}
                 height={50}
                 sizes="120px"
-                className="h-9 sm:h-16 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
             ) : (
               <>

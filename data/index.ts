@@ -31,6 +31,16 @@ export type TravelTestimonialData =
   typeof travelData.TravelIndustries.sections.Testimonial.variants.TravelTestimonial1;
 export type TravelBlogData =
   typeof travelData.TravelIndustries.sections.Blog.variants.TravelBlog1;
+export type TravelChooseUsData =
+  typeof travelData.TravelIndustries.sections.WhyChooseUs.variants.TravelChoose1;
+export type TravelProcessData =
+  typeof travelData.TravelIndustries.sections.Process.variants.TravelProcess1;
+export type TravelMissionData =
+  typeof travelData.TravelIndustries.sections.Mission.variants.TravelMission1;
+export type TravelMissionFeature =
+  TravelMissionData["missionSection"]["features"][number];
+export type TravelAwardsData =
+  typeof travelData.TravelIndustries.sections.Awards.variants.TravelAwards1;
 
 export type TravelDestinationItem =
   TravelDestinationsData["destinations"][number];
@@ -45,6 +55,8 @@ export type TravelBlogPost = TravelBlogData["posts"][number];
 export type TravelFeaturedBlogPost = TravelBlogData["featuredPost"];
 export type TravelFooterColumn = TravelFooterData["columns"][number];
 export type TravelFooterLink = TravelFooterColumn["links"][number];
+export type TravelChooseUsItem = TravelChooseUsData["items"][number];
+export type TravelProcessItem = TravelProcessData["steps"][number];
 
 const sec = travelData.TravelIndustries.sections;
 
@@ -59,6 +71,10 @@ export const site = {
   ctaBanner: sec.CtaBanner.variants.TravelCtaBanner1,
   testimonial: sec.Testimonial.variants.TravelTestimonial1,
   blog: sec.Blog.variants.TravelBlog1,
+  whyChooseUs: sec.WhyChooseUs.variants.TravelChoose1,
+  process: sec.Process.variants.TravelProcess1,
+  mission: sec.Mission.variants.TravelMission1,
+  awards: sec.Awards.variants.TravelAwards1,
 };
 
 const destinationItems = sec.Destinations.variants.TravelDestinations1

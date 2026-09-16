@@ -265,6 +265,12 @@ export interface TravelTestimonialData {
   title: TwoPartTitle;
   tagline: string;
   testimonialItems: TravelTestimonialItem[];
+  banner?: {
+    title: string;
+    highlightedTitle?: string;
+    backgroundImage: string;
+    breadcrumbItems: BreadcrumbItem[];
+  };
 }
 
 // --- Blog ---
@@ -297,4 +303,129 @@ export interface TravelBlogData {
   desc: string;
   featuredPost: TravelFeaturedBlogPost;
   posts: TravelBlogPost[];
+}
+
+export interface ChooseBreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+export interface ChooseItem {
+  id: number;
+  icon: string; // Icon identifier (e.g., "Calendar", "Hotel", "Compass", "Headphones")
+  title: string;
+  description: string;
+}
+
+export interface ChooseVariant {
+  banner: {
+    title: string;
+    highlightedTitle?: string;
+    backgroundImage: string;
+    breadcrumbItems: ChooseBreadcrumbItem[];
+  };
+  badge: string;
+  title: {
+    normal: string;
+    highlighted: string;
+  };
+  centerImage: string;
+  brushFrame: string;
+  items: ChooseItem[];
+}
+
+export interface ChooseData {
+  variants: {
+    [key: string]: ChooseVariant;
+  };
+}
+export interface TravelProcessItem {
+  id: number;
+  stepNumber: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface TravelProcessData {
+  badge: string;
+  title: {
+    normal: string;
+    highlighted: string;
+  };
+  steps: TravelProcessItem[];
+}
+export interface MissionBreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+export interface MissionFeature {
+  id: number;
+  icon: string;
+  title: string;
+}
+
+export interface MissionSectionData {
+  badge: string;
+  title: {
+    normal: string;
+    highlighted: string;
+  };
+  description: string;
+  image: string;
+  features: MissionFeature[];
+}
+
+export interface TravelMissionData {
+  banner: {
+    title: string;
+    highlightedTitle?: string;
+    backgroundImage: string;
+    breadcrumbItems: MissionBreadcrumbItem[];
+  };
+  missionSection: MissionSectionData;
+  visionSection: MissionSectionData;
+}
+export interface AwardItem {
+  id: number;
+  badgeTitle: string;
+  title: string;
+  description: string;
+  image: string;
+  tag?: string;
+}
+
+export interface CertificationItem {
+  id: number;
+  title: string;
+  subtitle: string;
+  image: string;
+}
+
+export interface TravelAwardsData {
+  banner: {
+    title: string;
+    highlightedTitle?: string;
+    backgroundImage: string;
+    breadcrumbItems: BreadcrumbItem[];
+  };
+  achievementsSection: {
+    badge: string;
+    title: {
+      normal: string;
+      highlighted: string;
+    };
+    description: string;
+    items: AwardItem[];
+  };
+  certificationsSection: {
+    badge: string;
+    title: {
+      normal: string;
+      highlighted: string;
+    };
+    description: string;
+    items: CertificationItem[];
+  };
 }
