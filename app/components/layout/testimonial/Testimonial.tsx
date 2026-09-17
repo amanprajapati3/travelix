@@ -23,7 +23,7 @@ export default function Testimonial() {
   const { banner, badge, title, tagline, testimonialItems } = testimonialData;
 
   return (
-    <main className="min-h-screen bg-black text-white overflow-hidden">
+    <main className="min-h-screen bg-[#011014] text-white overflow-hidden">
       {/* REUSABLE BANNER */}
       {banner && (
         <Banner

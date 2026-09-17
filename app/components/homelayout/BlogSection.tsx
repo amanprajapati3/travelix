@@ -128,7 +128,7 @@ export default function BlogSection() {
           {/* RIGHT SIDE: THREE STACKED CARDS (Takes 5 cols on Desktop) */}
           <div className="lg:col-span-5 flex flex-col gap-2">
             {posts &&
-              posts.map((post: TravelBlogPost) => (
+              posts.slice(0, 3).map((post: TravelBlogPost) => (
                 <div
                   key={post.id}
                   className="bg-white rounded-xl overflow-hidden shadow-xl text-slate-900 flex flex-col sm:flex-row items-stretch group border border-slate-100"

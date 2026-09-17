@@ -206,12 +206,7 @@ export function TestimonialCard({ item }: { item: TravelTestimonialItem }) {
       <div className="absolute left-5 top-10 bottom-10 w-1.5 bg-amber-400 rounded-r-full" />
 
       {/* Triangle notch connecting to line */}
-      <div
-        className="absolute left-6 top-1/2 -translate-y-1/2 w-0 h-0 
-        border-t-[12px] border-t-transparent
-        border-l-[12px] border-l-amber-400
-        border-b-[12px] border-b-transparent"
-      />
+      <div className="absolute left-6 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[12px] border-t-transparent border-l-[12px] border-l-amber-400 border-b-[12px] border-b-transparent" />
 
       {/* Top Section: Image and Name */}
       <div className="flex items-center gap-5 mb-6 pl-4">

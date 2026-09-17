@@ -111,7 +111,7 @@ export default function ServiceSection() {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:hidden">
-          {services.map((service) => (
+          {services.slice(0, 4).map((service) => (
             <TabletMobileCard key={service.id} service={service} />
           ))}
         </div>

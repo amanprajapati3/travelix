@@ -138,13 +138,27 @@ export interface TravelDestinationItem {
   country: string;
   image: string;
   slug: string;
+  type?: string;
+  region?: string;
+  tags?: string[];
 }
 
 export interface TravelDestinationsData {
+  banner?: {
+    title: string;
+    highlightedTitle?: string;
+    backgroundImage: string;
+    breadcrumbItems: BreadcrumbItem[];
+  };
   badge: string;
   title: TwoPartTitle;
   desc: string;
   viewAllLink: CtaButton;
+  searchFilter?: {
+    destinationTypes: string[];
+    regions: string[];
+  };
+  domesticDestinations: TravelDestinationItem[];
   destinations: TravelDestinationItem[];
 }
 
@@ -190,10 +204,40 @@ export interface TravelServiceItem {
 }
 
 export interface TravelServicesData {
+  banner?: {
+    title: string;
+    highlightedTitle?: string;
+    backgroundImage: string;
+    breadcrumbItems: BreadcrumbItem[];
+  };
   badge: string;
   title: string;
   tagline: string;
   services: TravelServiceItem[];
+}
+
+// --- Team ---
+
+export interface TravelTeamMember {
+  id: string;
+  slug: string;
+  name: string;
+  role: string;
+  image: string;
+  button: CtaButton;
+}
+
+export interface TravelTeamData {
+  banner?: {
+    title: string;
+    highlightedTitle?: string;
+    backgroundImage: string;
+    breadcrumbItems: BreadcrumbItem[];
+  };
+  badge: string;
+  title: string;
+  desc: string;
+  members: TravelTeamMember[];
 }
 
 // --- Opportunity ---
@@ -279,6 +323,7 @@ export interface TravelFeaturedBlogPost {
   id: number;
   slug: string;
   tag: string;
+  date: string;
   image: string;
   author: string;
   comments: string;
@@ -290,6 +335,7 @@ export interface TravelFeaturedBlogPost {
 export interface TravelBlogPost {
   id: number;
   slug: string;
+  date: string;
   image: string;
   author: string;
   comments: string;
@@ -298,6 +344,12 @@ export interface TravelBlogPost {
 }
 
 export interface TravelBlogData {
+  banner?: {
+    title: string;
+    highlightedTitle?: string;
+    backgroundImage: string;
+    breadcrumbItems: BreadcrumbItem[];
+  };
   badge: string;
   title: TwoPartTitle;
   desc: string;
@@ -428,4 +480,159 @@ export interface TravelAwardsData {
     description: string;
     items: CertificationItem[];
   };
+}
+
+// Add these types to your @/type/typeSection file
+
+export interface ContactInfoItem {
+  id: string | number;
+  icon: string;
+  title: string;
+  value: string;
+  subtext?: string;
+}
+
+export interface ContactFeatureItem {
+  id: string | number;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface TravelContactData {
+  banner: {
+    title: string;
+    highlightedTitle: string;
+    backgroundImage: string;
+    breadcrumbItems: { label: string; href?: string }[];
+  };
+  header: {
+    title: { normal: string; highlighted: string };
+    subtitle: string;
+  };
+  infoItems: ContactInfoItem[];
+  scriptTexts: {
+    travelMore: string;
+    planAdventure: string;
+    exploreWorld: string;
+  };
+  form: {
+    title: { normal: string; highlighted: string };
+    subtitle: string;
+    buttonLabel: string;
+    subjects: string[];
+  };
+  features: ContactFeatureItem[];
+  images: {
+    tiltImage1: string;
+    tiltImage2: string;
+    planeLoop: string;
+    mountainTransparent: string;
+    mountainOnly: string;
+  };
+}
+export interface FaqLeftFeature {
+  id: number;
+  icon: string;
+  title: string;
+  subtitle: string;
+}
+
+export interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+}
+
+export interface TravelFaqData {
+  banner: {
+    title: string;
+    highlightedTitle: string;
+    backgroundImage: string;
+    breadcrumbItems: { label: string; href?: string }[];
+  };
+  header: {
+    eyebrow: string;
+    title: { normal: string; highlighted: string };
+    subtitle: string;
+  };
+  speechBubbles: {
+    leftText: string;
+    rightText: string;
+  };
+  leftFeatures: FaqLeftFeature[];
+  cardImage: {
+    src: string;
+    tagline: string;
+  };
+  faqs: FaqItem[];
+  supportBar: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    phone: string;
+    email: string;
+    chatText: string;
+    chatSubtext: string;
+    buttonText: string;
+  }
+}
+export interface PartnerItem {
+  id: number;
+  name: string;
+  category?: string;
+  logo: string;
+}
+
+export interface PartnerFeature {
+  id: number;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface TravelPartnersData {
+  banner: {
+    title: string;
+    highlightedTitle: string;
+    backgroundImage: string;
+    breadcrumbItems: { label: string; href?: string }[];
+  };
+  header: {
+    eyebrow: string;
+    title: { normal: string; highlighted: string };
+    subtitle: string;
+  };
+  scriptTexts: {
+    topRight: string;
+    bottomLeft: string;
+    bottomRight: string;
+  };
+  partners: PartnerItem[];
+  features: PartnerFeature[];
+  images: {
+    partnersMap: string;
+    citySilhouette: string;
+  };
+}
+export interface LegalSectionItem {
+  id: string;
+  number?: string;
+  heading: string;
+  description?: string;
+  bullets?: string[];
+  footerText?: string;
+  contactEmail?: string;
+}
+
+export interface LegalPageData {
+  banner: {
+    title: string;
+    highlightedTitle: string;
+    backgroundImage: string;
+    breadcrumbItems: { label: string; href?: string }[];
+  };
+  title: string;
+  lastUpdated: string;
+  sections: LegalSectionItem[];
 }

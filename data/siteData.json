@@ -72,7 +72,7 @@
             "nav": [
               { "label": "Home", "href": "/" },
               { "label": "Destination", "href": "/destination" },
-              { "label": "Services", "href": "/services" },
+              { "label": "Services", "href": "/service" },
               {
                 "label": "About",
                 "href": "#",
@@ -88,7 +88,7 @@
             ],
             "ctaButton": {
               "label": "Plan Your Trip",
-              "href": "/plan-your-trip"
+              "href": "/contact"
             }
           }
         }
@@ -145,17 +145,15 @@
               {
                 "title": "Help & Support",
                 "links": [
-                  { "label": "FAQ", "href": "/faq" },
-                  { "label": "Booking Guide", "href": "/booking-guide" },
+                  { "label": "Team", "href": "/team" },
+                  { "label": "Partners", "href": "/partners" },
                   {
-                    "label": "Cancellation Policy",
-                    "href": "/cancellation-policy"
+                    "label": "Payment Policy",
+                    "href": "/payment"
                   },
-                  { "label": "Refund Policy", "href": "/refund-policy" },
-                  { "label": "Privacy Policy", "href": "/privacy-policy" },
+                  { "label": "Refund Policy", "href": "/refund" },
+                  { "label": "Privacy Policy", "href": "/privacy" },
                   { "label": "Terms & Conditions", "href": "/terms" },
-                  { "label": "Travel Insurance", "href": "/travel-insurance" },
-                  { "label": "24/7 Support", "href": "/support" },
                   { "label": "Sitemap", "href": "/sitemap" }
                 ]
               }
@@ -183,7 +181,7 @@
             "paymentIcons": ["visa", "mastercard", "paypal"],
             "copyright": "Copyright © 2026. All rights reserved. Powered by Lestow.",
             "legalLinks": [
-              { "label": "Privacy Policy", "href": "/privacy-policy" },
+              { "label": "Privacy Policy", "href": "/privacy" },
               { "label": "Terms & Conditions", "href": "/terms" }
             ],
             "sideTagline": "Explore The World"
@@ -226,6 +224,15 @@
       "Destinations": {
         "variants": {
           "TravelDestinations1": {
+            "banner": {
+              "title": "Destinations",
+              "highlightedTitle": "",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Destinations" }
+              ]
+            },
             "badge": "TOP PLACES",
             "title": {
               "normal": "Popular",
@@ -233,93 +240,189 @@
             },
             "desc": "From serene beaches to vibrant cities, find your next adventure.",
             "viewAllLink": {
-              "label": "View All Destinations",
+              "label": "View All",
               "href": "/destination"
             },
+            "searchFilter": {
+              "destinationTypes": [
+                "All Types",
+                "Domestic",
+                "International",
+                "Heritage",
+                "Beach",
+                "Mountains",
+                "City Life"
+              ],
+              "regions": [
+                "All Regions",
+                "Asia",
+                "Europe",
+                "North America",
+                "Middle East"
+              ]
+            },
+            "domesticDestinations": [
+              {
+                "id": 1,
+                "name": "Delhi",
+                "country": "India",
+                "image": "/places/delhi.jpg",
+                "slug": "/destination/delhi",
+                "type": "Heritage",
+                "region": "Asia",
+                "tags": ["History", "Culture", "Heritage"]
+              },
+              {
+                "id": 2,
+                "name": "Kerala",
+                "country": "India",
+                "image": "/places/kerala.jpg",
+                "slug": "/destination/kerala",
+                "type": "Beach",
+                "region": "Asia",
+                "tags": ["Backwaters", "Nature", "Beaches"]
+              },
+              {
+                "id": 3,
+                "name": "Himachal Pradesh",
+                "country": "India",
+                "image": "/places/hp.jpg",
+                "slug": "/destination/himachal-pradesh",
+                "type": "Mountains",
+                "region": "Asia",
+                "tags": ["Mountains", "Adventure", "Scenic"]
+              },
+              {
+                "id": 4,
+                "name": "Goa",
+                "country": "India",
+                "image": "/places/goa.jpg",
+                "slug": "/destination/goa",
+                "type": "Beach",
+                "region": "Asia",
+                "tags": ["Beaches", "Nightlife", "Relaxation"]
+              },
+              {
+                "id": 5,
+                "name": "Jammu & Kashmir",
+                "country": "India",
+                "image": "/places/jk.jpg",
+                "slug": "/destination/jammu-and-kashmir",
+                "type": "Mountains",
+                "region": "Asia",
+                "tags": ["Lakes", "Mountains", "Serenity"]
+              },
+              {
+                "id": 6,
+                "name": "Uttar Pradesh",
+                "country": "India",
+                "image": "/places/up.jpg",
+                "slug": "/destination/uttar-pradesh",
+                "type": "Heritage",
+                "region": "Asia",
+                "tags": ["Heritage", "Spiritual", "Culture"]
+              },
+              {
+                "id": 7,
+                "name": "Rajasthan",
+                "country": "India",
+                "image": "/places/rajesthan.jpg",
+                "slug": "/destination/rajasthan",
+                "type": "Heritage",
+                "region": "Asia",
+                "tags": ["Royalty", "Forts", "Desert"]
+              },
+              {
+                "id": 8,
+                "name": "Mumbai",
+                "country": "India",
+                "image": "/places/mumbai.jpg",
+                "slug": "/destination/mumbai",
+                "type": "City Life",
+                "region": "Asia",
+                "tags": ["City Life", "Modern", "Attractions"]
+              }
+            ],
             "destinations": [
               {
                 "id": 1,
                 "name": "Bali",
                 "country": "Indonesia",
                 "image": "/places/bali.png",
-                "slug": "/destination/bali"
+                "slug": "/destination/bali",
+                "type": "Beach",
+                "region": "Asia",
+                "tags": ["Beach", "Culture", "Nature"]
               },
               {
                 "id": 2,
                 "name": "Paris",
                 "country": "France",
                 "image": "/places/paris.jpg",
-                "slug": "/destination/paris"
+                "slug": "/destination/paris",
+                "type": "City Life",
+                "region": "Europe",
+                "tags": ["History", "Culture", "Art"]
               },
               {
                 "id": 3,
                 "name": "Dubai",
                 "country": "UAE",
                 "image": "/places/1.jpg",
-                "slug": "/destination/dubai"
+                "slug": "/destination/dubai",
+                "type": "City Life",
+                "region": "Middle East",
+                "tags": ["Luxury", "Shopping", "Modern"]
               },
               {
                 "id": 4,
                 "name": "Maldives",
                 "country": "Maldives",
                 "image": "/places/maldive.jpg",
-                "slug": "/destination/maldives"
+                "slug": "/destination/maldives",
+                "type": "Beach",
+                "region": "Asia",
+                "tags": ["Beaches", "Luxury", "Relaxation"]
               },
               {
                 "id": 5,
                 "name": "Swiss Alps",
                 "country": "Switzerland",
                 "image": "/places/swiss.jpg",
-                "slug": "/destination/swiss-alps"
+                "slug": "/destination/swiss-alps",
+                "type": "Mountains",
+                "region": "Europe",
+                "tags": ["Mountains", "Lakes", "Adventure"]
               },
               {
                 "id": 6,
                 "name": "Kyoto",
                 "country": "Japan",
                 "image": "/places/japan.jpg",
-                "slug": "/destination/kyoto"
+                "slug": "/destination/kyoto",
+                "type": "Heritage",
+                "region": "Asia",
+                "tags": ["Tradition", "Modern", "Unique"]
               },
               {
                 "id": 7,
                 "name": "Santorini",
                 "country": "Greece",
                 "image": "/places/santorini.jpg",
-                "slug": "/destination/santorini"
+                "slug": "/destination/santorini",
+                "type": "Beach",
+                "region": "Europe",
+                "tags": ["Heritage", "Cuisine", "Scenic"]
               },
               {
                 "id": 8,
                 "name": "New York",
                 "country": "USA",
                 "image": "/places/newyork.jpg",
-                "slug": "/destination/new-york"
-              },
-              {
-                "id": 9,
-                "name": "Rome",
-                "country": "Italy",
-                "image": "/places/rome.jpg",
-                "slug": "/destination/rome"
-              },
-              {
-                "id": 10,
-                "name": "Bangkok",
-                "country": "Thailand",
-                "image": "/travel/bangkok.jpg",
-                "slug": "/destination/bangkok"
-              },
-              {
-                "id": 11,
-                "name": "London",
-                "country": "UK",
-                "image": "/travel/london.jpg",
-                "slug": "/destination/london"
-              },
-              {
-                "id": 12,
-                "name": "Sydney",
-                "country": "Australia",
-                "image": "/travel/sydney.jpg",
-                "slug": "/destination/sydney"
+                "slug": "/destination/new-york",
+                "type": "City Life",
+                "region": "North America",
+                "tags": ["City Life", "Modern", "Attractions"]
               }
             ]
           }
@@ -380,6 +483,15 @@
       "Services": {
         "variants": {
           "TravelServices1": {
+            "banner": {
+              "title": "Our",
+              "highlightedTitle": "Services",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Services" }
+              ]
+            },
             "badge": "WHAT WE DO",
             "title": "Our Travel Services",
             "tagline": "Your Journey Our Passion",
@@ -434,6 +546,140 @@
                 "button": {
                   "label": "Explore Now",
                   "href": "/services/airport-transport"
+                }
+              },
+              {
+                "id": "custom-itineraries",
+                "badge": "CUSTOM ITINERARIES",
+                "iconName": "map",
+                "title": "Trips Made",
+                "highlightedTitle": "Just for You",
+                "description": "Personalized itineraries designed around your interests, pace and travel dreams.",
+                "image": "/travel/Travel/wooden-bridge-koh-nangyuan-island-surat-thani-thailand.jpg",
+                "button": {
+                  "label": "Explore Now",
+                  "href": "/services/custom-itineraries"
+                }
+              },
+              {
+                "id": "guided-adventures",
+                "badge": "GUIDED ADVENTURES",
+                "iconName": "map",
+                "title": "Discover With",
+                "highlightedTitle": "Local Experts",
+                "description": "Meet experienced local guides and experience every destination beyond the usual highlights.",
+                "image": "/travel/Travel/rear-view-back-young-asian-hiking-man-standing-riseup-hands-with-happy-peak-rocky-mountain-copy-space.jpg",
+                "button": {
+                  "label": "Explore Now",
+                  "href": "/services/guided-adventures"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "Team": {
+        "variants": {
+          "TravelTeam1": {
+            "banner": {
+              "title": "Meet Our",
+              "highlightedTitle": "Team",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Team" }
+              ]
+            },
+            "badge": "THE PEOPLE BEHIND THE JOURNEY",
+            "title": "Meet the Team",
+            "desc": "Passionate travel experts dedicated to making every journey memorable.",
+            "members": [
+              {
+                "id": "arjun-mehta",
+                "slug": "arjun-mehta",
+                "name": "Arjun Mehta",
+                "role": "Founder & CEO",
+                "image": "/person/man1-transparent.png",
+                "button": {
+                  "label": "View Profile",
+                  "href": "/team/arjun-mehta"
+                }
+              },
+              {
+                "id": "meera-sharma",
+                "slug": "meera-sharma",
+                "name": "Meera Sharma",
+                "role": "Travel Consultant",
+                "image": "/person/women1-transparent.png",
+                "button": {
+                  "label": "View Profile",
+                  "href": "/team/meera-sharma"
+                }
+              },
+              {
+                "id": "kabir-singh",
+                "slug": "kabir-singh",
+                "name": "Kabir Singh",
+                "role": "Adventure Specialist",
+                "image": "/person/men2-transparent.png",
+                "button": {
+                  "label": "View Profile",
+                  "href": "/team/kabir-singh"
+                }
+              },
+              {
+                "id": "ananya-kapoor",
+                "slug": "ananya-kapoor",
+                "name": "Ananya Kapoor",
+                "role": "Experience Curator",
+                "image": "/person/women2-transparent.png",
+                "button": {
+                  "label": "View Profile",
+                  "href": "/team/ananya-kapoor"
+                }
+              },
+              {
+                "id": "rohan-verma",
+                "slug": "rohan-verma",
+                "name": "Rohan Verma",
+                "role": "Operations Manager",
+                "image": "/person/men3-transparent.png",
+                "button": {
+                  "label": "View Profile",
+                  "href": "/team/rohan-verma"
+                }
+              },
+              {
+                "id": "ishita-rao",
+                "slug": "ishita-rao",
+                "name": "Ishita Rao",
+                "role": "Trip Planner",
+                "image": "/person/women2-transparent.png",
+                "button": {
+                  "label": "View Profile",
+                  "href": "/team/ishita-rao"
+                }
+              },
+              {
+                "id": "vihaan-joshi",
+                "slug": "vihaan-joshi",
+                "name": "Vihaan Joshi",
+                "role": "Destination Expert",
+                "image": "/person/men4-transparent.png",
+                "button": {
+                  "label": "View Profile",
+                  "href": "/team/vihaan-joshi"
+                }
+              },
+              {
+                "id": "tara-malhotra",
+                "slug": "tara-malhotra",
+                "name": "Tara Malhotra",
+                "role": "Guest Relations Lead",
+                "image": "/person/men5-transparent.png",
+                "button": {
+                  "label": "View Profile",
+                  "href": "/team/tara-malhotra"
                 }
               }
             ]
@@ -602,6 +848,15 @@
       "Blog": {
         "variants": {
           "TravelBlog1": {
+            "banner": {
+              "title": "Travel",
+              "highlightedTitle": "Blog",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Blog" }
+              ]
+            },
             "badge": "OUR BLOG",
             "title": {
               "normal": "Travel Stories &",
@@ -612,6 +867,7 @@
               "id": 1,
               "slug": "10-essential-travel-tips-for-a-hassle-free-vacation",
               "tag": "TRAVEL TIPS",
+              "date": " 16 OCT, 2026",
               "image": "/travel/2.jpg",
               "author": "Priya Mehta",
               "comments": "12",
@@ -624,6 +880,7 @@
                 "id": 2,
                 "slug": "top-7-budget-friendly-destinations-for-2025",
                 "image": "/travel/3.jpg",
+                "date": " 16 OCT, 2026",
                 "author": "Amit Verma",
                 "comments": "08",
                 "title": "Top 7 Budget Friendly Destinations For 2025",
@@ -633,6 +890,7 @@
                 "id": 3,
                 "slug": "how-to-plan-a-perfect-honeymoon-trip",
                 "image": "/travel/7.jpg",
+                "date": " 16 OCT, 2026",
                 "author": "Sneha Kapoor",
                 "comments": "15",
                 "title": "How To Plan A Perfect Honeymoon Trip",
@@ -642,9 +900,30 @@
                 "id": 4,
                 "slug": "best-trekking-destinations-in-india",
                 "image": "/travel/5.jpg",
+                "date": " 16 OCT, 2026",
                 "author": "Rohit Sharma",
                 "comments": "09",
                 "title": "Best Trekking Destinations In India",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 5,
+                "slug": "hidden-gems-of-goa-beyond-the-beaches",
+                "image": "/places/goa.jpg",
+                "date": " 16 OCT, 2026",
+                "author": "Karan Malhotra",
+                "comments": "07",
+                "title": "Hidden Gems Of Goa Beyond The Beaches",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 6,
+                "slug": "ultimate-backpacking-guide-for-southeast-asia",
+                "image": "/places/bangkok.jpg",
+                "date": " 16 OCT, 2026",
+                "author": "Ananya Iyer",
+                "comments": "11",
+                "title": "Ultimate Backpacking Guide For Southeast Asia",
                 "readMoreText": "Read More"
               }
             ]
@@ -881,6 +1160,696 @@
                 }
               ]
             }
+          }
+        }
+      },
+      "Contact": {
+        "variants": {
+          "TravelContact1": {
+            "banner": {
+              "title": "Contact",
+              "highlightedTitle": "Us",
+              "backgroundImage": "/travel/2.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Contact Us", "href": "/contact" }
+              ]
+            },
+            "header": {
+              "title": {
+                "normal": "Contact",
+                "highlighted": "Us"
+              },
+              "subtitle": "We'd love to hear from you! Whether you have a question, need travel advice, or want to plan your next adventure — our team is here to help."
+            },
+            "infoItems": [
+              {
+                "id": 1,
+                "icon": "Phone",
+                "title": "Call Us",
+                "value": "+91 98765 43210",
+                "subtext": "Mon - Sat, 9:00 AM - 7:00 PM"
+              },
+              {
+                "id": 2,
+                "icon": "Mail",
+                "title": "Email Us",
+                "value": "hello@travelix.com",
+                "subtext": "We reply within 24 hours"
+              },
+              {
+                "id": 3,
+                "icon": "MapPin",
+                "title": "Visit Us",
+                "value": "123 Travel Street, New Delhi, India - 110001",
+                "subtext": ""
+              },
+              {
+                "id": 4,
+                "icon": "Clock",
+                "title": "24/7 Support",
+                "value": "We're here whenever you need us.",
+                "subtext": ""
+              }
+            ],
+            "scriptTexts": {
+              "travelMore": "Travel More Worry Less",
+              "planAdventure": "Let's Plan Your Next Adventure",
+              "exploreWorld": "Explore The World"
+            },
+            "form": {
+              "title": {
+                "normal": "Send Us a",
+                "highlighted": "Message"
+              },
+              "subtitle": "Fill out the form below and our travel experts will get back to you soon.",
+              "buttonLabel": "Send Message",
+              "subjects": [
+                "General Inquiry",
+                "Booking Assistance",
+                "Custom Tour Request",
+                "Feedback"
+              ]
+            },
+            "features": [
+              {
+                "id": 1,
+                "icon": "MapPin",
+                "title": "Global Destinations",
+                "description": "Explore top destinations across the world."
+              },
+              {
+                "id": 2,
+                "icon": "Users",
+                "title": "Expert Guidance",
+                "description": "Get personalized travel recommendations."
+              },
+              {
+                "id": 3,
+                "icon": "ShieldCheck",
+                "title": "Secure Booking",
+                "description": "Your journey is safe with us."
+              },
+              {
+                "id": 4,
+                "icon": "Heart",
+                "title": "Memorable Experiences",
+                "description": "Creating journeys that last a lifetime."
+              }
+            ],
+            "images": {
+              "tiltImage1": "/travel/2.jpg",
+              "tiltImage2": "/travel/4.jpg",
+              "planeLoop": "/travel/plane_loop_transparent.png",
+              "mountainTransparent": "/travel/mountain.png",
+              "mountainOnly": "/travel/mountain_only_transparent.png"
+            }
+          }
+        }
+      },
+      "Faq": {
+        "variants": {
+          "TravelFaq1": {
+            "banner": {
+              "title": "Frequently Asked",
+              "highlightedTitle": "Questions",
+              "backgroundImage": "/travel/2.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "FAQ", "href": "/faq" }
+              ]
+            },
+            "header": {
+              "eyebrow": "FREQUENTLY ASKED QUESTIONS",
+              "title": {
+                "normal": "Got Questions?",
+                "highlighted": "We've Got Answers"
+              },
+              "subtitle": "Find quick answers to common questions about our travel packages, booking process, cancellation policy, and custom itineraries."
+            },
+            "speechBubbles": {
+              "leftText": "ANY QUESTIONS?",
+              "rightText": "WE'RE HERE TO HELP!"
+            },
+            "leftFeatures": [
+              {
+                "id": 1,
+                "icon": "Zap",
+                "title": "Quick Answers",
+                "subtitle": "Save Your Time"
+              },
+              {
+                "id": 2,
+                "icon": "FileText",
+                "title": "Clear & Helpful",
+                "subtitle": "Information"
+              },
+              {
+                "id": 3,
+                "icon": "Globe",
+                "title": "Support for All",
+                "subtitle": "Tours & Bookings"
+              },
+              {
+                "id": 4,
+                "icon": "Headphones",
+                "title": "Still Have a Question?",
+                "subtitle": "Contact Us"
+              }
+            ],
+            "cardImage": {
+              "src": "/travel/7.jpg",
+              "tagline": "EXPLORE BETTER LIVE BRIGHTER"
+            },
+            "faqs": [
+              {
+                "id": "01",
+                "question": "How long does a tour booking take to confirm?",
+                "answer": "Most tour package bookings are confirmed instantly or within 2 hours, depending on destination availability and flight verification. We always aim for a fast and hassle-free booking experience."
+              },
+              {
+                "id": "02",
+                "question": "Are flights and accommodations included in packages?",
+                "answer": "Yes, standard packages include handpicked hotel accommodations and curated excursions. Direct flight additions can be customized upon request during the booking process."
+              },
+              {
+                "id": "03",
+                "question": "What is the cancellation and refund policy?",
+                "answer": "Full refunds are available for cancellations made 15 days prior to departure. Partial refunds or travel credit vouchers are issued for cancellations closer to the travel date."
+              },
+              {
+                "id": "04",
+                "question": "Which international destinations do you cover?",
+                "answer": "We offer tour packages across Europe, Asia, North America, South America, Africa, and Australia, including custom island getaways and mountain trekking trips."
+              },
+              {
+                "id": "05",
+                "question": "How can I request a customized travel itinerary?",
+                "answer": "You can customize your travel itinerary by selecting 'Custom Tour Request' on our contact page or reaching out directly to our 24/7 travel experts."
+              },
+              {
+                "id": "06",
+                "question": "Will my personal data and payment details be safe?",
+                "answer": "Absolutely. We use bank-grade SSL encryption and certified secure payment gateways to safeguard your personal information and transactions."
+              },
+              {
+                "id": "07",
+                "question": "What payment methods do you accept?",
+                "answer": "We accept major Credit/Debit cards, PayPal, Apple Pay, Net Banking, and flexible installment options (EMI) for luxury travel packages."
+              },
+              {
+                "id": "08",
+                "question": "Can I book a trip without an advance reservation?",
+                "answer": "Yes! Last-minute travel bookings are accepted based on flight and hotel availability. Contact our emergency support hotline for quick assistance."
+              },
+              {
+                "id": "09",
+                "question": "Do you offer travel insurance coverage?",
+                "answer": "Yes, optional medical, trip cancellation, and lost baggage travel insurance plans are available with every booking."
+              },
+              {
+                "id": "10",
+                "question": "What happens if a trip is rescheduled due to weather?",
+                "answer": "If extreme weather forces a itinerary change, we offer flexible free rescheduling, alternative destinations, or a travel credit voucher."
+              }
+            ],
+            "supportBar": {
+              "eyebrow": "STILL HAVE QUESTIONS?",
+              "title": "We're Here to Help!",
+              "subtitle": "Can't find what you're looking for? Our travel support team is ready to assist you with any questions.",
+              "phone": "+91 98765 43210",
+              "email": "support@travelix.com",
+              "chatText": "Live Chat",
+              "chatSubtext": "Chat with our team",
+              "buttonText": "Contact Us"
+            }
+          }
+        }
+      },
+      "Partners": {
+        "variants": {
+          "TravelPartners1": {
+            "banner": {
+              "title": "Our",
+              "highlightedTitle": "Partners",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Our Partners", "href": "/partners" }
+              ]
+            },
+            "header": {
+              "eyebrow": "STRONGER TOGETHER",
+              "title": {
+                "normal": "Our",
+                "highlighted": "Partners"
+              },
+              "subtitle": "We collaborate with trusted global partners to bring you the best travel experiences, exclusive deals, and seamless services across the world."
+            },
+            "scriptTexts": {
+              "topRight": "Travel Beyond Boundaries",
+              "bottomLeft": "Explore More Together",
+              "bottomRight": "New Places Stronger Together"
+            },
+            "partners": [
+              {
+                "id": 1,
+                "name": "Emirates",
+                "category": "Airlines",
+                "logo": "/partners/emirates.jpg"
+              },
+              {
+                "id": 2,
+                "name": "Qatar Airways",
+                "category": "Airlines",
+                "logo": "/partners/qatar.jpg"
+              },
+              {
+                "id": 3,
+                "name": "Singapore Airlines",
+                "category": "Airlines",
+                "logo": "/partners/singapur.jpg"
+              },
+              {
+                "id": 4,
+                "name": "Thai Airways",
+                "category": "Airlines",
+                "logo": "/partners/thai.jpg"
+              },
+              {
+                "id": 5,
+                "name": "Turkish Airlines",
+                "category": "Airlines",
+                "logo": "/partners/turkish.jpg"
+              },
+              {
+                "id": 6,
+                "name": "British Airways",
+                "category": "Airlines",
+                "logo": "/partners/british.jpg"
+              },
+              {
+                "id": 7,
+                "name": "Air India",
+                "category": "Airlines",
+                "logo": "/partners/india.jpg"
+              },
+              {
+                "id": 8,
+                "name": "Malaysia Airlines",
+                "category": "Airlines",
+                "logo": "/partners/malasia.jpg"
+              },
+              {
+                "id": 9,
+                "name": "IndiGo",
+                "category": "Airlines",
+                "logo": "/partners/indogo.jpg"
+              },
+              {
+                "id": 10,
+                "name": "Vistara",
+                "category": "Airlines",
+                "logo": "/partners/vistara.jpg"
+              },
+              {
+                "id": 11,
+                "name": "SpiceJet",
+                "category": "Airlines",
+                "logo": "/partners/spicejet.jpg"
+              },
+              {
+                "id": 12,
+                "name": "Akasa Air",
+                "category": "Airlines",
+                "logo": "/partners/akasa.jpg"
+              }
+            ],
+            "features": [
+              {
+                "id": 1,
+                "icon": "Handshake",
+                "title": "Trusted Partnerships",
+                "description": "Building strong global connections"
+              },
+              {
+                "id": 2,
+                "icon": "Globe",
+                "title": "Better Experiences",
+                "description": "More choices for your journey"
+              },
+              {
+                "id": 3,
+                "icon": "ShieldCheck",
+                "title": "Reliable Services",
+                "description": "Your travel, our commitment"
+              },
+              {
+                "id": 4,
+                "icon": "Users",
+                "title": "A Stronger Travel Community",
+                "description": "Together we make the world closer"
+              }
+            ],
+            "images": {
+              "partnersMap": "/travel/partnersmap.jpg",
+              "citySilhouette": "/travel/city.jpg"
+            }
+          }
+        }
+      },
+      "Legal": {
+        "variants": {
+          "privacyPolicy": {
+            "banner": {
+              "title": "Privacy",
+              "highlightedTitle": "Policy",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Privacy Policy", "href": "/privacy" }
+              ]
+            },
+            "title": "Privacy Policy",
+            "lastUpdated": "Last Updated: 01 January, 2025",
+            "sections": [
+              {
+                "id": "1",
+                "number": "1.",
+                "heading": "Information We Collect",
+                "description": "We collect information when you:",
+                "bullets": [
+                  "Book tours or create an account",
+                  "Subscribe to our newsletter",
+                  "Contact our customer service",
+                  "Participate in surveys or promotions"
+                ],
+                "footerText": "This may include: name, email, phone number, payment details, passport information (for tours), and travel preferences."
+              },
+              {
+                "id": "2",
+                "number": "2.",
+                "heading": "How We Use Your Information",
+                "bullets": [
+                  "Process bookings and provide tour services",
+                  "Communicate about your itinerary",
+                  "Improve our services and website",
+                  "Send marketing communications (with consent)",
+                  "Comply with legal requirementss"
+                ]
+              },
+              {
+                "id": "3",
+                "number": "3.",
+                "heading": "Data Sharing",
+                "description": "We only share data with:",
+                "bullets": [
+                  "Tour operators and accommodation providers necessary for your trip",
+                  "Payment processors (we don't store credit card details)",
+                  "Contact our customer service",
+                  "Legal authorities when required"
+                ]
+              },
+              {
+                "id": "4",
+                "number": "4.",
+                "heading": "Your Rights",
+                "description": "You have the right to:",
+                "bullets": [
+                  "Access, correct, or delete your personal data",
+                  "Withdraw consent for marketing",
+                  "Lodge complaints with data protection authorities"
+                ]
+              },
+              {
+                "id": "5",
+                "number": "5.",
+                "heading": "Security Measures",
+                "description": "We implement SSL encryption, regular security audits, and restrict access to sensitive data."
+              },
+              {
+                "id": "6",
+                "number": "6.",
+                "heading": "Cookies",
+                "description": "Our website uses cookies to improve user experience. You can manage preferences in your browser settings."
+              },
+              {
+                "id": "7",
+                "number": "7.",
+                "heading": "Contact Us",
+                "description": "For privacy-related inquiries:",
+                "contactEmail": "hello@travlix.com"
+              }
+            ]
+          },
+          "termsConditions": {
+            "banner": {
+              "title": "Terms &",
+              "highlightedTitle": "Conditions",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                {
+                  "label": "Terms & Conditions",
+                  "href": "/terms"
+                }
+              ]
+            },
+            "title": "Terms & Conditions",
+            "lastUpdated": "Last Updated: 01 January, 2025",
+            "sections": [
+              {
+                "id": "1",
+                "number": "1.",
+                "heading": "Information We Collect",
+                "description": "We collect information when you:",
+                "bullets": [
+                  "Book tours or create an account",
+                  "Subscribe to our newsletter",
+                  "Contact our customer service",
+                  "Participate in surveys or promotions"
+                ],
+                "footerText": "This may include: name, email, phone number, payment details, passport information (for tours), and travel preferences."
+              },
+              {
+                "id": "2",
+                "number": "2.",
+                "heading": "How We Use Your Information",
+                "bullets": [
+                  "Process bookings and provide tour services",
+                  "Communicate about your itinerary",
+                  "Improve our services and website",
+                  "Send marketing communications (with consent)",
+                  "Comply with legal requirementss"
+                ]
+              },
+              {
+                "id": "3",
+                "number": "3.",
+                "heading": "Data Sharing",
+                "description": "We only share data with:",
+                "bullets": [
+                  "Tour operators and accommodation providers necessary for your trip",
+                  "Payment processors (we don't store credit card details)",
+                  "Contact our customer service",
+                  "Legal authorities when required"
+                ]
+              },
+              {
+                "id": "4",
+                "number": "4.",
+                "heading": "Your Rights",
+                "description": "You have the right to:",
+                "bullets": [
+                  "Access, correct, or delete your personal data",
+                  "Withdraw consent for marketing",
+                  "Lodge complaints with data protection authorities"
+                ]
+              },
+              {
+                "id": "5",
+                "number": "5.",
+                "heading": "Security Measures",
+                "description": "We implement SSL encryption, regular security audits, and restrict access to sensitive data."
+              },
+              {
+                "id": "6",
+                "number": "6.",
+                "heading": "Cookies",
+                "description": "Our website uses cookies to improve user experience. You can manage preferences in your browser settings."
+              },
+              {
+                "id": "7",
+                "number": "7.",
+                "heading": "Contact Us",
+                "description": "For privacy-related inquiries:",
+                "contactEmail": "hello@travlix.com"
+              }
+            ]
+          },
+          "refundPolicy": {
+            "banner": {
+              "title": "Refund &",
+              "highlightedTitle": "Cancellation",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Refund Policy", "href": "/refund" }
+              ]
+            },
+            "title": "Refund & Cancellation Policy",
+            "lastUpdated": "Last Updated: 01 January, 2025",
+            "sections": [
+              {
+                "id": "1",
+                "number": "1.",
+                "heading": "Information We Collect",
+                "description": "We collect information when you:",
+                "bullets": [
+                  "Book tours or create an account",
+                  "Subscribe to our newsletter",
+                  "Contact our customer service",
+                  "Participate in surveys or promotions"
+                ],
+                "footerText": "This may include: name, email, phone number, payment details, passport information (for tours), and travel preferences."
+              },
+              {
+                "id": "2",
+                "number": "2.",
+                "heading": "How We Use Your Information",
+                "bullets": [
+                  "Process bookings and provide tour services",
+                  "Communicate about your itinerary",
+                  "Improve our services and website",
+                  "Send marketing communications (with consent)",
+                  "Comply with legal requirementss"
+                ]
+              },
+              {
+                "id": "3",
+                "number": "3.",
+                "heading": "Data Sharing",
+                "description": "We only share data with:",
+                "bullets": [
+                  "Tour operators and accommodation providers necessary for your trip",
+                  "Payment processors (we don't store credit card details)",
+                  "Contact our customer service",
+                  "Legal authorities when required"
+                ]
+              },
+              {
+                "id": "4",
+                "number": "4.",
+                "heading": "Your Rights",
+                "description": "You have the right to:",
+                "bullets": [
+                  "Access, correct, or delete your personal data",
+                  "Withdraw consent for marketing",
+                  "Lodge complaints with data protection authorities"
+                ]
+              },
+              {
+                "id": "5",
+                "number": "5.",
+                "heading": "Security Measures",
+                "description": "We implement SSL encryption, regular security audits, and restrict access to sensitive data."
+              },
+              {
+                "id": "6",
+                "number": "6.",
+                "heading": "Cookies",
+                "description": "Our website uses cookies to improve user experience. You can manage preferences in your browser settings."
+              },
+              {
+                "id": "7",
+                "number": "7.",
+                "heading": "Contact Us",
+                "description": "For privacy-related inquiries:",
+                "contactEmail": "hello@travlix.com"
+              }
+            ]
+          },
+          "paymentPolicy": {
+            "banner": {
+              "title": "Payment",
+              "highlightedTitle": "Policy",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Payment Policy", "href": "/payment" }
+              ]
+            },
+            "title": "Payment Policy",
+            "lastUpdated": "Last Updated: 01 January, 2025",
+            "sections": [
+              {
+                "id": "1",
+                "number": "1.",
+                "heading": "Information We Collect",
+                "description": "We collect information when you:",
+                "bullets": [
+                  "Book tours or create an account",
+                  "Subscribe to our newsletter",
+                  "Contact our customer service",
+                  "Participate in surveys or promotions"
+                ],
+                "footerText": "This may include: name, email, phone number, payment details, passport information (for tours), and travel preferences."
+              },
+              {
+                "id": "2",
+                "number": "2.",
+                "heading": "How We Use Your Information",
+                "bullets": [
+                  "Process bookings and provide tour services",
+                  "Communicate about your itinerary",
+                  "Improve our services and website",
+                  "Send marketing communications (with consent)",
+                  "Comply with legal requirementss"
+                ]
+              },
+              {
+                "id": "3",
+                "number": "3.",
+                "heading": "Data Sharing",
+                "description": "We only share data with:",
+                "bullets": [
+                  "Tour operators and accommodation providers necessary for your trip",
+                  "Payment processors (we don't store credit card details)",
+                  "Contact our customer service",
+                  "Legal authorities when required"
+                ]
+              },
+              {
+                "id": "4",
+                "number": "4.",
+                "heading": "Your Rights",
+                "description": "You have the right to:",
+                "bullets": [
+                  "Access, correct, or delete your personal data",
+                  "Withdraw consent for marketing",
+                  "Lodge complaints with data protection authorities"
+                ]
+              },
+              {
+                "id": "5",
+                "number": "5.",
+                "heading": "Security Measures",
+                "description": "We implement SSL encryption, regular security audits, and restrict access to sensitive data."
+              },
+              {
+                "id": "6",
+                "number": "6.",
+                "heading": "Cookies",
+                "description": "Our website uses cookies to improve user experience. You can manage preferences in your browser settings."
+              },
+              {
+                "id": "7",
+                "number": "7.",
+                "heading": "Contact Us",
+                "description": "For privacy-related inquiries:",
+                "contactEmail": "hello@travlix.com"
+              }
+            ]
           }
         }
       }

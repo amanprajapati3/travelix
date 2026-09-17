@@ -55,7 +55,7 @@ export default function Banner({
       <div className="relative z-20 mx-auto max-w-[1300px] w-full px-4 sm:px-6 lg:px-10 xl:px-14 flex flex-col justify-center h-full md:pt-10 sm:pt-20 pt-28">
         
         {/* Breadcrumbs */}
-        <nav className="flex items-center gap-2 text-xs sm:text-sm font-medium text-white mb-4 flex-wrap">
+        <nav className="flex items-center gap-2 text-sm sm:text-lg font-medium text-white mb-4 flex-wrap">
           {breadcrumbItems.map((item, index) => {
             const isLast = index === breadcrumbItems.length - 1;
             return (
@@ -80,7 +80,7 @@ export default function Banner({
                 )}
 
                 {!isLast && (
-                  <ChevronRight className="h-3.5 w-3.5 text-amber-400 mx-0.5" />
+                  <ChevronRight className="h-6 w-6 text-amber-400 mx-0.5" />
                 )}
               </React.Fragment>
             );

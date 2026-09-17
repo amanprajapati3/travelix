@@ -114,12 +114,7 @@ const FeatureCircle = ({
   title: string;
 }) => (
   <div className="flex flex-col items-center text-center group">
-    <div
-      className="relative h-16 w-16 sm:h-20 sm:w-20 rounded-full flex items-center justify-center mb-4
-                 bg-[#0b0f17] border-2 border-amber-400/60
-                 
-                 group-hover:border-amber-400 group-hover:shadow-[0_0_0_1px_rgba(251,191,36,0.15),0_22px_50px_-10px_rgba(251,191,36,0.55)]
-                 group-hover:-translate-y-1 transition-all duration-300"
+    <div className="relative h-16 w-16 sm:h-20 sm:w-20 rounded-full flex items-center justify-center mb-4 bg-[#0b0f17] border-2 border-amber-400/60 group-hover:border-amber-400 group-hover:shadow-[0_0_0_1px_rgba(251,191,36,0.15),0_22px_50px_-10px_rgba(251,191,36,0.55)] group-hover:-translate-y-1 transition-all duration-300"
     >
       {/* soft inner glow */}
       <div className="absolute inset-0 rounded-full bg-amber-400/[0.06]" />
@@ -173,7 +168,7 @@ export default function Mission() {
   const { banner, missionSection, visionSection } = missionData;
 
   return (
-    <main className="min-h-screen bg-[#05060a] text-white overflow-hidden">
+    <main className="min-h-screen bg-[#011014] text-white overflow-hidden">
       {/* Google Font Import for Allura script font */}
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
@@ -215,9 +210,7 @@ export default function Mission() {
                     className="object-contain "
                   />
                   <span
-                    className="absolute inset-0 flex flex-col items-center justify-center
-                               font-allura font-normal text-xl sm:text-3xl leading-[0.9]
-                               transform -rotate-3 text-slate-950 text-center px-4"
+                    className="absolute inset-0 flex flex-col items-center justify-center font-allura font-normal text-xl sm:text-3xl leading-[0.9] transform -rotate-3 text-slate-950 text-center px-4"
                   >
                     Travel
                     <br />
@@ -292,8 +285,7 @@ export default function Mission() {
               {/* Script text overlaid directly on the image, left-aligned, transparent bg using Allura font */}
               <div className="absolute bottom-20 left-6 sm:left-28 md:left-12 -rotate-6 z-20 pointer-events-none  max-w-[140px]">
                 <p
-                  className="font-allura font-normal text-white text-3xl sm:text-4xl leading-[1.05]
-                             drop-shadow-[0_3px_10px_rgba(0,0,0,0.85)]"
+                  className="font-allura font-normal text-white text-3xl sm:text-4xl leading-[1.05] drop-shadow-[0_3px_10px_rgba(0,0,0,0.85)]"
                 >
                   New Places
                   <br />

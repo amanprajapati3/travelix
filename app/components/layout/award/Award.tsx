@@ -16,7 +16,7 @@ export default function Award() {
   const { banner, achievementsSection, certificationsSection } = awardData;
 
   return (
-    <main className="min-h-screen bg-[#05060a] text-white overflow-hidden">
+    <main className="min-h-screen bg-[#011014] text-white overflow-hidden">
       
       {/* 1. REUSABLE BANNER */}
       <Banner
@@ -91,7 +91,7 @@ export default function Award() {
       </section>
 
       {/* 3. OUR CERTIFICATIONS SECTION */}
-      <section className="relative w-full py-8 bg-[#070a10]/60 border-t border-white/5">
+      <section className="relative w-full py-8 bg-[#011014] border-t border-white/5">
         <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10 xl:px-14">
           
           {/* Section Header */}

@@ -23,6 +23,8 @@ export type TravelPackagesData =
   typeof travelData.TravelIndustries.sections.Packages.variants.TravelPackages1;
 export type TravelServicesData =
   typeof travelData.TravelIndustries.sections.Services.variants.TravelServices1;
+export type TravelTeamData =
+  typeof travelData.TravelIndustries.sections.Team.variants.TravelTeam1;
 export type TravelOpportunityData =
   typeof travelData.TravelIndustries.sections.Opportunity.variants.TravelOpportunity1;
 export type TravelCtaBannerData =
@@ -37,15 +39,28 @@ export type TravelProcessData =
   typeof travelData.TravelIndustries.sections.Process.variants.TravelProcess1;
 export type TravelMissionData =
   typeof travelData.TravelIndustries.sections.Mission.variants.TravelMission1;
-export type TravelMissionFeature =
+export type TravelLegalData =
+  typeof travelData.TravelIndustries.sections.Legal.variants.privacyPolicy;
+  export type TravelMissionFeature =
   TravelMissionData["missionSection"]["features"][number];
 export type TravelAwardsData =
   typeof travelData.TravelIndustries.sections.Awards.variants.TravelAwards1;
-
-export type TravelDestinationItem =
+export type TravelContactData =
+  typeof travelData.TravelIndustries.sections.Contact.variants.TravelContact1;
+export type TravelPartnersData =
+  typeof travelData.TravelIndustries.sections.Partners.variants.TravelPartners1;
+export type PartnerItem = TravelPartnersData["partners"][number];
+export type PartnerFeature = TravelPartnersData["features"][number];
+  export type TravelDestinationItem =
   TravelDestinationsData["destinations"][number];
+export type TravelFaqData =
+  typeof travelData.TravelIndustries.sections.Faq.variants.TravelFaq1;
+
+  export type FaqItem = TravelFaqData["faqs"][number];
+export type FaqLeftFeature = TravelFaqData["leftFeatures"][number];
 export type TravelPackageItem = TravelPackagesData["packages"][number];
 export type TravelServiceItem = TravelServicesData["services"][number];
+export type TravelTeamMember = TravelTeamData["members"][number];
 export type TravelOpportunityBullet =
   TravelOpportunityData["bulletPoints"][number];
 export type TravelCtaStat = TravelCtaBannerData["stats"][number];
@@ -57,7 +72,7 @@ export type TravelFooterColumn = TravelFooterData["columns"][number];
 export type TravelFooterLink = TravelFooterColumn["links"][number];
 export type TravelChooseUsItem = TravelChooseUsData["items"][number];
 export type TravelProcessItem = TravelProcessData["steps"][number];
-
+export type TravelContactFeatureItem = TravelContactData["features"][number];
 const sec = travelData.TravelIndustries.sections;
 
 export const site = {
@@ -67,6 +82,7 @@ export const site = {
   destinations: sec.Destinations.variants.TravelDestinations1,
   packages: sec.Packages.variants.TravelPackages1,
   services: sec.Services.variants.TravelServices1,
+  team: sec.Team.variants.TravelTeam1,
   opportunity: sec.Opportunity.variants.TravelOpportunity1,
   ctaBanner: sec.CtaBanner.variants.TravelCtaBanner1,
   testimonial: sec.Testimonial.variants.TravelTestimonial1,
@@ -75,6 +91,12 @@ export const site = {
   process: sec.Process.variants.TravelProcess1,
   mission: sec.Mission.variants.TravelMission1,
   awards: sec.Awards.variants.TravelAwards1,
+  contact: sec.Contact.variants.TravelContact1,
+  faq: sec.Faq.variants.TravelFaq1,
+  partners: sec.Partners.variants.TravelPartners1,privacyPolicy: sec.Legal.variants.privacyPolicy,
+  termsConditions: sec.Legal.variants.termsConditions,
+  refundPolicy: sec.Legal.variants.refundPolicy,
+  paymentPolicy: sec.Legal.variants.paymentPolicy,
 };
 
 const destinationItems = sec.Destinations.variants.TravelDestinations1
@@ -85,6 +107,9 @@ const packageItems = sec.Packages.variants.TravelPackages1
 
 const serviceItems = sec.Services.variants.TravelServices1
   .services as TravelServiceItem[];
+
+const teamMembers = sec.Team.variants.TravelTeam1
+  .members as TravelTeamMember[];
 
 const blogPosts = sec.Blog.variants.TravelBlog1.posts as TravelBlogPost[];
 
@@ -118,6 +143,19 @@ export function getServiceById(id: string): TravelServiceItem | null {
 
 export function getServiceIds(): TravelServiceItem[] {
   return serviceItems;
+}
+
+export function getTeamMemberBySlug(slug: string): TravelTeamMember | null {
+  const cleanSlug = slug.replace(/^team\//, "");
+  return (
+    teamMembers.find(
+      (member) => member.slug === cleanSlug || member.slug.endsWith(cleanSlug),
+    ) || null
+  );
+}
+
+export function getTeamMemberSlugs(): TravelTeamMember[] {
+  return teamMembers;
 }
 
 export function getBlogPostBySlug(slug: string): TravelBlogPost | null {
