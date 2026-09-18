@@ -105,8 +105,8 @@
                 "links": [
                   { "label": "Home", "href": "/" },
                   { "label": "About Us", "href": "/about" },
-                  { "label": "Our Services", "href": "/services" },
-                  { "label": "Tour Packages", "href": "/packages" },
+                  { "label": "Gallery", "href": "/gallery" },
+                  { "label": "Tour Packages", "href": "/package" },
                   { "label": "Destinations", "href": "/destination" },
                   { "label": "Award", "href": "/award" },
                   { "label": "Blog", "href": "/blog" },
@@ -147,6 +147,7 @@
                 "links": [
                   { "label": "Team", "href": "/team" },
                   { "label": "Partners", "href": "/partners" },
+                  { "label": "Enquiry Now", "href": "/enquiry" },
                   {
                     "label": "Payment Policy",
                     "href": "/payment"
@@ -431,6 +432,15 @@
       "Packages": {
         "variants": {
           "TravelPackages1": {
+            "banner": {
+              "title": "Tour",
+              "highlightedTitle": "Packages",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Tour Packages" }
+              ]
+            },
             "badge": "EXPLORE OUR PACKAGES",
             "title": {
               "normal": "Find Your",
@@ -452,7 +462,12 @@
                 "duration": "6 Days - 5 Nights",
                 "price": "499",
                 "priceUnit": "/ Traveler",
-                "rating": "4.9"
+                "rating": "4.9",
+                "reviews": 24,
+                "destination": "Maldives",
+                "tourType": "Beach Tour",
+                "durationGroup": "5 - 7 Days",
+                "description": "Swim through turquoise lagoons, unwind on quiet sands and enjoy a beautifully paced island escape."
               },
               {
                 "id": 2,
@@ -463,7 +478,12 @@
                 "duration": "5 Days - 4 Nights",
                 "price": "699",
                 "priceUnit": "/ Traveler",
-                "rating": "4.8"
+                "rating": "4.8",
+                "reviews": 18,
+                "destination": "Dubai",
+                "tourType": "City Tour",
+                "durationGroup": "3 - 5 Days",
+                "description": "Pair iconic city skylines with desert sunsets, luxury shopping and warm Arabian hospitality."
               },
               {
                 "id": 3,
@@ -474,7 +494,252 @@
                 "duration": "7 Days - 6 Nights",
                 "price": "799",
                 "priceUnit": "/ Traveler",
-                "rating": "4.9"
+                "rating": "4.9",
+                "reviews": 31,
+                "destination": "Canada",
+                "tourType": "Adventure Tour",
+                "durationGroup": "5 - 7 Days",
+                "description": "Trade busy streets for alpine lakes, crisp mountain air and unforgettable wilderness trails."
+              },
+              {
+                "id": 4,
+                "slug": "delhi-heritage-trail",
+                "title": "Delhi Heritage Trail",
+                "location": "Delhi, India",
+                "image": "/places/delhi.jpg",
+                "duration": "4 Days - 3 Nights",
+                "price": "349",
+                "priceUnit": "/ Traveler",
+                "rating": "4.8",
+                "reviews": 16,
+                "destination": "Delhi",
+                "tourType": "Heritage Tour",
+                "durationGroup": "3 - 5 Days",
+                "description": "Walk through imperial landmarks, fragrant markets and the living history of India's capital."
+              },
+              {
+                "id": 5,
+                "slug": "delhi-to-agra-cultural-journey",
+                "title": "Delhi To Agra Culture",
+                "location": "Delhi, India",
+                "image": "/places/up.jpg",
+                "duration": "6 Days - 5 Nights",
+                "price": "549",
+                "priceUnit": "/ Traveler",
+                "rating": "4.7",
+                "reviews": 12,
+                "destination": "Delhi",
+                "tourType": "Cultural Tour",
+                "durationGroup": "5 - 7 Days",
+                "description": "Discover grand forts, timeless mausoleums and the stories that shaped northern India."
+              },
+              {
+                "id": 6,
+                "slug": "kerala-backwater-retreat",
+                "title": "Kerala Backwater Retreat",
+                "location": "Kerala, India",
+                "image": "/places/kerala.jpg",
+                "duration": "7 Days - 6 Nights",
+                "price": "649",
+                "priceUnit": "/ Traveler",
+                "rating": "4.9",
+                "reviews": 27,
+                "destination": "Kerala",
+                "tourType": "Nature Tour",
+                "durationGroup": "5 - 7 Days",
+                "description": "Drift through palm-fringed backwaters, taste coastal flavours and slow down in Kerala."
+              },
+              {
+                "id": 7,
+                "slug": "kerala-coastal-wellness-escape",
+                "title": "Kerala Coastal Escape",
+                "location": "Kerala, India",
+                "image": "/places/goa.jpg",
+                "duration": "10 Days - 9 Nights",
+                "price": "899",
+                "priceUnit": "/ Traveler",
+                "rating": "4.8",
+                "reviews": 21,
+                "destination": "Kerala",
+                "tourType": "Wellness Tour",
+                "durationGroup": "7 - 10 Days",
+                "description": "A restorative journey of Ayurveda, quiet beaches, spice gardens and local cuisine."
+              },
+              {
+                "id": 8,
+                "slug": "himachal-himalayan-trek",
+                "title": "Himalayan Trek",
+                "location": "Himachal Pradesh, India",
+                "image": "/places/hp.jpg",
+                "duration": "8 Days - 7 Nights",
+                "price": "899",
+                "priceUnit": "/ Traveler",
+                "rating": "4.9",
+                "reviews": 19,
+                "destination": "Himachal Pradesh",
+                "tourType": "Adventure Tour",
+                "durationGroup": "7 - 10 Days",
+                "description": "Follow pine forests and high mountain paths into a rewarding Himalayan adventure."
+              },
+              {
+                "id": 9,
+                "slug": "himachal-valley-discovery",
+                "title": "Himachal Valley Discovery",
+                "location": "Himachal Pradesh, India",
+                "image": "/places/jk.jpg",
+                "duration": "5 Days - 4 Nights",
+                "price": "599",
+                "priceUnit": "/ Traveler",
+                "rating": "4.8",
+                "reviews": 14,
+                "destination": "Himachal Pradesh",
+                "tourType": "Mountain Tour",
+                "durationGroup": "3 - 5 Days",
+                "description": "See dramatic valleys, riverside villages and serene viewpoints on a relaxed mountain route."
+              },
+              {
+                "id": 10,
+                "slug": "goa-sun-and-sand",
+                "title": "Goa Sun And Sand",
+                "location": "Goa, India",
+                "image": "/places/goa.jpg",
+                "duration": "5 Days - 4 Nights",
+                "price": "399",
+                "priceUnit": "/ Traveler",
+                "rating": "4.7",
+                "reviews": 25,
+                "destination": "Goa",
+                "tourType": "Beach Tour",
+                "durationGroup": "3 - 5 Days",
+                "description": "Make room for golden beaches, colourful markets, seafood and easygoing coastal days."
+              },
+              {
+                "id": 11,
+                "slug": "goa-coastal-adventure",
+                "title": "Goa Coastal Adventure",
+                "location": "Goa, India",
+                "image": "/places/bali.png",
+                "duration": "8 Days - 7 Nights",
+                "price": "699",
+                "priceUnit": "/ Traveler",
+                "rating": "4.8",
+                "reviews": 17,
+                "destination": "Goa",
+                "tourType": "Adventure Tour",
+                "durationGroup": "7 - 10 Days",
+                "description": "Combine hidden coves, river adventures and lively nights in one bright coastal itinerary."
+              },
+              {
+                "id": 12,
+                "slug": "kashmir-lakes-and-valleys",
+                "title": "Kashmir Lakes And Valleys",
+                "location": "Jammu & Kashmir, India",
+                "image": "/places/jk.jpg",
+                "duration": "7 Days - 6 Nights",
+                "price": "749",
+                "priceUnit": "/ Traveler",
+                "rating": "4.9",
+                "reviews": 23,
+                "destination": "Jammu & Kashmir",
+                "tourType": "Mountain Tour",
+                "durationGroup": "5 - 7 Days",
+                "description": "Glide across still lakes and wander through flower-filled valleys beneath snowcapped peaks."
+              },
+              {
+                "id": 13,
+                "slug": "kashmir-winter-wonderland",
+                "title": "Kashmir Winter Wonderland",
+                "location": "Jammu & Kashmir, India",
+                "image": "/places/swiss.jpg",
+                "duration": "10 Days - 9 Nights",
+                "price": "999",
+                "priceUnit": "/ Traveler",
+                "rating": "4.8",
+                "reviews": 15,
+                "destination": "Jammu & Kashmir",
+                "tourType": "Adventure Tour",
+                "durationGroup": "7 - 10 Days",
+                "description": "Find snow-dusted landscapes, cosy stays and exhilarating winter experiences in the north."
+              },
+              {
+                "id": 14,
+                "slug": "rajasthan-royal-route",
+                "title": "Rajasthan Royal Route",
+                "location": "Rajasthan, India",
+                "image": "/places/rajesthan.jpg",
+                "duration": "8 Days - 7 Nights",
+                "price": "799",
+                "priceUnit": "/ Traveler",
+                "rating": "4.9",
+                "reviews": 28,
+                "destination": "Rajasthan",
+                "tourType": "Heritage Tour",
+                "durationGroup": "7 - 10 Days",
+                "description": "Stay in royal cities, explore desert forts and experience Rajasthan's vivid hospitality."
+              },
+              {
+                "id": 15,
+                "slug": "rajasthan-desert-safari",
+                "title": "Rajasthan Desert Safari",
+                "location": "Rajasthan, India",
+                "image": "/places/rajesthan.jpg",
+                "duration": "4 Days - 3 Nights",
+                "price": "459",
+                "priceUnit": "/ Traveler",
+                "rating": "4.7",
+                "reviews": 11,
+                "destination": "Rajasthan",
+                "tourType": "Adventure Tour",
+                "durationGroup": "3 - 5 Days",
+                "description": "Cross golden dunes, share an evening campfire and wake up to the quiet of the desert."
+              },
+              {
+                "id": 16,
+                "slug": "bali-family-adventure",
+                "title": "Bali Family Adventure",
+                "location": "Bali, Indonesia",
+                "image": "/places/bali.png",
+                "duration": "8 Days - 7 Nights",
+                "price": "1299",
+                "priceUnit": "/ Family",
+                "rating": "4.9",
+                "reviews": 26,
+                "destination": "Bali",
+                "tourType": "Family Tour",
+                "durationGroup": "7 - 10 Days",
+                "description": "Mix island beaches, gentle adventures and cultural discoveries for a holiday everyone enjoys."
+              },
+              {
+                "id": 17,
+                "slug": "bali-wellness-escape",
+                "title": "Bali Wellness Escape",
+                "location": "Bali, Indonesia",
+                "image": "/places/maldive.jpg",
+                "duration": "6 Days - 5 Nights",
+                "price": "899",
+                "priceUnit": "/ Traveler",
+                "rating": "4.8",
+                "reviews": 20,
+                "destination": "Bali",
+                "tourType": "Wellness Tour",
+                "durationGroup": "5 - 7 Days",
+                "description": "Reset with rainforest mornings, restorative rituals and beautiful sunsets over the island."
+              },
+              {
+                "id": 18,
+                "slug": "paris-art-and-cuisine",
+                "title": "Paris Art And Cuisine",
+                "location": "Paris, France",
+                "image": "/places/paris.jpg",
+                "duration": "6 Days - 5 Nights",
+                "price": "1199",
+                "priceUnit": "/ Traveler",
+                "rating": "4.9",
+                "reviews": 34,
+                "destination": "Paris",
+                "tourType": "City Tour",
+                "durationGroup": "5 - 7 Days",
+                "description": "Pair gallery afternoons with neighbourhood cafés, river walks and the romance of Paris."
               }
             ]
           }
@@ -1518,6 +1783,169 @@
           }
         }
       },
+      "Gallery": {
+        "variants": {
+          "TravelGallery1": {
+            "banner": {
+              "title": "Photo",
+              "highlightedTitle": "Gallery",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Gallery", "href": "/gallery" }
+              ]
+            },
+            "imageSection": {
+              "eyebrow": "OUR GALLERY",
+              "title": {
+                "normal": "Moments We",
+                "highlighted": "Captured"
+              },
+              "subtitle": "A glimpse into the breathtaking destinations and unforgettable journeys we have explored with our travelers across the world.",
+              "images": [
+                {
+                  "id": 1,
+                  "src": "/places/maldive.jpg",
+                  "alt": "Beautiful Maldives beaches and turquoise water",
+                  "caption": "Maldives"
+                },
+                {
+                  "id": 2,
+                  "src": "/places/paris.jpg",
+                  "alt": "Eiffel tower in Paris during sunset",
+                  "caption": "Paris"
+                },
+                {
+                  "id": 3,
+                  "src": "/places/santorini.jpg",
+                  "alt": "White houses of Santorini overlooking the sea",
+                  "caption": "Santorini"
+                },
+                {
+                  "id": 4,
+                  "src": "/places/swiss.jpg",
+                  "alt": "Alpine mountains and lakes of Switzerland",
+                  "caption": "Switzerland"
+                },
+                {
+                  "id": 5,
+                  "src": "/places/japan.jpg",
+                  "alt": "Cherry blossoms and temple in Japan",
+                  "caption": "Japan"
+                },
+                {
+                  "id": 6,
+                  "src": "/places/kerala.jpg",
+                  "alt": "Backwaters and houseboats of Kerala",
+                  "caption": "Kerala"
+                },
+                {
+                  "id": 7,
+                  "src": "/places/goa.jpg",
+                  "alt": "Sunset beaches and palm trees of Goa",
+                  "caption": "Goa"
+                },
+                {
+                  "id": 8,
+                  "src": "/places/rajesthan.jpg",
+                  "alt": "Historic forts and palaces of Rajasthan",
+                  "caption": "Rajasthan"
+                },
+                {
+                  "id": 9,
+                  "src": "/places/rome.jpg",
+                  "alt": "Ancient architecture of Rome",
+                  "caption": "Rome"
+                },
+                {
+                  "id": 10,
+                  "src": "/places/london.jpg",
+                  "alt": "Big Ben and London city skyline",
+                  "caption": "London"
+                },
+                {
+                  "id": 11,
+                  "src": "/places/sydney.jpg",
+                  "alt": "Sydney opera house and harbor",
+                  "caption": "Sydney"
+                },
+                {
+                  "id": 12,
+                  "src": "/places/bali.png",
+                  "alt": "Tropical landscapes and temples of Bali",
+                  "caption": "Bali"
+                }
+              ]
+            },
+            "videoSection": {
+              "eyebrow": "OUR VIDEOS",
+              "title": {
+                "normal": "Watch Our",
+                "highlighted": "Journeys"
+              },
+              "subtitle": "Step into our travels through these videos and experience the magic of every destination we bring to life.",
+              "videos": [
+                {
+                  "id": 1,
+                  "thumbnail": "/travel/1.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "Big Buck Bunny",
+                  "duration": "09:56"
+                },
+                {
+                  "id": 2,
+                  "thumbnail": "/travel/2.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "Elephants Dream",
+                  "duration": "10:53"
+                },
+                {
+                  "id": 3,
+                  "thumbnail": "/travel/3.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "For Bigger Blazes",
+                  "duration": "00:15"
+                },
+                {
+                  "id": 4,
+                  "thumbnail": "/travel/4.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "For Bigger Escapes",
+                  "duration": "00:15"
+                },
+                {
+                  "id": 5,
+                  "thumbnail": "/travel/5.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "For Bigger Fun",
+                  "duration": "01:00"
+                },
+                {
+                  "id": 6,
+                  "thumbnail": "/travel/6.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "For Bigger Joyrides",
+                  "duration": "00:15"
+                },
+                {
+                  "id": 7,
+                  "thumbnail": "/travel/7.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "For Bigger Meltdowns",
+                  "duration": "00:15"
+                },
+                {
+                  "id": 8,
+                  "thumbnail": "/travel/8.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "Sintel",
+                  "duration": "14:48"
+                }
+              ]
+            }
+          }
+        }
+      },
       "Legal": {
         "variants": {
           "privacyPolicy": {
@@ -1850,6 +2278,100 @@
                 "contactEmail": "hello@travlix.com"
               }
             ]
+          }
+        }
+      },
+      "Enquiry": {
+        "variants": {
+          "TravelEnquiry1": {
+            "banner": {
+              "title": "Enquiry",
+              "highlightedTitle": "Now",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Enquiry Now", "href": "/enquiry" }
+              ]
+            },
+            "formHeader": {
+              "eyebrow": "TRAVEL ENQUIRY",
+              "title": {
+                "normal": "Get a",
+                "highlighted": "Free Quote"
+              },
+              "subtitle": "Fill in the details below and our travel expert will contact you shortly with the travel options."
+            },
+            "whyEnquire": {
+              "title": "Why Enquire With Us?",
+              "items": [
+                {
+                  "id": 1,
+                  "icon": "Headphones",
+                  "title": "Personalized Assistance",
+                  "description": "Get expert advice tailored to your needs."
+                },
+                {
+                  "id": 2,
+                  "icon": "Tag",
+                  "title": "Best Price Options",
+                  "description": "We offer the most competitive rates."
+                },
+                {
+                  "id": 3,
+                  "icon": "Calendar",
+                  "title": "Quick Response",
+                  "description": "Our team will get back to you within 24 hours."
+                },
+                {
+                  "id": 4,
+                  "icon": "ShieldCheck",
+                  "title": "Safe & Secure",
+                  "description": "Your information is always protected with us."
+                }
+              ]
+            },
+            "needHelp": {
+              "title": "Need Help?",
+              "subtitle": "Our travel experts are here to assist you.",
+              "contacts": [
+                {
+                  "id": 1,
+                  "icon": "Phone",
+                  "title": "+1 123 456 7890",
+                  "subtitle": "Mon - Sat, 9:00 AM - 7:00 PM"
+                },
+                {
+                  "id": 2,
+                  "icon": "Mail",
+                  "title": "support@wanderly.com",
+                  "subtitle": "We reply within 24 hours"
+                },
+                {
+                  "id": 3,
+                  "icon": "MapPin",
+                  "title": "123 Travel Street,",
+                  "subtitle": "New Delhi, India"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "variants": {
+          "Travel4041": {
+            "eyebrow": "OOPS!",
+            "code": "404",
+            "title": {
+              "normal": "Page",
+              "highlighted": "Not Found"
+            },
+            "description": "Looks like this destination doesn't exist! The page you are looking for might have been moved, deleted, or you entered the wrong URL.",
+            "button": {
+              "label": "Back To Home",
+              "href": "/"
+            },
+            "backgroundImage": "/travel/travel_hero_clean.png"
           }
         }
       }

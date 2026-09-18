@@ -43,19 +43,28 @@ export type TravelLegalData =
   typeof travelData.TravelIndustries.sections.Legal.variants.privacyPolicy;
   export type TravelMissionFeature =
   TravelMissionData["missionSection"]["features"][number];
-export type TravelAwardsData =
+export type TravelNotFoundData =
+  typeof travelData.TravelIndustries.sections.NotFound.variants.Travel4041;
+  export type TravelAwardsData =
   typeof travelData.TravelIndustries.sections.Awards.variants.TravelAwards1;
 export type TravelContactData =
   typeof travelData.TravelIndustries.sections.Contact.variants.TravelContact1;
 export type TravelPartnersData =
   typeof travelData.TravelIndustries.sections.Partners.variants.TravelPartners1;
 export type PartnerItem = TravelPartnersData["partners"][number];
+    export type TravelGalleryData =
+  typeof travelData.TravelIndustries.sections.Gallery.variants.TravelGallery1;
+export type GalleryImageItem =
+  TravelGalleryData["imageSection"]["images"][number];
+export type GalleryVideoItem =
+  TravelGalleryData["videoSection"]["videos"][number];
 export type PartnerFeature = TravelPartnersData["features"][number];
   export type TravelDestinationItem =
   TravelDestinationsData["destinations"][number];
 export type TravelFaqData =
   typeof travelData.TravelIndustries.sections.Faq.variants.TravelFaq1;
-
+export type TravelEnquiryData =
+  typeof travelData.TravelIndustries.sections.Enquiry.variants.TravelEnquiry1;
   export type FaqItem = TravelFaqData["faqs"][number];
 export type FaqLeftFeature = TravelFaqData["leftFeatures"][number];
 export type TravelPackageItem = TravelPackagesData["packages"][number];
@@ -93,10 +102,13 @@ export const site = {
   awards: sec.Awards.variants.TravelAwards1,
   contact: sec.Contact.variants.TravelContact1,
   faq: sec.Faq.variants.TravelFaq1,
-  partners: sec.Partners.variants.TravelPartners1,privacyPolicy: sec.Legal.variants.privacyPolicy,
+  partners: sec.Partners.variants.TravelPartners1,
+  gallery: sec.Gallery.variants.TravelGallery1,privacyPolicy: sec.Legal.variants.privacyPolicy,
   termsConditions: sec.Legal.variants.termsConditions,
   refundPolicy: sec.Legal.variants.refundPolicy,
   paymentPolicy: sec.Legal.variants.paymentPolicy,
+  enquiry: sec.Enquiry.variants.TravelEnquiry1,
+  notFound: sec.NotFound.variants.Travel4041,
 };
 
 const destinationItems = sec.Destinations.variants.TravelDestinations1
@@ -135,6 +147,14 @@ export function getPackageBySlug(slug: string): TravelPackageItem | null {
 
 export function getPackageSlugs(): TravelPackageItem[] {
   return packageItems;
+}
+
+export function getPackageFilters() {
+  return {
+    destinations: [...new Set(packageItems.map((pkg) => pkg.destination))],
+    tourTypes: [...new Set(packageItems.map((pkg) => pkg.tourType))],
+    durations: [...new Set(packageItems.map((pkg) => pkg.durationGroup))],
+  };
 }
 
 export function getServiceById(id: string): TravelServiceItem | null {

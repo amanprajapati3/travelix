@@ -37,7 +37,7 @@ export default function Choose({ hideBanner = false }: ChooseProps) {
   const rightItems = items.slice(2, 4);
 
   return (
-    <main className=" bg-[#011014] text-white">
+    <main className=" bg-[#000000] text-white">
       {!hideBanner && (
         <Banner
           title={banner.title}

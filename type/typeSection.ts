@@ -174,6 +174,11 @@ export interface TravelPackageItem {
   price: string;
   priceUnit: string;
   rating: string;
+  reviews: number;
+  destination: string;
+  tourType: string;
+  durationGroup: string;
+  description: string;
 }
 
 export interface TravelPackagesTitle {
@@ -183,6 +188,12 @@ export interface TravelPackagesTitle {
 }
 
 export interface TravelPackagesData {
+  banner?: {
+    title: string;
+    highlightedTitle?: string;
+    backgroundImage: string;
+    breadcrumbItems: BreadcrumbItem[];
+  };
   badge: string;
   title: TravelPackagesTitle;
   desc: string;
@@ -615,6 +626,45 @@ export interface TravelPartnersData {
     citySilhouette: string;
   };
 }
+export interface GalleryImageItem {
+  id: number;
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+export interface GalleryVideoItem {
+  id: number;
+  thumbnail: string;
+  videoSrc: string;
+  title?: string;
+  duration?: string;
+}
+
+export interface GallerySectionHeading {
+  eyebrow: string;
+  title: {
+    normal: string;
+    highlighted: string;
+  };
+  subtitle: string;
+}
+
+export interface TravelGalleryData {
+  banner: {
+    title: string;
+    highlightedTitle: string;
+    backgroundImage: string;
+    breadcrumbItems: { label: string; href?: string }[];
+  };
+  imageSection: GallerySectionHeading & {
+    images: GalleryImageItem[];
+  };
+  videoSection: GallerySectionHeading & {
+    videos: GalleryVideoItem[];
+  };
+}
+
 export interface LegalSectionItem {
   id: string;
   number?: string;
@@ -635,4 +685,55 @@ export interface LegalPageData {
   title: string;
   lastUpdated: string;
   sections: LegalSectionItem[];
+}
+
+export interface EnquiryFeature {
+  id: number;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface EnquiryContact {
+  id: number;
+  icon: string;
+  title: string;
+  subtitle: string;
+}
+
+export interface TravelEnquiryData {
+  banner: {
+    title: string;
+    highlightedTitle: string;
+    backgroundImage: string;
+    breadcrumbItems: { label: string; href?: string }[];
+  };
+  formHeader: {
+    eyebrow: string;
+    title: { normal: string; highlighted: string };
+    subtitle: string;
+  };
+  whyEnquire: {
+    title: string;
+    items: EnquiryFeature[];
+  };
+  needHelp: {
+    title: string;
+    subtitle: string;
+    contacts: EnquiryContact[];
+  };
+}
+export interface TravelNotFoundData {
+  eyebrow: string;
+  code: string;
+  title: {
+    normal: string;
+    highlighted: string;
+  };
+  description: string;
+  button: {
+    label: string;
+    href: string;
+  };
+  backgroundImage: string;
 }
