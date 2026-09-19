@@ -40,7 +40,7 @@ export default function Blog() {
                   {badge}
                 </span>
               )}
-              <h2 className="mb-3 max-w-2xl text-[clamp(2.2rem,4vw,2rem)] uppercase leading-tight tracking-wide">
+              <h2 className="mb-3 max-w-2xl text-[clamp(2.2rem,4vw,2.5rem)] font-semibold leading-tight tracking-wide">
                 <span className="text-white">{title.normal}</span>{" "}
                 <span className="relative inline-block text-amber-400">
                   {title.highlighted}

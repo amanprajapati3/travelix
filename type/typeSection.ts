@@ -181,6 +181,28 @@ export interface TravelPackageItem {
   description: string;
 }
 
+export interface TravelTourItineraryItem {
+  day: string;
+  title: string;
+  description: string;
+}
+
+export interface TravelTourFaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface TravelTourDetails {
+  overview: string;
+  difficulty: string;
+  highlights: string[];
+  itinerary: TravelTourItineraryItem[];
+  inclusions: string[];
+  exclusions: string[];
+  gallery: string[];
+  faqs: TravelTourFaqItem[];
+}
+
 export interface TravelPackagesTitle {
   normal: string;
   highlighted: string;
@@ -211,6 +233,13 @@ export interface TravelServiceItem {
   highlightedTitle: string;
   description?: string;
   image: string;
+  detail: {
+    eyebrow: string;
+    intro: string;
+    features: { icon: string; title: string; text: string }[];
+    overview: string;
+    overviewExtra: string;
+  };
   button: CtaButton;
 }
 
@@ -235,6 +264,16 @@ export interface TravelTeamMember {
   name: string;
   role: string;
   image: string;
+  image2:string;
+  bio: string;
+  experience: string;
+  email: string;
+  telephone: string;
+  fax: string;
+  social: {
+    label: string;
+    href: string;
+  }[];
   button: CtaButton;
 }
 
@@ -354,6 +393,13 @@ export interface TravelBlogPost {
   readMoreText: string;
 }
 
+export interface TravelBlogDetail {
+  slug: string;
+  intro: string;
+  sections: { number: string; title: string; body: string }[];
+  quote: string;
+}
+
 export interface TravelBlogData {
   banner?: {
     title: string;
@@ -366,6 +412,7 @@ export interface TravelBlogData {
   desc: string;
   featuredPost: TravelFeaturedBlogPost;
   posts: TravelBlogPost[];
+  blogDetails: TravelBlogDetail[];
 }
 
 export interface ChooseBreadcrumbItem {
@@ -736,4 +783,26 @@ export interface TravelNotFoundData {
     href: string;
   };
   backgroundImage: string;
+}
+
+export interface TravelSitemapData {
+  banner: {
+    title: string;
+    highlightedTitle?: string;
+    backgroundImage: string;
+    breadcrumbItems: BreadcrumbItem[];
+  };
+  eyebrow: string;
+  title: TwoPartTitle;
+  description: string;
+  groups: {
+    title: string;
+    icon: string;
+    links: SitemapLink[];
+  }[];
+}
+
+export interface SitemapLink {
+  label: string;
+  href: string;
 }

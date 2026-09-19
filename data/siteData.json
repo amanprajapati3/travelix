@@ -117,29 +117,28 @@
               {
                 "title": "Our Services",
                 "links": [
-                  { "label": "Family Tours", "href": "/services/family-tours" },
+                  { "label": "Hotels", "href": "/services/hotels" },
                   {
-                    "label": "Honeymoon Tours",
-                    "href": "/services/honeymoon-tours"
+                    "label": "Insurance",
+                    "href": "services/insurance"
                   },
                   { "label": "Group Tours", "href": "/services/group-tours" },
                   {
-                    "label": "Corporate Tours",
-                    "href": "/services/corporate-tours"
+                    "label": "Tour Packages",
+                    "href": "/services/tour-packages"
                   },
                   {
                     "label": "International Tours",
-                    "href": "/services/international-tours"
+                    "href": "/services/airport-transport"
                   },
                   {
-                    "label": "Adventure Tours",
-                    "href": "/services/adventure-tours"
+                    "label": "Custom Itineraries",
+                    "href": "/services/custom-itineraries"
                   },
                   {
-                    "label": "Weekend Getaways",
-                    "href": "/services/weekend-getaways"
-                  },
-                  { "label": "Custom Tours", "href": "/services/custom-tours" }
+                    "label": "Guided Adventure",
+                    "href": "/services/guided-adventures"
+                  }
                 ]
               },
               {
@@ -450,7 +449,7 @@
             "desc": "Discover thoughtfully crafted travel packages designed for unforgettable experiences, from relaxing getaways to thrilling adventures",
             "button": {
               "label": "Read more",
-              "href": "/packages"
+              "href": "/package"
             },
             "packages": [
               {
@@ -768,7 +767,8 @@
                 "title": "Stay in Exceptional",
                 "highlightedTitle": "Hotels",
                 "image": "/travel/1.jpg",
-                "description": "Comprehensive travel insurance for a worry-free journey.",
+                "description": "Handpicked hotels and resorts for a comfortable, memorable stay.",
+                "detail": { "eyebrow": "STAY IN COMFORT", "intro": "Find the right place to rest, recharge and feel at home wherever your journey takes you.", "features": [ { "icon": "star", "title": "Handpicked Stays", "text": "Carefully selected hotels and resorts" }, { "icon": "heart", "title": "Best Locations", "text": "Stay close to the moments that matter" }, { "icon": "shield", "title": "Trusted Quality", "text": "Comfortable stays checked by our team" }, { "icon": "headphones", "title": "Travel Support", "text": "Help whenever you need it" } ], "overview": "Our hotel service takes the guesswork out of choosing where to stay. From boutique hideaways and family-friendly resorts to stylish city hotels, we match every booking to your route, budget and travel style.", "overviewExtra": "We work with trusted properties so you can enjoy thoughtful rooms, welcoming service and a location that makes exploring easier." },
                 "button": {
                   "label": "Explore Now",
                   "href": "/services/hotels"
@@ -782,9 +782,10 @@
                 "highlightedTitle": "Travel Happy",
                 "image": "/travel/2.jpg",
                 "description": "Comprehensive travel insurance for a worry-free journey.",
+                "detail": { "eyebrow": "TRAVEL WITH CONFIDENCE", "intro": "Feel prepared for the unexpected with practical cover and caring support throughout your trip.", "features": [ { "icon": "shield", "title": "Trip Protection", "text": "Support for covered travel disruptions" }, { "icon": "heart", "title": "Medical Assistance", "text": "Guidance when you need care abroad" }, { "icon": "clock", "title": "24/7 Support", "text": "Help from our travel assistance team" }, { "icon": "check", "title": "Clear Options", "text": "Plans explained without the jargon" } ], "overview": "Travel insurance gives your plans an extra layer of confidence. We help you choose practical cover for the kind of journey you are taking, from a short city break to a longer international adventure.", "overviewExtra": "Our team makes the details easy to understand and stays close when plans change, so you can focus on enjoying the experience." },
                 "button": {
                   "label": "Explore Now",
-                  "href": "/services/travel-insurance"
+                  "href": "/services/insurance"
                 }
               },
               {
@@ -795,6 +796,7 @@
                 "highlightedTitle": "With Our Tour Packages",
                 "image": "/travel/3.jpg",
                 "description": "Customized tour packages for families, couples, groups and solo travelers.",
+                "detail": { "eyebrow": "JOURNEYS WORTH REMEMBERING", "intro": "Go further with a considered itinerary, trusted local partners and every important detail arranged for you.", "features": [ { "icon": "map", "title": "Curated Routes", "text": "Well-paced journeys with room to breathe" }, { "icon": "users", "title": "For Every Traveler", "text": "Trips for couples, families and groups" }, { "icon": "star", "title": "Local Highlights", "text": "See more than the usual postcard stops" }, { "icon": "headphones", "title": "On-Trip Support", "text": "A team behind you from start to finish" } ], "overview": "Our tour packages bring together the places, stays and experiences that make a destination feel complete. Each route is planned with a natural rhythm, leaving space for discovery while keeping the practical details in hand.", "overviewExtra": "Choose a ready-made journey or let us shape the pace around your interests, whether that means heritage, food, wildlife, beaches or mountain air." },
                 "button": {
                   "label": "Explore Now",
                   "href": "/services/tour-packages"
@@ -807,6 +809,7 @@
                 "title": "Smooth Rides",
                 "highlightedTitle": "To Your Destination",
                 "description": "Reliable and comfortable airport transfer service, anytime, anywhere.",
+                "detail": { "eyebrow": "ARRIVE WITHOUT THE RUSH", "intro": "Start and finish your journey smoothly with a dependable ride waiting when you need it.", "features": [ { "icon": "clock", "title": "On-Time Pickup", "text": "Planned around your flight schedule" }, { "icon": "car", "title": "Comfortable Rides", "text": "Clean vehicles for an easy transfer" }, { "icon": "map", "title": "Local Drivers", "text": "Knowledgeable drivers who know the way" }, { "icon": "shield", "title": "Reliable Service", "text": "A smooth welcome at every arrival" } ], "overview": "Our airport transport service removes one of the most stressful parts of travel. We coordinate your pickup around your flight, help you reach your hotel comfortably and make sure your return transfer is just as straightforward.", "overviewExtra": "With clear meeting instructions and dependable local drivers, you can step off the plane knowing the next part of your journey is already taken care of." },
                 "image": "/travel/9.jpg",
                 "button": {
                   "label": "Explore Now",
@@ -820,6 +823,7 @@
                 "title": "Trips Made",
                 "highlightedTitle": "Just for You",
                 "description": "Personalized itineraries designed around your interests, pace and travel dreams.",
+                "detail": { "eyebrow": "YOUR JOURNEY, YOUR WAY", "intro": "Build a trip around the things you love, with a pace and personality that feels entirely yours.", "features": [ { "icon": "heart", "title": "Personal Planning", "text": "Every route begins with your ideas" }, { "icon": "map", "title": "Flexible Pace", "text": "Full days or slow mornings, your choice" }, { "icon": "star", "title": "Thoughtful Details", "text": "Meaningful experiences beyond the obvious" }, { "icon": "users", "title": "Expert Guidance", "text": "Advice shaped by real local knowledge" } ], "overview": "A custom itinerary gives you the freedom of independent travel with the confidence of expert planning. We listen to what excites you, understand how you like to travel and turn those details into a route that feels effortless.", "overviewExtra": "From a private food walk to a quiet day beside the sea, every recommendation is chosen to fit your interests rather than someone else's checklist." },
                 "image": "/travel/Travel/wooden-bridge-koh-nangyuan-island-surat-thani-thailand.jpg",
                 "button": {
                   "label": "Explore Now",
@@ -833,6 +837,7 @@
                 "title": "Discover With",
                 "highlightedTitle": "Local Experts",
                 "description": "Meet experienced local guides and experience every destination beyond the usual highlights.",
+                "detail": { "eyebrow": "SEE THE PLACE DIFFERENTLY", "intro": "Travel deeper with people who know the stories, flavours and hidden corners behind every destination.", "features": [ { "icon": "users", "title": "Local Experts", "text": "Guides who bring places to life" }, { "icon": "map", "title": "Beyond Highlights", "text": "Discover the character behind the sights" }, { "icon": "heart", "title": "Real Connections", "text": "Meet communities with respect" }, { "icon": "star", "title": "Memorable Days", "text": "Stories you will carry home" } ], "overview": "Our guided adventures connect you with experienced local experts who know how a destination really moves. Walk beyond the main sights, taste what locals love and understand the stories that give each place its character.", "overviewExtra": "Guides shape each day around your group, keeping the experience engaging, comfortable and respectful of the people and places you visit." },
                 "image": "/travel/Travel/rear-view-back-young-asian-hiking-man-standing-riseup-hands-with-happy-peak-rocky-mountain-copy-space.jpg",
                 "button": {
                   "label": "Explore Now",
@@ -865,6 +870,17 @@
                 "name": "Arjun Mehta",
                 "role": "Founder & CEO",
                 "image": "/person/man1-transparent.png",
+                "image2": "/people/man1.png",
+                "bio": "Rohit Sharma is the founder of our company and has over 12 years of experience in the travel and hospitality industry. He is passionate about creating meaningful travel experiences and believes in delivering personalized services that make every journey memorable. Under his leadership, the company has grown into a trusted brand, helping travelers explore new destinations with ease and confidence. His vision is to connect people with the world through travel, building a community of happy and loyal customers.",
+                "experience": "12 Years",
+                "email": "arjun.mehta@travelix.com",
+                "telephone": "+91 98765 43210",
+                "fax": "+91 11 2345 6789",
+                "social": [
+                  { "label": "LinkedIn", "href": "#" },
+                  { "label": "Instagram", "href": "#" },
+                  { "label": "Facebook", "href": "#" }
+                ],
                 "button": {
                   "label": "View Profile",
                   "href": "/team/arjun-mehta"
@@ -876,6 +892,17 @@
                 "name": "Meera Sharma",
                 "role": "Travel Consultant",
                 "image": "/person/women1-transparent.png",
+                "image2": "/people/women1.png",
+                "bio": "Meera Sharma is the founder of our company and has over 12 years of experience in the travel and hospitality industry. He is passionate about creating meaningful travel experiences and believes in delivering personalized services that make every journey memorable. Under his leadership, the company has grown into a trusted brand, helping travelers explore new destinations with ease and confidence. His vision is to connect people with the world through travel, building a community of happy and loyal customers.",
+                "experience": "8 Years",
+                "email": "meera.sharma@travelix.com",
+                "telephone": "+91 98765 43211",
+                "fax": "+91 11 2345 6790",
+                "social": [
+                  { "label": "LinkedIn", "href": "#" },
+                  { "label": "Instagram", "href": "#" },
+                  { "label": "Facebook", "href": "#" }
+                ],
                 "button": {
                   "label": "View Profile",
                   "href": "/team/meera-sharma"
@@ -887,6 +914,17 @@
                 "name": "Kabir Singh",
                 "role": "Adventure Specialist",
                 "image": "/person/men2-transparent.png",
+                "image2": "/people/men2.png",
+                "bio": "Kabir Singh is the founder of our company and has over 12 years of experience in the travel and hospitality industry. He is passionate about creating meaningful travel experiences and believes in delivering personalized services that make every journey memorable. Under his leadership, the company has grown into a trusted brand, helping travelers explore new destinations with ease and confidence. His vision is to connect people with the world through travel, building a community of happy and loyal customers.",
+                "experience": "9 Years",
+                "email": "kabir.singh@travelix.com",
+                "telephone": "+91 98765 43212",
+                "fax": "+91 11 2345 6791",
+                "social": [
+                  { "label": "LinkedIn", "href": "#" },
+                  { "label": "Instagram", "href": "#" },
+                  { "label": "Facebook", "href": "#" }
+                ],
                 "button": {
                   "label": "View Profile",
                   "href": "/team/kabir-singh"
@@ -898,6 +936,17 @@
                 "name": "Ananya Kapoor",
                 "role": "Experience Curator",
                 "image": "/person/women2-transparent.png",
+                "image2": "/people/women2.png",
+                "bio": "Ananya Kapoor is the founder of our company and has over 12 years of experience in the travel and hospitality industry. He is passionate about creating meaningful travel experiences and believes in delivering personalized services that make every journey memorable. Under his leadership, the company has grown into a trusted brand, helping travelers explore new destinations with ease and confidence. His vision is to connect people with the world through travel, building a community of happy and loyal customers.",
+                "experience": "7 Years",
+                "email": "ananya.kapoor@travelix.com",
+                "telephone": "+91 98765 43213",
+                "fax": "+91 11 2345 6792",
+                "social": [
+                  { "label": "LinkedIn", "href": "#" },
+                  { "label": "Instagram", "href": "#" },
+                  { "label": "Facebook", "href": "#" }
+                ],
                 "button": {
                   "label": "View Profile",
                   "href": "/team/ananya-kapoor"
@@ -909,6 +958,17 @@
                 "name": "Rohan Verma",
                 "role": "Operations Manager",
                 "image": "/person/men3-transparent.png",
+                "image2": "/people/men3.png",
+                "bio": "Rohan Verma is the founder of our company and has over 12 years of experience in the travel and hospitality industry. He is passionate about creating meaningful travel experiences and believes in delivering personalized services that make every journey memorable. Under his leadership, the company has grown into a trusted brand, helping travelers explore new destinations with ease and confidence. His vision is to connect people with the world through travel, building a community of happy and loyal customers.",
+                "experience": "10 Years",
+                "email": "rohan.verma@travelix.com",
+                "telephone": "+91 98765 43214",
+                "fax": "+91 11 2345 6793",
+                "social": [
+                  { "label": "LinkedIn", "href": "#" },
+                  { "label": "Instagram", "href": "#" },
+                  { "label": "Facebook", "href": "#" }
+                ],
                 "button": {
                   "label": "View Profile",
                   "href": "/team/rohan-verma"
@@ -920,6 +980,17 @@
                 "name": "Ishita Rao",
                 "role": "Trip Planner",
                 "image": "/person/women2-transparent.png",
+                "image2": "/people/women2.png",
+                "bio": "Ishita Rao is the founder of our company and has over 12 years of experience in the travel and hospitality industry. He is passionate about creating meaningful travel experiences and believes in delivering personalized services that make every journey memorable. Under his leadership, the company has grown into a trusted brand, helping travelers explore new destinations with ease and confidence. His vision is to connect people with the world through travel, building a community of happy and loyal customers.",
+                "experience": "6 Years",
+                "email": "ishita.rao@travelix.com",
+                "telephone": "+91 98765 43215",
+                "fax": "+91 11 2345 6794",
+                "social": [
+                  { "label": "LinkedIn", "href": "#" },
+                  { "label": "Instagram", "href": "#" },
+                  { "label": "Facebook", "href": "#" }
+                ],
                 "button": {
                   "label": "View Profile",
                   "href": "/team/ishita-rao"
@@ -931,6 +1002,17 @@
                 "name": "Vihaan Joshi",
                 "role": "Destination Expert",
                 "image": "/person/men4-transparent.png",
+                "image2": "/people/men4.png",
+                "bio": "Vihaan Joshi is the founder of our company and has over 12 years of experience in the travel and hospitality industry. He is passionate about creating meaningful travel experiences and believes in delivering personalized services that make every journey memorable. Under his leadership, the company has grown into a trusted brand, helping travelers explore new destinations with ease and confidence. His vision is to connect people with the world through travel, building a community of happy and loyal customers.",
+                "experience": "8 Years",
+                "email": "vihaan.joshi@travelix.com",
+                "telephone": "+91 98765 43216",
+                "fax": "+91 11 2345 6795",
+                "social": [
+                  { "label": "LinkedIn", "href": "#" },
+                  { "label": "Instagram", "href": "#" },
+                  { "label": "Facebook", "href": "#" }
+                ],
                 "button": {
                   "label": "View Profile",
                   "href": "/team/vihaan-joshi"
@@ -942,6 +1024,17 @@
                 "name": "Tara Malhotra",
                 "role": "Guest Relations Lead",
                 "image": "/person/men5-transparent.png",
+                "image2": "/people/men5.png",
+                "bio": "Tara Malhotra is the founder of our company and has over 12 years of experience in the travel and hospitality industry. He is passionate about creating meaningful travel experiences and believes in delivering personalized services that make every journey memorable. Under his leadership, the company has grown into a trusted brand, helping travelers explore new destinations with ease and confidence. His vision is to connect people with the world through travel, building a community of happy and loyal customers.",
+                "experience": "5 Years",
+                "email": "tara.malhotra@travelix.com",
+                "telephone": "+91 98765 43217",
+                "fax": "+91 11 2345 6796",
+                "social": [
+                  { "label": "LinkedIn", "href": "#" },
+                  { "label": "Instagram", "href": "#" },
+                  { "label": "Facebook", "href": "#" }
+                ],
                 "button": {
                   "label": "View Profile",
                   "href": "/team/tara-malhotra"
@@ -988,7 +1081,7 @@
             ],
             "button": {
               "label": "Read more",
-              "href": "/about"
+              "href": "/about-us"
             }
           }
         }
@@ -1005,7 +1098,7 @@
             "desc": "Let's plan your next journey and make unforgettable memories with our exclusive travel experiences.",
             "button": {
               "label": "LET'S GET STARTED",
-              "href": "/plan-your-trip"
+              "href": "/contact"
             },
             "bgImageUrl": "/travel/1.jpg",
             "stats": [
@@ -1190,6 +1283,75 @@
                 "comments": "11",
                 "title": "Ultimate Backpacking Guide For Southeast Asia",
                 "readMoreText": "Read More"
+              }
+            ],
+            "blogDetails": [
+              {
+                "slug": "10-essential-travel-tips-for-a-hassle-free-vacation",
+                "intro": "A great holiday begins long before you arrive. With a little thoughtful preparation, you can spend less time solving small problems and more time noticing the places, people and moments that make a journey memorable.",
+                "sections": [
+                  { "number": "1", "title": "Choose a Comfortable Pace", "body": "Leave breathing room between the highlights. A slower morning, a long lunch or an unplanned walk can become the most memorable part of your itinerary." },
+                  { "number": "2", "title": "Pack for the Journey You Have", "body": "Check the season, local customs and the activities you have planned. Comfortable shoes, a light layer and a small day bag will take you further than an overfilled suitcase." },
+                  { "number": "3", "title": "Keep Important Details Together", "body": "Save your bookings, emergency contacts and travel documents in one easy-to-reach place. Keep a digital copy available offline for the moments when signal is unreliable." },
+                  { "number": "4", "title": "Make Space for Local Life", "body": "Try a neighbourhood cafe, speak with a local guide and learn a few words of the language. The best travel memories often begin away from the usual checklist." },
+                  { "number": "5", "title": "Stay Curious and Flexible", "body": "Weather changes, roads close and plans evolve. A flexible mindset helps you turn an unexpected detour into a story worth bringing home." }
+                ],
+                "quote": "The best journeys are planned with care, then lived with enough openness to let the destination surprise you."
+              },
+              {
+                "slug": "top-7-budget-friendly-destinations-for-2025",
+                "intro": "A memorable escape does not need to be expensive. The right season, a flexible route and a little local knowledge can open the door to remarkable experiences at a comfortable budget.",
+                "sections": [
+                  { "number": "1", "title": "Travel Outside Peak Season", "body": "Shoulder seasons often bring gentler prices, fewer crowds and beautiful weather. You may also find that local hosts have more time to share their favourite places." },
+                  { "number": "2", "title": "Choose One Region", "body": "Staying longer in one area reduces transfer costs and lets you experience a place more deeply. A focused route is usually richer than a rushed list of cities." },
+                  { "number": "3", "title": "Stay Local", "body": "Guesthouses, homestays and small hotels can offer better value while connecting you with the character of the destination." },
+                  { "number": "4", "title": "Spend on Experiences", "body": "Prioritise the food walk, boat trip or guided visit you will remember. Save on things that do not add meaning to your day." }
+                ],
+                "quote": "A smart travel budget is not about missing out; it is about spending where the memory lives."
+              },
+              {
+                "slug": "how-to-plan-a-perfect-honeymoon-trip",
+                "intro": "A honeymoon should feel like the beginning of your story, not a race through a destination. Thoughtful pacing and a few personal touches create space for both adventure and quiet celebration.",
+                "sections": [
+                  { "number": "1", "title": "Pick the Feeling First", "body": "Decide whether you want beach calm, mountain air, city energy or a blend. The feeling you want will guide every later choice." },
+                  { "number": "2", "title": "Plan Fewer Stops", "body": "Two or three beautiful bases allow you to settle in and enjoy each other rather than spending your trip in transit." },
+                  { "number": "3", "title": "Balance Plans and Freedom", "body": "Book the experiences that matter most, then keep open afternoons for slow breakfasts, wandering and spontaneous discoveries." },
+                  { "number": "4", "title": "Add One Personal Surprise", "body": "A private dinner, sunrise excursion or handwritten note can make a familiar destination feel completely yours." }
+                ],
+                "quote": "The most romantic itinerary is one that leaves enough time to simply be together."
+              },
+              {
+                "slug": "best-trekking-destinations-in-india",
+                "intro": "India's trails move from pine-covered mountain paths to high alpine passes and dramatic coastal walks. The right trek is the one that matches your experience, season and sense of adventure.",
+                "sections": [
+                  { "number": "1", "title": "Himachal's High Trails", "body": "From gentle valley walks to challenging high-altitude routes, Himachal offers a rewarding landscape for both first-time hikers and experienced trekkers." },
+                  { "number": "2", "title": "The Green Western Ghats", "body": "Misty forests, waterfalls and rich wildlife make the Western Ghats especially beautiful during the cooler months." },
+                  { "number": "3", "title": "Kashmir's Alpine Valleys", "body": "Quiet meadows, clear streams and dramatic peaks create a slower, deeply scenic trekking experience in the north." },
+                  { "number": "4", "title": "Prepare With Respect", "body": "Use a trained local guide, carry your waste out and give your body time to adjust. Responsible trekking protects the trail for everyone." }
+                ],
+                "quote": "Every trail asks you to slow down enough to notice the landscape changing around you."
+              },
+              {
+                "slug": "hidden-gems-of-goa-beyond-the-beaches",
+                "intro": "Goa is more than a shoreline. Travel inland and you will find quiet villages, old spice plantations, forest paths and a generous local culture that deserves time and attention.",
+                "sections": [
+                  { "number": "1", "title": "Wander Through Old Goa", "body": "Historic churches, shaded lanes and layers of Portuguese and Indian heritage reveal a quieter side of the region." },
+                  { "number": "2", "title": "Spend Time in the Hinterland", "body": "Head toward the green interior for waterfalls, spice farms and small communities where the pace feels wonderfully unhurried." },
+                  { "number": "3", "title": "Eat Beyond the Resort Menu", "body": "Seek out local thalis, fresh seafood and family-run kitchens. Goa's food tells a story of coastlines, trade and home." },
+                  { "number": "4", "title": "Leave Room to Roam", "body": "Rent a scooter with care or arrange a local driver and let the smaller roads guide you toward a market, riverbank or village cafe." }
+                ],
+                "quote": "The Goa you remember most may be the one you find between the beaches."
+              },
+              {
+                "slug": "ultimate-backpacking-guide-for-southeast-asia",
+                "intro": "Southeast Asia rewards curious travellers with incredible food, welcoming communities and landscapes that change from city streets to tropical islands in a single journey.",
+                "sections": [
+                  { "number": "1", "title": "Build a Flexible Route", "body": "Choose a few anchor destinations and leave room between them. Flexibility makes it easier to follow good weather, local recommendations and your own energy." },
+                  { "number": "2", "title": "Start With the Essentials", "body": "Carry a light pack, comfortable footwear, a refillable bottle and a secure way to keep your documents and money organised." },
+                  { "number": "3", "title": "Eat Where Locals Eat", "body": "Street food and small family restaurants are often the most memorable part of the trip. Follow busy stalls and ask what is fresh that day." },
+                  { "number": "4", "title": "Travel Thoughtfully", "body": "Respect local dress, customs and communities. Choose responsible operators and remember that a slower, more considered trip leaves a lighter footprint." }
+                ],
+                "quote": "Backpacking is not about collecting places; it is about becoming more awake to the world between them."
               }
             ]
           }
@@ -2354,6 +2516,38 @@
                 }
               ]
             }
+          }
+        }
+      },
+      "Sitemap": {
+        "variants": {
+          "TravelSitemap1": {
+            "banner": {
+              "title": "Site",
+              "highlightedTitle": "map",
+              "backgroundImage": "/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg",
+              "breadcrumbItems": [
+                { "label": "Home", "href": "/" },
+                { "label": "Sitemap" }
+              ]
+            },
+            "eyebrow": "EXPLORE OUR WEBSITE",
+            "title": { "normal": "Website", "highlighted": "Sitemap" },
+            "description": "Find all the important pages of our website in one place. Navigate easily and explore everything we have to offer.",
+            "groups": [
+              { "title": "Main Pages", "icon": "compass", "links": [
+                { "label": "Home", "href": "/" }, { "label": "About Us", "href": "/about-us" }, { "label": "Why Choose Us", "href": "/choose" }, { "label": "Our Team", "href": "/team" }, { "label": "Mission & Vision", "href": "/mission" }, { "label": "Awards & Recognition", "href": "/award" }, { "label": "Testimonials", "href": "/testimonial" }
+              ] },
+              { "title": "Tour Packages", "icon": "plane", "links": [ { "label": "All Packages", "href": "/package" } ] },
+              { "title": "Destinations", "icon": "map-pin", "links": [ { "label": "All Destinations", "href": "/destination" } ] },
+              { "title": "Our Services", "icon": "shield-check", "links": [ { "label": "All Services", "href": "/service" } ] },
+              { "title": "Blog", "icon": "file-text", "links": [ { "label": "Our Blog", "href": "/blog" } ] },
+              { "title": "Gallery", "icon": "image", "links": [ { "label": "Photo Gallery", "href": "/gallery" }, { "label": "Video Gallery", "href": "/gallery#videos" } ] },
+              { "title": "Useful Pages", "icon": "help-circle", "links": [ { "label": "FAQ", "href": "/faq" }, { "label": "Privacy Policy", "href": "/privacy" }, { "label": "Refund Policy", "href": "/refund" }, { "label": "Terms & Conditions", "href": "/terms" }, { "label": "Payment Policy", "href": "/payment" }, { "label": "Sitemap", "href": "/sitemap" } ] },
+              { "title": "Get in Touch", "icon": "car", "links": [ { "label": "Contact Us", "href": "/contact" }, { "label": "Enquiry Now", "href": "/enquiry" }, { "label": "Partners", "href": "/partners" } ] },
+              { "title": "Book & Plan", "icon": "calendar", "links": [ { "label": "Book a Tour", "href": "/enquiry" }, { "label": "Tour Enquiry", "href": "/enquiry" }, { "label": "Travel Insurance", "href": "/services/insurance" } ] },
+              { "title": "Our People", "icon": "users", "links": [] }
+            ]
           }
         }
       },

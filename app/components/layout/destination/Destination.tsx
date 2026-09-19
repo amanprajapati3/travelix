@@ -134,7 +134,6 @@ export default function Destination() {
       )}
 
       {/* 2. SEARCH FILTER BAR SECTION */}
-      {/* 2. SEARCH FILTER BAR SECTION */}
       <section className="relative z-20 max-w-[1200px] mx-auto px-4 py-8 md:py-12 mb-0">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-20 items-stretch">
           {/* Dropdowns row — stays side-by-side even on mobile */}
@@ -224,12 +223,12 @@ export default function Destination() {
                 Explore the incredible beauty of India, from mountains to
                 beaches, historical cities to spiritual destinations.
               </p>
-              <Link
+              {/* <Link
                 href={destinationData.viewAllLink.href}
                 className="self-start sm:self-auto border-2 border-amber-400 hover:border-amber-400 text-white hover:text-amber-400 px-7 py-3 rounded-xl text-xs font-semibold tracking-wider transition-all"
               >
                 {destinationData.viewAllLink.label}
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -299,12 +298,12 @@ export default function Destination() {
                 Explore the incredible beauty of India, from mountains to
                 beaches, historical cities to spiritual destinations.
               </p>
-              <Link
+              {/* <Link
                 href={destinationData.viewAllLink.href}
                 className="self-start sm:self-auto border-2 border-amber-400 hover:border-amber-400 text-white hover:text-amber-400 px-7 py-3 rounded-xl text-xs font-semibold tracking-wider transition-all"
               >
                 {destinationData.viewAllLink.label}
-              </Link>
+              </Link> */}
             </div>
           </div>
 

@@ -1,4 +1,6 @@
 import travelData from "./siteData.json";
+import tourDetails from "./tourDetails.json";
+import type { TravelBlogDetail, TravelSitemapData, TravelTourDetails } from "@/type/typeSection";
 
 export type RawTravelData = typeof travelData;
 
@@ -45,6 +47,7 @@ export type TravelLegalData =
   TravelMissionData["missionSection"]["features"][number];
 export type TravelNotFoundData =
   typeof travelData.TravelIndustries.sections.NotFound.variants.Travel4041;
+export type TravelSitemapSectionData = TravelSitemapData;
   export type TravelAwardsData =
   typeof travelData.TravelIndustries.sections.Awards.variants.TravelAwards1;
 export type TravelContactData =
@@ -68,6 +71,7 @@ export type TravelEnquiryData =
   export type FaqItem = TravelFaqData["faqs"][number];
 export type FaqLeftFeature = TravelFaqData["leftFeatures"][number];
 export type TravelPackageItem = TravelPackagesData["packages"][number];
+export type TravelTourDetailsItem = TravelTourDetails;
 export type TravelServiceItem = TravelServicesData["services"][number];
 export type TravelTeamMember = TravelTeamData["members"][number];
 export type TravelOpportunityBullet =
@@ -109,6 +113,7 @@ export const site = {
   paymentPolicy: sec.Legal.variants.paymentPolicy,
   enquiry: sec.Enquiry.variants.TravelEnquiry1,
   notFound: sec.NotFound.variants.Travel4041,
+  sitemap: sec.Sitemap.variants.TravelSitemap1 as TravelSitemapData,
 };
 
 const destinationItems = sec.Destinations.variants.TravelDestinations1
@@ -117,6 +122,8 @@ const destinationItems = sec.Destinations.variants.TravelDestinations1
 const packageItems = sec.Packages.variants.TravelPackages1
   .packages as TravelPackageItem[];
 
+const tourDetailItems = tourDetails as Record<string, TravelTourDetailsItem>;
+
 const serviceItems = sec.Services.variants.TravelServices1
   .services as TravelServiceItem[];
 
@@ -124,6 +131,8 @@ const teamMembers = sec.Team.variants.TravelTeam1
   .members as TravelTeamMember[];
 
 const blogPosts = sec.Blog.variants.TravelBlog1.posts as TravelBlogPost[];
+const featuredBlogPost = sec.Blog.variants.TravelBlog1.featuredPost as TravelFeaturedBlogPost;
+const blogDetails = sec.Blog.variants.TravelBlog1.blogDetails as TravelBlogDetail[];
 
 export function getDestinationBySlug(
   slug: string,
@@ -147,6 +156,10 @@ export function getPackageBySlug(slug: string): TravelPackageItem | null {
 
 export function getPackageSlugs(): TravelPackageItem[] {
   return packageItems;
+}
+
+export function getTourDetailsBySlug(slug: string): TravelTourDetailsItem | null {
+  return tourDetailItems[slug] || null;
 }
 
 export function getPackageFilters() {
@@ -178,17 +191,22 @@ export function getTeamMemberSlugs(): TravelTeamMember[] {
   return teamMembers;
 }
 
-export function getBlogPostBySlug(slug: string): TravelBlogPost | null {
+export function getBlogPostBySlug(slug: string): TravelBlogPost | TravelFeaturedBlogPost | null {
   const cleanSlug = slug.replace(/^blog\//, "");
   return (
-    blogPosts.find(
+    [featuredBlogPost, ...blogPosts].find(
       (post) => post.slug === cleanSlug || post.slug.endsWith(cleanSlug),
     ) || null
   );
 }
 
-export function getBlogPostSlugs(): TravelBlogPost[] {
-  return blogPosts;
+export function getBlogPostSlugs(): (TravelBlogPost | TravelFeaturedBlogPost)[] {
+  return [featuredBlogPost, ...blogPosts];
+}
+
+export function getBlogDetailBySlug(slug: string): TravelBlogDetail | null {
+  const cleanSlug = slug.replace(/^blog\//, "");
+  return blogDetails.find((detail) => detail.slug === cleanSlug) || null;
 }
 
 export function getFeaturedBlogPost(): TravelFeaturedBlogPost {

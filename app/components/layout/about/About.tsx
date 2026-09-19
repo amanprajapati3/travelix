@@ -17,7 +17,7 @@ export default function About() {
         ]}
         backgroundImage="/travel/Travel/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg"
       />
-      <ExploreSection />
+      <ExploreSection hideButton />
       <CtaBanner />
       <Stats />
       <Choose hideBanner />

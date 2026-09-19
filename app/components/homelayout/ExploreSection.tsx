@@ -15,7 +15,7 @@ const allura = Allura({
 
 const opportunityData: TravelOpportunityData = site.opportunity;
 
-export default function ExploreSection() {
+export default function ExploreSection({ hideButton = false }: { hideButton?: boolean }) {
   if (!opportunityData) return null;
 
   const {
@@ -184,7 +184,7 @@ export default function ExploreSection() {
               </div>
 
               {/* Read More Button with Circle Arrow */}
-              {button && (
+              {button && !hideButton && (
                 <Link
                   href={button.href || "#"}
                   className="group inline-flex items-center gap-3 rounded-full bg-[#facc15] pl-6 pr-2 py-2 text-sm font-bold text-black transition-all duration-300 hover:bg-[#eab308] shadow-lg"

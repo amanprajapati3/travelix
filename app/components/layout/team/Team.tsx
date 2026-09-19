@@ -26,7 +26,7 @@ function TeamCard({ member }: { member: TravelTeamMember }) {
       className="relative z-10 object-contain object-bottom transition-transform duration-500 group-hover:scale-105"
     />
   </Link>
-
+  <Link href={member.button.href}>
   <div className="flex flex-col items-center justify-center">
     <h2 className="my-5 text-2xl font-semibold text-white">
       {member.name}
@@ -35,6 +35,7 @@ function TeamCard({ member }: { member: TravelTeamMember }) {
       {member.role}
     </p>
   </div>
+  </Link>
 </article>
   );
 }

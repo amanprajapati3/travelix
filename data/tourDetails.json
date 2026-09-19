@@ -1,0 +1,1154 @@
+{
+  "maldives-paradise-escape": {
+    "overview": "Sail into a turquoise island escape with unhurried beach days, warm lagoon swims and sunset moments made for switching off.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Private island beaches",
+      "Lagoon snorkelling",
+      "Sunset cruise",
+      "Fresh island cuisine"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in the Maldives",
+        "description": "Meet our representative, transfer to your island resort and settle into your tropical surroundings."
+      },
+      {
+        "day": "Day 2",
+        "title": "Lagoon discovery",
+        "description": "Enjoy a guided snorkelling session and a relaxed afternoon on the white-sand beach."
+      },
+      {
+        "day": "Day 3",
+        "title": "Island life",
+        "description": "Visit a local island, taste Maldivian flavours and watch the sunset from the lagoon."
+      },
+      {
+        "day": "Day 4",
+        "title": "Ocean adventure",
+        "description": "Choose a dolphin cruise or a reef excursion before an evening at leisure."
+      }
+    ],
+    "inclusions": [
+      "Airport and resort transfers",
+      "Resort accommodation",
+      "Daily breakfast, lunch and dinner",
+      "Snorkelling excursion",
+      "English-speaking local guide",
+      "Taxes and service charges"
+    ],
+    "exclusions": [
+      "International airfare",
+      "Travel insurance",
+      "Personal expenses",
+      "Optional water sports",
+      "Tips and gratuities",
+      "Items not listed in inclusions"
+    ],
+    "gallery": [
+      "/places/maldive.jpg",
+      "/places/goa.jpg",
+      "/places/bali.png",
+      "/places/kerala.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Is this tour suitable for families?",
+        "answer": "Yes. The relaxed pace and easy activities make it suitable for families and first-time island travellers."
+      },
+      {
+        "question": "Can activities be customised?",
+        "answer": "Yes. Our team can adjust excursions and room preferences around your travel dates."
+      }
+    ]
+  },
+  "dubai-luxury-journey": {
+    "overview": "Experience Dubai at its most dazzling, from skyline views and golden desert dunes to elegant dining and generous Arabian hospitality.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Burj Khalifa views",
+      "Desert safari",
+      "Luxury shopping",
+      "Marina dinner cruise"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Dubai",
+        "description": "Private transfer to your hotel, followed by an evening walk along the lively Dubai Marina."
+      },
+      {
+        "day": "Day 2",
+        "title": "Iconic Dubai",
+        "description": "Visit the Burj Khalifa, Dubai Mall and the historic Al Fahidi district with your guide."
+      },
+      {
+        "day": "Day 3",
+        "title": "Desert gold",
+        "description": "Travel into the dunes for a 4x4 safari, sunset views and a traditional camp dinner."
+      },
+      {
+        "day": "Day 4",
+        "title": "Coast and culture",
+        "description": "Cruise the Palm coastline and enjoy free time for shopping or a spa experience."
+      }
+    ],
+    "inclusions": [
+      "Airport transfers",
+      "Luxury hotel stay",
+      "Daily breakfast",
+      "City sightseeing tour",
+      "Desert safari with dinner",
+      "Professional guide"
+    ],
+    "exclusions": [
+      "International airfare",
+      "Visa fees",
+      "Travel insurance",
+      "Personal shopping",
+      "Optional activities",
+      "Tips and gratuities"
+    ],
+    "gallery": [
+      "/places/1.jpg",
+      "/places/maldive.jpg",
+      "/places/paris.jpg",
+      "/places/goa.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "What should I wear?",
+        "answer": "Light, comfortable clothing is ideal; modest clothing is recommended when visiting cultural sites."
+      },
+      {
+        "question": "Is the desert safari included?",
+        "answer": "Yes, the shared desert safari and camp dinner are included in the package."
+      }
+    ]
+  },
+  "canadian-nature-tour": {
+    "overview": "Breathe in the wild beauty of Banff with glacier-fed lakes, pine forests, mountain viewpoints and quiet moments in the Canadian Rockies.",
+    "difficulty": "Moderate",
+    "highlights": [
+      "Banff National Park",
+      "Lake Louise",
+      "Rocky Mountain views",
+      "Wildlife spotting"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Banff",
+        "description": "Transfer to Banff, check in and take an easy orientation walk through the mountain town."
+      },
+      {
+        "day": "Day 2",
+        "title": "Lake Louise",
+        "description": "Visit the turquoise waters of Lake Louise and enjoy a scenic lakeside trail."
+      },
+      {
+        "day": "Day 3",
+        "title": "Icefields Parkway",
+        "description": "Follow one of the world’s most scenic roads with stops at glaciers, lakes and viewpoints."
+      },
+      {
+        "day": "Day 4",
+        "title": "Wild mountain day",
+        "description": "Choose a guided nature walk or gondola ride before an evening in Banff."
+      }
+    ],
+    "inclusions": [
+      "Airport and hotel transfers",
+      "Mountain lodge accommodation",
+      "Daily breakfast",
+      "Park entry fees",
+      "Scenic sightseeing",
+      "Local nature guide"
+    ],
+    "exclusions": [
+      "International airfare",
+      "Travel insurance",
+      "Adventure equipment",
+      "Personal expenses",
+      "Optional excursions",
+      "Guide gratuities"
+    ],
+    "gallery": [
+      "/places/santorini.jpg",
+      "/places/swiss.jpg",
+      "/places/hp.jpg",
+      "/places/jk.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Will we see wildlife?",
+        "answer": "Wildlife sightings are possible but never guaranteed. Your guide will share responsible viewing advice."
+      },
+      {
+        "question": "Are hikes strenuous?",
+        "answer": "The itinerary offers moderate trails with easier alternatives available."
+      }
+    ]
+  },
+  "delhi-heritage-trail": {
+    "overview": "Uncover Delhi through grand Mughal landmarks, colourful bazaars, peaceful gardens and the stories of a city shaped by centuries.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Red Fort",
+      "Humayun’s Tomb",
+      "Old Delhi food walk",
+      "India Gate at sunset"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Welcome to Delhi",
+        "description": "Arrive, transfer to your hotel and enjoy a gentle evening visit to India Gate."
+      },
+      {
+        "day": "Day 2",
+        "title": "Old Delhi stories",
+        "description": "Explore the Red Fort, Jama Masjid and Chandni Chowk on a guided heritage walk."
+      },
+      {
+        "day": "Day 3",
+        "title": "Imperial Delhi",
+        "description": "Visit Humayun’s Tomb, Qutub Minar and the peaceful gardens of central Delhi."
+      },
+      {
+        "day": "Day 4",
+        "title": "Markets and departure",
+        "description": "Enjoy breakfast and free time for local shopping before your onward transfer."
+      }
+    ],
+    "inclusions": [
+      "Airport transfers",
+      "Heritage hotel accommodation",
+      "Daily breakfast",
+      "Guided sightseeing",
+      "Monument entry fees",
+      "Local food tasting"
+    ],
+    "exclusions": [
+      "Flights",
+      "Visa fees",
+      "Travel insurance",
+      "Lunches and dinners",
+      "Personal shopping",
+      "Tips and gratuities"
+    ],
+    "gallery": [
+      "/places/delhi.jpg",
+      "/places/up.jpg",
+      "/places/rajesthan.jpg",
+      "/places/mumbai.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Is the food walk vegetarian-friendly?",
+        "answer": "Yes. The guide can recommend excellent vegetarian and non-vegetarian local options."
+      },
+      {
+        "question": "Can the walking be reduced?",
+        "answer": "Yes. Private transfers can be arranged between major landmarks."
+      }
+    ]
+  },
+  "delhi-to-agra-cultural-journey": {
+    "overview": "Travel through the heart of northern India, connecting Delhi and Agra through legendary monuments, living craft traditions and local flavours.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Taj Mahal sunrise",
+      "Agra Fort",
+      "Local craft workshops",
+      "Northern Indian cuisine"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Delhi arrival",
+        "description": "Arrive in Delhi, meet your guide and begin with a relaxed city introduction."
+      },
+      {
+        "day": "Day 2",
+        "title": "Delhi heritage",
+        "description": "Discover Old Delhi markets and the grand monuments of imperial Delhi."
+      },
+      {
+        "day": "Day 3",
+        "title": "Journey to Agra",
+        "description": "Drive to Agra, visit Agra Fort and watch the sunset over the Yamuna."
+      },
+      {
+        "day": "Day 4",
+        "title": "Taj Mahal morning",
+        "description": "See the Taj Mahal at sunrise, then explore local marble and textile crafts."
+      }
+    ],
+    "inclusions": [
+      "Private road transfers",
+      "Hotel accommodation",
+      "Daily breakfast",
+      "Professional guide",
+      "Monument tickets",
+      "Bottled drinking water"
+    ],
+    "exclusions": [
+      "International airfare",
+      "Visa fees",
+      "Travel insurance",
+      "Meals beyond breakfast",
+      "Personal expenses",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/up.jpg",
+      "/places/delhi.jpg",
+      "/places/rajesthan.jpg",
+      "/places/mumbai.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "What time is the Taj Mahal visit?",
+        "answer": "The visit is planned around sunrise for cooler weather and beautiful light."
+      },
+      {
+        "question": "Is the road journey comfortable?",
+        "answer": "Yes. You travel in a private air-conditioned vehicle with planned rest stops."
+      }
+    ]
+  },
+  "kerala-backwater-retreat": {
+    "overview": "Slow down among Kerala’s palm-lined waterways with a houseboat stay, fragrant spices, coastal food and the gentle rhythm of village life.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Alleppey houseboat",
+      "Spice gardens",
+      "Kathakali evening",
+      "Kerala cuisine"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Kerala",
+        "description": "Transfer to Kochi and enjoy a relaxed introduction to the coast."
+      },
+      {
+        "day": "Day 2",
+        "title": "Kochi heritage",
+        "description": "Walk through Fort Kochi, see the Chinese fishing nets and enjoy a cultural performance."
+      },
+      {
+        "day": "Day 3",
+        "title": "Into the backwaters",
+        "description": "Board your houseboat and cruise through villages, rice fields and lagoons."
+      },
+      {
+        "day": "Day 4",
+        "title": "Spice country",
+        "description": "Visit a spice garden and enjoy a traditional cooking experience."
+      }
+    ],
+    "inclusions": [
+      "Airport and hotel transfers",
+      "Hotels and houseboat stay",
+      "Daily breakfast",
+      "Houseboat meals",
+      "Guided sightseeing",
+      "Cultural performance"
+    ],
+    "exclusions": [
+      "Flights",
+      "Travel insurance",
+      "Alcoholic drinks",
+      "Ayurvedic treatments",
+      "Personal expenses",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/kerala.jpg",
+      "/places/goa.jpg",
+      "/places/bali.png",
+      "/places/maldive.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Are meals served on the houseboat?",
+        "answer": "Yes. Fresh breakfast, lunch and dinner are prepared on board with local ingredients."
+      },
+      {
+        "question": "Can I add Ayurveda treatments?",
+        "answer": "Yes. Optional treatments can be added at selected wellness centres."
+      }
+    ]
+  },
+  "kerala-coastal-wellness-escape": {
+    "overview": "Restore your rhythm on Kerala’s coast with Ayurveda, quiet beaches, tropical gardens and nourishing food shaped by local traditions.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Ayurvedic consultation",
+      "Beachside wellness",
+      "Coconut grove walk",
+      "Healthy cooking class"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Welcome to the coast",
+        "description": "Arrive at your coastal retreat, meet your wellness team and settle into a calm evening."
+      },
+      {
+        "day": "Day 2",
+        "title": "Wellness begins",
+        "description": "Join your Ayurvedic consultation, gentle yoga and a nourishing local breakfast."
+      },
+      {
+        "day": "Day 3",
+        "title": "Village and spice walk",
+        "description": "Explore a coconut village and learn how Kerala’s herbs and spices are used."
+      },
+      {
+        "day": "Day 4",
+        "title": "Restorative rituals",
+        "description": "Enjoy a guided treatment, quiet beach time and a sunset meditation session."
+      }
+    ],
+    "inclusions": [
+      "Retreat accommodation",
+      "Daily breakfast and wellness meals",
+      "Airport transfers",
+      "Yoga sessions",
+      "Ayurvedic consultation",
+      "Selected treatments"
+    ],
+    "exclusions": [
+      "Flights",
+      "Travel insurance",
+      "Additional treatments",
+      "Alcoholic beverages",
+      "Personal purchases",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/goa.jpg",
+      "/places/kerala.jpg",
+      "/places/maldive.jpg",
+      "/places/bali.png"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need prior yoga experience?",
+        "answer": "No. Sessions are beginner-friendly and adapted to your comfort level."
+      },
+      {
+        "question": "Are wellness meals included?",
+        "answer": "Yes. The retreat serves fresh, balanced meals with dietary preferences considered."
+      }
+    ]
+  },
+  "himachal-himalayan-trek": {
+    "overview": "Follow pine forests, high valleys and dramatic Himalayan paths on an active journey led by experienced local guides.",
+    "difficulty": "Challenging",
+    "highlights": [
+      "High-altitude trails",
+      "Base camp experience",
+      "Mountain villages",
+      "Expert trekking guides"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrival in Himachal",
+        "description": "Meet your guide, complete a trek briefing and rest before the adventure begins."
+      },
+      {
+        "day": "Day 2",
+        "title": "Trail to the valley",
+        "description": "Begin your trek through pine forests, meadows and traditional mountain villages."
+      },
+      {
+        "day": "Day 3",
+        "title": "Trek to base camp",
+        "description": "Climb steadily through changing landscapes to your mountain base camp."
+      },
+      {
+        "day": "Day 4",
+        "title": "Summit views",
+        "description": "Reach a panoramic viewpoint, celebrate the route and descend to a comfortable camp."
+      }
+    ],
+    "inclusions": [
+      "Transfers from the nearest airport",
+      "Mountain accommodation and camps",
+      "All meals during trek",
+      "Professional trekking guide",
+      "Permits and entry fees",
+      "First aid and safety equipment"
+    ],
+    "exclusions": [
+      "International and domestic airfare",
+      "Travel insurance",
+      "Personal trekking gear",
+      "Emergency evacuation",
+      "Porter beyond allowance",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/hp.jpg",
+      "/places/jk.jpg",
+      "/places/swiss.jpg",
+      "/places/santorini.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need trekking experience?",
+        "answer": "A good fitness level is required, but your guide supports first-time trekkers on the planned route."
+      },
+      {
+        "question": "What happens if weather changes?",
+        "answer": "Safety comes first; the guide may adjust the route or schedule when conditions require it."
+      }
+    ]
+  },
+  "himachal-valley-discovery": {
+    "overview": "Discover Himachal at a comfortable pace through river valleys, hillside villages, forest trails and peaceful mountain viewpoints.",
+    "difficulty": "Moderate",
+    "highlights": [
+      "Scenic valley drives",
+      "Riverside villages",
+      "Forest viewpoints",
+      "Local mountain food"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Mountain welcome",
+        "description": "Arrive in Himachal and settle into your hillside hotel with views across the valley."
+      },
+      {
+        "day": "Day 2",
+        "title": "Village discovery",
+        "description": "Walk through a traditional village and meet local artisans along the way."
+      },
+      {
+        "day": "Day 3",
+        "title": "River and forest",
+        "description": "Enjoy an easy nature trail and a picnic beside a clear mountain river."
+      },
+      {
+        "day": "Day 4",
+        "title": "Viewpoint day",
+        "description": "Drive to a high viewpoint and spend the afternoon exploring at your own pace."
+      }
+    ],
+    "inclusions": [
+      "Private transfers",
+      "Mountain hotel accommodation",
+      "Daily breakfast",
+      "Guided walks",
+      "Sightseeing entries",
+      "Local guide"
+    ],
+    "exclusions": [
+      "Flights",
+      "Travel insurance",
+      "Lunch and dinner",
+      "Adventure activities",
+      "Personal expenses",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/jk.jpg",
+      "/places/hp.jpg",
+      "/places/kerala.jpg",
+      "/places/santorini.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Is this a trekking holiday?",
+        "answer": "It includes easy to moderate walks, with scenic drives connecting the main valleys."
+      },
+      {
+        "question": "Can the itinerary be made slower?",
+        "answer": "Yes. We can add rest time or extra nights to suit your travel style."
+      }
+    ]
+  },
+  "goa-sun-and-sand": {
+    "overview": "Find your easygoing Goa with golden beaches, colourful markets, Portuguese lanes, fresh seafood and time to simply wander.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Golden beaches",
+      "Old Goa churches",
+      "Sunset cruise",
+      "Coastal markets"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive by the sea",
+        "description": "Transfer to your beach hotel and enjoy your first sunset on the coast."
+      },
+      {
+        "day": "Day 2",
+        "title": "Old Goa",
+        "description": "Explore historic churches, Panjim’s colourful streets and a riverside market."
+      },
+      {
+        "day": "Day 3",
+        "title": "Beach day",
+        "description": "Relax by the sea, try optional water activities and enjoy a coastal dinner."
+      },
+      {
+        "day": "Day 4",
+        "title": "Sunset and departure",
+        "description": "Take a final beach walk before your transfer home."
+      }
+    ],
+    "inclusions": [
+      "Airport transfers",
+      "Beach hotel accommodation",
+      "Daily breakfast",
+      "Goa sightseeing",
+      "Sunset cruise",
+      "Local guide"
+    ],
+    "exclusions": [
+      "Flights",
+      "Travel insurance",
+      "Water sports",
+      "Lunches and dinners",
+      "Personal expenses",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/goa.jpg",
+      "/places/bali.png",
+      "/places/maldive.jpg",
+      "/places/kerala.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Is this package good for a first Goa visit?",
+        "answer": "Yes. It balances the major sights with generous free time on the beach."
+      },
+      {
+        "question": "Are water sports included?",
+        "answer": "They are optional and can be added according to season and weather."
+      }
+    ]
+  },
+  "goa-coastal-adventure": {
+    "overview": "Bring more energy to your coast escape with hidden coves, river adventures, forest paths and Goa’s lively evenings.",
+    "difficulty": "Moderate",
+    "highlights": [
+      "Kayaking adventure",
+      "Hidden coves",
+      "Jungle waterfall",
+      "Beach nightlife"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Coastal arrival",
+        "description": "Check in by the beach and meet your activity coordinator for a safety briefing."
+      },
+      {
+        "day": "Day 2",
+        "title": "River adventure",
+        "description": "Kayak through calm waterways and discover mangroves with an expert instructor."
+      },
+      {
+        "day": "Day 3",
+        "title": "Cove and forest",
+        "description": "Hike to a hidden cove and visit a seasonal waterfall in the afternoon."
+      },
+      {
+        "day": "Day 4",
+        "title": "Free coastal day",
+        "description": "Choose a surf lesson, beach time or a lively evening in North Goa."
+      }
+    ],
+    "inclusions": [
+      "Airport transfers",
+      "Beach accommodation",
+      "Daily breakfast",
+      "Kayaking session",
+      "Guided nature walk",
+      "Safety equipment"
+    ],
+    "exclusions": [
+      "Flights",
+      "Travel insurance",
+      "Surf lessons",
+      "Meals beyond breakfast",
+      "Personal expenses",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/bali.png",
+      "/places/goa.jpg",
+      "/places/kerala.jpg",
+      "/places/maldive.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Are activities weather dependent?",
+        "answer": "Yes. Activities may be rescheduled or replaced with a safe alternative when needed."
+      },
+      {
+        "question": "Is equipment supplied?",
+        "answer": "Safety equipment for included activities is supplied by the local operators."
+      }
+    ]
+  },
+  "kashmir-lakes-and-valleys": {
+    "overview": "Glide across Kashmir’s still lakes and travel through flower-filled valleys beneath snowcapped peaks on a journey of quiet beauty.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Dal Lake shikara ride",
+      "Mughal gardens",
+      "Pahalgam valley",
+      "Mountain views"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Welcome to Srinagar",
+        "description": "Arrive, transfer to your hotel or houseboat and enjoy an evening shikara ride."
+      },
+      {
+        "day": "Day 2",
+        "title": "Gardens and old city",
+        "description": "Visit Mughal gardens, local markets and Srinagar’s historic neighbourhoods."
+      },
+      {
+        "day": "Day 3",
+        "title": "Into the valley",
+        "description": "Drive to Pahalgam with scenic stops through pine forests and riverside villages."
+      },
+      {
+        "day": "Day 4",
+        "title": "Meadow escape",
+        "description": "Enjoy a gentle valley walk and return for a peaceful evening by the lake."
+      }
+    ],
+    "inclusions": [
+      "Airport transfers",
+      "Hotel and houseboat stay",
+      "Daily breakfast",
+      "Shikara ride",
+      "Private sightseeing",
+      "Local guide"
+    ],
+    "exclusions": [
+      "Flights",
+      "Travel insurance",
+      "Pony rides",
+      "Lunches and dinners",
+      "Personal shopping",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/jk.jpg",
+      "/places/swiss.jpg",
+      "/places/hp.jpg",
+      "/places/kerala.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Is a houseboat stay included?",
+        "answer": "Yes. The itinerary includes a comfortable houseboat experience on Dal Lake."
+      },
+      {
+        "question": "Can we visit Gulmarg too?",
+        "answer": "Yes. Gulmarg can be added or substituted depending on your dates."
+      }
+    ]
+  },
+  "kashmir-winter-wonderland": {
+    "overview": "Step into a snow-bright Kashmir of cosy stays, mountain views, winter walks and exhilarating experiences in the north.",
+    "difficulty": "Moderate",
+    "highlights": [
+      "Snow-covered Gulmarg",
+      "Winter gondola ride",
+      "Cosy mountain stays",
+      "Kashmiri cuisine"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Srinagar",
+        "description": "Transfer to your winter stay and enjoy a warm welcome with local tea."
+      },
+      {
+        "day": "Day 2",
+        "title": "Lake and gardens",
+        "description": "Take a shikara ride and visit Srinagar’s gardens dressed in winter light."
+      },
+      {
+        "day": "Day 3",
+        "title": "Gulmarg snow day",
+        "description": "Travel to Gulmarg for mountain views, snow activities and an optional gondola ride."
+      },
+      {
+        "day": "Day 4",
+        "title": "Valley farewell",
+        "description": "Enjoy a slow breakfast and final shopping before your airport transfer."
+      }
+    ],
+    "inclusions": [
+      "Airport transfers",
+      "Winter accommodation",
+      "Daily breakfast",
+      "Shikara ride",
+      "Gulmarg sightseeing",
+      "Local guide"
+    ],
+    "exclusions": [
+      "Flights",
+      "Travel insurance",
+      "Gondola tickets",
+      "Winter clothing rental",
+      "Personal expenses",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/swiss.jpg",
+      "/places/jk.jpg",
+      "/places/hp.jpg",
+      "/places/santorini.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "When is snow most likely?",
+        "answer": "Snow conditions vary by season; our team will advise on the best dates before booking."
+      },
+      {
+        "question": "Can beginners enjoy this tour?",
+        "answer": "Yes. Snow activities are optional and the route can be enjoyed at a relaxed pace."
+      }
+    ]
+  },
+  "rajasthan-royal-route": {
+    "overview": "Move through Rajasthan’s royal cities, desert forts and colourful bazaars while experiencing the warm hospitality of the north-west.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Jaipur forts",
+      "Jodhpur blue city",
+      "Udaipur lakes",
+      "Heritage stays"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Royal Jaipur",
+        "description": "Arrive in Jaipur and begin with the City Palace and a colourful old-city walk."
+      },
+      {
+        "day": "Day 2",
+        "title": "Fort and crafts",
+        "description": "Visit Amber Fort, meet local artisans and enjoy an evening cultural performance."
+      },
+      {
+        "day": "Day 3",
+        "title": "Blue city stories",
+        "description": "Travel to Jodhpur, explore Mehrangarh Fort and watch the sunset over the blue houses."
+      },
+      {
+        "day": "Day 4",
+        "title": "Lakes of Udaipur",
+        "description": "Continue to Udaipur for a lakeside walk and a peaceful boat ride."
+      }
+    ],
+    "inclusions": [
+      "Private air-conditioned transfers",
+      "Heritage hotel stays",
+      "Daily breakfast",
+      "Monument entries",
+      "Cultural experiences",
+      "Professional guide"
+    ],
+    "exclusions": [
+      "Flights",
+      "Visa fees",
+      "Travel insurance",
+      "Meals beyond breakfast",
+      "Personal shopping",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/rajesthan.jpg",
+      "/places/delhi.jpg",
+      "/places/up.jpg",
+      "/places/mumbai.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Are heritage hotels guaranteed?",
+        "answer": "We include carefully selected heritage-style stays subject to availability."
+      },
+      {
+        "question": "Is the route suitable for seniors?",
+        "answer": "Yes, with private transfers and a flexible pace between major sights."
+      }
+    ]
+  },
+  "rajasthan-desert-safari": {
+    "overview": "Cross golden dunes, share stories around a desert campfire and discover the quiet beauty of Rajasthan’s Thar Desert.",
+    "difficulty": "Moderate",
+    "highlights": [
+      "Camel safari",
+      "Desert camp",
+      "Jaisalmer Fort",
+      "Folk music evening"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Jaisalmer arrival",
+        "description": "Arrive in the golden city, explore the fort and settle into your heritage stay."
+      },
+      {
+        "day": "Day 2",
+        "title": "Into the Thar",
+        "description": "Travel to the dunes, enjoy a camel safari and watch the sun set over the desert."
+      },
+      {
+        "day": "Day 3",
+        "title": "Desert sunrise",
+        "description": "Wake early for sunrise, visit a nearby village and enjoy folk music at camp."
+      },
+      {
+        "day": "Day 4",
+        "title": "Golden city farewell",
+        "description": "Return to Jaisalmer for local crafts and your onward transfer."
+      }
+    ],
+    "inclusions": [
+      "Private road transfers",
+      "Heritage accommodation",
+      "Desert camp night",
+      "Camel safari",
+      "Daily breakfast",
+      "Folk performance"
+    ],
+    "exclusions": [
+      "Flights",
+      "Travel insurance",
+      "Quad biking",
+      "Lunches and dinners",
+      "Personal expenses",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/rajesthan.jpg",
+      "/places/up.jpg",
+      "/places/delhi.jpg",
+      "/places/goa.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Is the camel safari optional?",
+        "answer": "Yes. A jeep transfer is available for guests who prefer not to ride a camel."
+      },
+      {
+        "question": "Are camp bathrooms private?",
+        "answer": "The selected camp provides clean private or attached facilities subject to availability."
+      }
+    ]
+  },
+  "bali-family-adventure": {
+    "overview": "Give every generation something to love with Bali’s beaches, gentle adventures, cultural discoveries and welcoming family-friendly stays.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Family beach time",
+      "Cultural village visit",
+      "Waterfall walk",
+      "Bali cooking class"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Bali",
+        "description": "Transfer to your family resort and enjoy a relaxed first evening by the pool."
+      },
+      {
+        "day": "Day 2",
+        "title": "Beach and island fun",
+        "description": "Spend the day at the coast with optional beginner-friendly water activities."
+      },
+      {
+        "day": "Day 3",
+        "title": "Culture and nature",
+        "description": "Visit a village, see a temple and walk to a family-friendly waterfall viewpoint."
+      },
+      {
+        "day": "Day 4",
+        "title": "Creative Bali",
+        "description": "Join a cooking or craft class and enjoy a sunset dinner together."
+      }
+    ],
+    "inclusions": [
+      "Airport transfers",
+      "Family-friendly resorts",
+      "Daily breakfast",
+      "Private sightseeing",
+      "Cultural activity",
+      "Local guide"
+    ],
+    "exclusions": [
+      "International airfare",
+      "Travel insurance",
+      "Water sports",
+      "Lunches and dinners",
+      "Personal expenses",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/bali.png",
+      "/places/goa.jpg",
+      "/places/maldive.jpg",
+      "/places/kerala.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Are children’s activities included?",
+        "answer": "The itinerary includes family-friendly activities; private child-focused add-ons can be arranged."
+      },
+      {
+        "question": "Can rooms be interconnected?",
+        "answer": "Interconnecting or family rooms can be requested subject to hotel availability."
+      }
+    ]
+  },
+  "bali-wellness-escape": {
+    "overview": "Reset among Bali’s rainforest mornings, restorative rituals, temple visits and sunsets that make space for a slower, lighter rhythm.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Yoga and meditation",
+      "Balinese spa ritual",
+      "Rice terrace walk",
+      "Sunset temple visit"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive and unwind",
+        "description": "Transfer to your retreat, enjoy a welcome treatment and settle into the rainforest quiet."
+      },
+      {
+        "day": "Day 2",
+        "title": "Mindful morning",
+        "description": "Begin with yoga and meditation before a nourishing breakfast and free afternoon."
+      },
+      {
+        "day": "Day 3",
+        "title": "Rice terraces",
+        "description": "Walk through the terraces, visit a local temple and enjoy a traditional wellness ritual."
+      },
+      {
+        "day": "Day 4",
+        "title": "Island sunset",
+        "description": "Take a gentle coastal excursion and watch the sun set over a Balinese temple."
+      }
+    ],
+    "inclusions": [
+      "Retreat accommodation",
+      "Daily breakfast",
+      "Airport transfers",
+      "Yoga sessions",
+      "One spa treatment",
+      "Guided cultural visit"
+    ],
+    "exclusions": [
+      "Flights",
+      "Travel insurance",
+      "Additional treatments",
+      "Alcoholic drinks",
+      "Personal purchases",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/maldive.jpg",
+      "/places/bali.png",
+      "/places/kerala.jpg",
+      "/places/goa.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Is the programme intensive?",
+        "answer": "No. Sessions are gentle and balanced with plenty of free time to rest or explore."
+      },
+      {
+        "question": "Can dietary needs be accommodated?",
+        "answer": "Yes. Please share dietary requirements when booking."
+      }
+    ]
+  },
+  "paris-art-and-cuisine": {
+    "overview": "See Paris through its galleries, neighbourhood cafés, riverside walks and the everyday details that make the city timeless.",
+    "difficulty": "Easy",
+    "highlights": [
+      "Louvre highlights",
+      "Seine river cruise",
+      "Montmartre walk",
+      "French cooking experience"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Paris",
+        "description": "Transfer to your central hotel and take an evening walk along the Seine."
+      },
+      {
+        "day": "Day 2",
+        "title": "Art and icons",
+        "description": "Explore the Louvre highlights, Tuileries Garden and elegant historic boulevards."
+      },
+      {
+        "day": "Day 3",
+        "title": "Montmartre and markets",
+        "description": "Discover artist streets, local bakeries and a relaxed neighbourhood food tasting."
+      },
+      {
+        "day": "Day 4",
+        "title": "Taste of Paris",
+        "description": "Join a French cooking experience before a final river cruise at sunset."
+      }
+    ],
+    "inclusions": [
+      "Airport transfers",
+      "Central hotel accommodation",
+      "Daily breakfast",
+      "Museum entry",
+      "River cruise",
+      "Cooking experience"
+    ],
+    "exclusions": [
+      "International airfare",
+      "Travel insurance",
+      "Meals beyond breakfast",
+      "Optional museum exhibitions",
+      "Personal shopping",
+      "Tips"
+    ],
+    "gallery": [
+      "/places/paris.jpg",
+      "/places/1.jpg",
+      "/places/rome.jpg",
+      "/places/london.jpg"
+    ],
+    "faqs": [
+      {
+        "question": "Are museum tickets included?",
+        "answer": "The itinerary includes the listed museum entry; special exhibitions are optional."
+      },
+      {
+        "question": "Can the food experience be adapted?",
+        "answer": "Yes. Dietary requirements can be discussed with our Paris experience partner."
+      }
+    ]
+  }
+}
