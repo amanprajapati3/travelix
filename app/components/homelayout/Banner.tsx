@@ -48,7 +48,7 @@ export default function Banner() {
       : [caption || ""];
 
   return (
-    <section className="relative h-[70vh] w-full overflow-hidden bg-[#05060a] text-white">
+    <section className="relative h-[100svh] w-full overflow-hidden bg-[#05060a] text-white">
       {/* BACKGROUND IMAGE */}
       {mainImage?.src && (
         <Image
@@ -57,7 +57,7 @@ export default function Banner() {
           fill
           priority
           sizes="100vw"
-          className="absolute inset-0 z-0 object-cover object-center"
+          className="absolute brightness-75  inset-0 z-0 object-cover object-center"
         />
       )}
 

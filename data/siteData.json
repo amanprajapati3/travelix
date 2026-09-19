@@ -34,9 +34,9 @@
               "TopBar": {
                 "address": "123 Travel Street, New Delhi, India",
                 "navLinks": [
-                  { "label": "Explore", "href": "/explore" },
-                  { "label": "Dream", "href": "/dream" },
-                  { "label": "Discover", "href": "/discover" }
+                  { "label": "Explore", "href": "/package" },
+                  { "label": "Dream", "href": "/destination" },
+                  { "label": "Discover", "href": "/about-us" }
                 ],
                 "socialLinks": [
                   { "label": "facebook", "href": "https://www.facebook.com/" },
@@ -209,7 +209,7 @@
               }
             ],
             "mainImage": {
-              "src": "/travel/2.jpg",
+              "src": "/travel/Travel/tourist-sitting-phu-sub-lek-viewpoint-sunset-lopburi-thailand.jpg",
               "alt": "Traveler with backpack looking at mountain lake"
             },
             "caption": "Travel Farther Live Fuller",
