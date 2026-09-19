@@ -9,6 +9,7 @@ import { IoCarSportOutline } from "react-icons/io5";
 
 import { site } from "@/data";
 import type { TravelServicesData, TravelServiceItem } from "@/type/typeSection";
+import ScrollReveal from "../shared/ScrollReveal";
 
 const allura = Allura({
   subsets: ["latin"],
@@ -43,7 +44,7 @@ export default function ServiceSection() {
     <section className="relative w-full bg-[#050811] py-8 md:py-12 text-white overflow-hidden">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         {/* HEADER SECTION */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 text-center lg:text-left">
+        <ScrollReveal className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 text-center lg:text-left" direction="up">
           <div className="w-full">
             {badge && (
               <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">
@@ -90,29 +91,31 @@ export default function ServiceSection() {
               </div>
             </div>
           )}
-        </div>
+        </ScrollReveal>
 
         
         <div className="hidden lg:grid lg:grid-cols-[26fr_48fr_26fr] gap-5 items-stretch">
           {/* Column 1: Left Tall Card (Hotels) */}
-          <div className="flex flex-col h-full">
+          <ScrollReveal className="flex flex-col h-full" direction="left">
             {services[0] && <TallCard service={services[0]} />}
-          </div>
+          </ScrollReveal>
 
           {/* Column 2: Center Stacked Wide Cards (Insurance & Tour Packages) */}
-          <div className="flex flex-col gap-5 h-full justify-between">
+          <ScrollReveal className="flex flex-col gap-5 h-full justify-between" direction="up">
             {services[1] && <CenterLandscapeCard service={services[1]} />}
             {services[2] && <CenterLandscapeCard service={services[2]} />}
-          </div>
+          </ScrollReveal>
 
           {/* Column 3: Right Tall Card (Airport Transport) */}
-          <div className="flex flex-col h-full">
+          <ScrollReveal className="flex flex-col h-full" direction="right">
             {services[3] && <TallCard service={services[3]} />}
-          </div>
+          </ScrollReveal>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:hidden">
-          {services.slice(0, 4).map((service) => (
-            <TabletMobileCard key={service.id} service={service} />
+          {services.slice(0, 4).map((service, i) => (
+            <ScrollReveal key={service.id} direction="up" index={i} staggerChildren={0.08}>
+              <TabletMobileCard service={service} />
+            </ScrollReveal>
           ))}
         </div>
       </div>

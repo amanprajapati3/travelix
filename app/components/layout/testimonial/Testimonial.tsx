@@ -2,6 +2,7 @@
 
 import React from "react";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { Allura } from "next/font/google";
 import { site } from "@/data";
 import { TestimonialCard } from "../../homelayout/TesitmonialSection";
@@ -43,7 +44,7 @@ export default function Testimonial() {
 
         <div className="relative z-10 mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10 xl:px-14">
           {/* HEADER SECTION */}
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-6">
+          <ScrollReveal className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-6" direction="up">
             <div className="text-center md:text-left">
               {badge && (
                 <span className="mb-2 inline-block text-[11px] font-medium uppercase tracking-[0.25em] text-white/60">
@@ -63,12 +64,14 @@ export default function Testimonial() {
                 {tagline}
               </span>
             )}
-          </div>
+          </ScrollReveal>
 
           {/* TESTIMONIALS GRID (2 per row desktop & tablet, 1 per row mobile) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {testimonialItems.map((item) => (
-              <TestimonialCard key={item.id} item={item} />
+            {testimonialItems.map((item, i) => (
+              <ScrollReveal key={item.id} direction="up" index={i} staggerChildren={0.08}>
+                <TestimonialCard item={item} />
+              </ScrollReveal>
             ))}
           </div>
         </div>

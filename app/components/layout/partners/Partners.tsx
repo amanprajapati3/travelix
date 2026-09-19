@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Caveat } from "next/font/google";
 import { Handshake, Globe, ShieldCheck, Users, Plane } from "lucide-react";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import type { TravelPartnersData } from "@/type/typeSection";
 
@@ -61,7 +62,7 @@ export default function Partners() {
         </div>
 
         {/* HEADER SECTION WITH CAVEAT SCRIPT ACCENT */}
-        <div className="relative z-10 mb-8 text-center max-w-3xl mx-auto">
+        <ScrollReveal className="relative z-10 mb-8 text-center max-w-3xl mx-auto" direction="up">
           {/* Eyebrow */}
           <p className="text-amber-400 font-bold text-md tracking-widest uppercase mb-0">
             {partnersData.header.eyebrow}
@@ -92,14 +93,17 @@ export default function Partners() {
             </p>
             <div className="w-full h-1 ml-14 -rotate-[30deg] bg-gradient-to-r from-amber-400 via-amber-300 to-transparent rounded-full mt-1 border-b-2 border-amber-400 border-dashed" />
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* 3. PARTNERS LOGO GRID (6x4 Cards Layout) */}
         <div className="relative z-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4 sm:gap-5 mb-16">
-          {partnersData.partners.map((item) => (
-            <div
+          {partnersData.partners.map((item, i) => (
+            <ScrollReveal
               key={item.id}
               className="bg-white rounded-xl p-4 sm:p-6 h-20 sm:h-24 flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-slate-200 group cursor-pointer"
+              direction="up"
+              index={i}
+              staggerChildren={0.05}
             >
               <div className="relative w-full h-full flex items-center justify-center">
                 {item.logo ? (
@@ -116,16 +120,19 @@ export default function Partners() {
                   </span>
                 )}
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* 4. FEATURES BAR (4 Items Below Grid) */}
         <div className="relative z-10 md:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 pt-4">
-          {partnersData.features.map((feature) => (
-            <div
+          {partnersData.features.map((feature, i) => (
+            <ScrollReveal
               key={feature.id}
               className="flex border-r border-gray-800  gap-4"
+              direction="up"
+              index={i}
+              staggerChildren={0.08}
             >
               <div className="h-16 w-16  rounded-full border-2 border-amber-400/80 bg-[#00171f] flex items-center justify-center shrink-0 shadow-md">
                 {renderIcon(feature.icon)}
@@ -138,12 +145,12 @@ export default function Partners() {
                   {feature.description}
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* 5. SIGNATURE SCRIPT TEXTS & CITY SILHOUETTE */}
-        <div className="relative w-full  pb-8  min-h-[220px] flex items-end justify-between">
+        <ScrollReveal className="relative w-full  pb-8  min-h-[220px] flex items-end justify-between" direction="up">
           {/* Left Signature Script Text */}
           <div className="relative z-20 transform -rotate-6 mb-8">
             <p
@@ -180,7 +187,7 @@ export default function Partners() {
               className="object-cover object-bottom"
             />
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   );

@@ -7,6 +7,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { Allura } from "next/font/google";
 import { site } from "@/data";
 import type { TravelOpportunityData } from "@/type/typeSection";
+import ScrollReveal from "../shared/ScrollReveal";
 
 const allura = Allura({
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function ExploreSection({ hideButton = false }: { hideButton?: bo
     <section className="relative w-full bg-[#080c14] py-8  md:py-12 text-white overflow-hidden">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
         {/* MOBILE & TABLET HEADER (Shown above the image on screens smaller than LG) */}
-        <div className="flex lg:hidden flex-col items-center text-center mb-8">
+        <ScrollReveal className="flex lg:hidden flex-col items-center text-center mb-8" direction="up">
           {badge && (
             <span
               className={`${allura.className} text-3xl sm:text-4xl text-[#facc15] mb-2`}
@@ -53,12 +54,12 @@ export default function ExploreSection({ hideButton = false }: { hideButton?: bo
             </span>
             <span> {title.normal3}</span>
           </h2>
-        </div>
+        </ScrollReveal>
 
         {/* MAIN CONTENT GRID */}
         <div className="grid grid-cols-1  lg:grid-cols-2 gap-12 lg:gap-16 items-end">
           {/* LEFT COLUMN: IMAGE, BRUSH STAMP, STATS & DOTTED LINE */}
-          <div className="flex  flex-col justify-end h-full">
+          <ScrollReveal className="flex  flex-col justify-end h-full" direction="left">
             {/* Image Container with Yellow Brush Stamp */}
             <div className="relative w-full rounded-2xl shadow-2xl h-[380px] sm:h-[430px]">
               <Image
@@ -106,10 +107,10 @@ export default function ExploreSection({ hideButton = false }: { hideButton?: bo
               {/* Dotted Separation Line */}
               <div className="w-full mt-6 border-b border-dotted border-gray-700/80" />
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT COLUMN: HEADING, DESCRIPTION, BULLETS, AVATARS & BUTTON */}
-          <div className="flex  flex-col justify-end h-full">
+          <ScrollReveal className="flex  flex-col justify-end h-full" direction="right">
             {/* DESKTOP HEADER (Hidden on Mobile & Tablet) */}
             <div className="hidden lg:flex flex-col items-start mb-6">
               {badge && (
@@ -196,7 +197,7 @@ export default function ExploreSection({ hideButton = false }: { hideButton?: bo
                 </Link>
               )}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

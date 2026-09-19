@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import type { TravelAwardsData } from "@/type/typeSection";
 import CtaBanner from "../../shared/CtaBanner";
@@ -31,7 +32,7 @@ export default function Award() {
         <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10 xl:px-14">
           
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-5">
+          <ScrollReveal className="text-center max-w-3xl mx-auto mb-5" direction="up">
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-amber-400 mb-0 block">
               {achievementsSection.badge}
             </span>
@@ -43,14 +44,17 @@ export default function Award() {
             <p className="text-slate-300 text-sm md:text-base leading-relaxed">
               {achievementsSection.description}
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Awards 4-Column Grid matching the precise card design */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {achievementsSection.items.map((award) => (
-              <div 
+            {achievementsSection.items.map((award, i) => (
+              <ScrollReveal
                 key={award.id}
                 className="group relative bg-[#070b14] border border-amber-400/20 rounded-[24px] p-2 flex flex-col md:flex-col lg:flex-row items-center text-center md:text-center lg:text-left gap-1 shadow-xl hover:border-amber-400/50 transition-all duration-300"
+                direction="up"
+                index={i}
+                staggerChildren={0.08}
               >
                 {/* Left Side: Award Trophy / Graphic Container */}
                 <div className="relative w-[140px] h-[180px]  shrink-0 flex items-center justify-center">
@@ -83,7 +87,7 @@ export default function Award() {
                     {award.description}
                   </p>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
@@ -95,7 +99,7 @@ export default function Award() {
         <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10 xl:px-14">
           
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-5">
+          <ScrollReveal className="text-center max-w-3xl mx-auto mb-5" direction="up">
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-amber-400 mb-0 block">
               {certificationsSection.badge}
             </span>
@@ -106,14 +110,17 @@ export default function Award() {
             <p className="text-slate-300 text-sm md:text-base leading-relaxed">
               {certificationsSection.description}
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Certifications 5-Column Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-            {certificationsSection.items.map((cert) => (
-              <div 
+            {certificationsSection.items.map((cert, i) => (
+              <ScrollReveal
                 key={cert.id}
                 className="group relative bg-[#0f0f0f] border border-gray-600 rounded-[15px] py-3 px-5 flex flex-col items-center text-center shadow-xl hover:border-amber-400 transition-all duration-300"
+                direction="up"
+                index={i}
+                staggerChildren={0.08}
               >
                 {/* Certificate Frame/Logo Container */}
                 <div className="relative w-full aspect-[4/3] mb-3 rounded-xl overflow-hidden border border-amber-400/20 bg-black/40 flex items-center justify-center p-3">
@@ -134,7 +141,7 @@ export default function Award() {
                 <span className="text-xs text-slate-300 font-medium leading-snug">
                   {cert.subtitle}
                 </span>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 

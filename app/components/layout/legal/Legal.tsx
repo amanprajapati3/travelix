@@ -2,6 +2,7 @@
 
 import React from "react";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import type { LegalPageData } from "@/type/typeSection";
 
 interface LegalProps {
@@ -26,17 +27,17 @@ export default function Legal({ data }: LegalProps) {
       {/* 2. LEGAL CONTENT SECTION */}
       <section className="relative w-full py-8 md:py-12 px-4 sm:px-6 lg:px-12 xl:px-20 max-w-[1400px] mx-auto">
         {/* Main Title & Last Updated */}
-        <div className="mb-10  ">
+        <ScrollReveal className="mb-10  " direction="up">
           <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide mb-3">
             {data.title}
           </h1>
           <p className="text-slate-400 text-xs sm:text-sm font-medium">
             {data.lastUpdated}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Section List */}
-        <div className="flex flex-col gap-8 md:ml-20 sm:gap-10">
+        <ScrollReveal className="flex flex-col gap-8 md:ml-20 sm:gap-10" direction="up">
           {data.sections.map((item) => (
             <div key={item.id} className="flex flex-col gap-3">
               {/* Heading */}
@@ -85,7 +86,7 @@ export default function Legal({ data }: LegalProps) {
               )}
             </div>
           ))}
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   );

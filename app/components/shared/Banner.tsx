@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Home, ChevronRight } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 export interface BreadcrumbItem {
   label: string;
@@ -52,7 +53,7 @@ export default function Banner({
       </div>
 
       {/* Main Content Container */}
-      <div className="relative z-20 mx-auto max-w-[1300px] w-full px-4 sm:px-6 lg:px-10 xl:px-14 flex flex-col justify-center h-full md:pt-10 sm:pt-20 pt-28">
+      <ScrollReveal className="relative z-20 mx-auto max-w-[1300px] w-full px-4 sm:px-6 lg:px-10 xl:px-14 flex flex-col justify-center h-full md:pt-10 sm:pt-20 pt-28" direction="up">
         
         {/* Breadcrumbs */}
         <nav className="flex items-center gap-2 text-sm sm:text-lg font-medium text-white mb-4 flex-wrap">
@@ -99,7 +100,7 @@ export default function Banner({
           <div className="h-1.5 w-16 sm:w-24 bg-amber-400 rounded-full mt-3 shadow-sm" />
         </div>
 
-      </div>
+      </ScrollReveal>
 
       {/* Bottom Brush Design Overlay */}
       <div className="absolute bottom-0 left-0 w-full h-[60px] sm:h-[90px] md:h-[120px] pointer-events-none z-30">

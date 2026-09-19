@@ -7,6 +7,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { IoAirplane } from "react-icons/io5";
 import { site as siteData } from "@/data";
 import type { TravelDestinationsData } from "@/type/typeSection";
+import ScrollReveal from "../shared/ScrollReveal";
 
 const destinationsData: TravelDestinationsData = siteData.destinations;
 
@@ -71,7 +72,7 @@ export default function Destination() {
     <section className="relative w-full bg-[#05060a] py-16 text-white overflow-hidden">
       <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10 xl:px-14">
         {/* HEADER SECTION */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-10 text-center lg:text-left">
+        <ScrollReveal className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-10 text-center lg:text-left" direction="up">
           <div className="max-w-2xl mx-auto lg:mx-0">
             {/* Badge */}
             {badge && (
@@ -121,7 +122,7 @@ export default function Destination() {
               </Link>
             )}
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* CAROUSEL CONTAINER WITH OUTER ARROWS */}
         <div className="relative px-0 sm:px-0">
@@ -151,10 +152,13 @@ export default function Destination() {
             onScroll={handleScroll}
             className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-4 pt-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            {destinations.map((destination) => (
-              <div
+            {destinations.map((destination, i) => (
+              <ScrollReveal
                 key={destination.id}
                 className="destination-card relative flex-shrink-0 snap-start w-full sm:w-[180px] h-[270px] rounded-3xl overflow-hidden group border border-white/10 shadow-2xl bg-gray-900"
+                direction="up"
+                index={i}
+                staggerChildren={0.08}
               >
                 {/* Destination Image - High quality rendering to eliminate blur */}
                 <Image
@@ -190,7 +194,7 @@ export default function Destination() {
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

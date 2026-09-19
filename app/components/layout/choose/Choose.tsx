@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Calendar, Building2, Compass, Headphones } from "lucide-react";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import type { ChooseVariant } from "@/type/typeSection";
 
@@ -50,7 +51,7 @@ export default function Choose({ hideBanner = false }: ChooseProps) {
       <section className="relative w-full overflow-hidden pt-8 md:pt-12">
         <div className="mx-auto max-w-[1300px]  px-4 sm:px-6 lg:px-10 xl:px-14">
           
-          <div className="mb-10 flex flex-col items-center text-center md:mb-12">
+          <ScrollReveal className="mb-10 flex flex-col items-center text-center md:mb-12" direction="up">
             {badge && (
               <span className="mb-2 inline-block text-xs font-medium uppercase tracking-[0.25em] text-amber-400">
                 {badge}
@@ -63,11 +64,11 @@ export default function Choose({ hideBanner = false }: ChooseProps) {
             </h2>
 
             <div className="mt-1 h-1 w-20 rounded-full bg-amber-400"></div>
-          </div>
+          </ScrollReveal>
 
           <div className="relative grid grid-cols-1 items-center gap-8 md:px-16 lg:grid-cols-12 lg:gap-4">
             
-            <div className="z-20 flex md:flex-col justify-center gap-10 md:gap-12 lg:col-span-3">
+            <ScrollReveal className="z-20 flex md:flex-col justify-center gap-10 md:gap-12 lg:col-span-3" direction="left">
               {leftItems.map((item) => (
                 <div
                   key={item.id}
@@ -86,9 +87,9 @@ export default function Choose({ hideBanner = false }: ChooseProps) {
                   </p>
                 </div>
               ))}
-            </div>
+            </ScrollReveal>
 
-            <div className="relative flex justify-center lg:col-span-6 lg:my-0">
+            <ScrollReveal className="relative flex justify-center lg:col-span-6 lg:my-0" direction="up">
               <div className="relative flex h-[380px] w-[280px] items-center justify-center sm:h-[360px] sm:w-[360px] md:h-[490px] md:w-[520px]">
                 
                 <div className="absolute inset-4 overflow-hidden rounded-2xl sm:inset-6">
@@ -111,9 +112,9 @@ export default function Choose({ hideBanner = false }: ChooseProps) {
                 </div>
 
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="z-20 flex md:flex-col justify-center gap-10 md:gap-12 lg:col-span-3">
+            <ScrollReveal className="z-20 flex md:flex-col justify-center gap-10 md:gap-12 lg:col-span-3" direction="right">
               {rightItems.map((item) => (
                 <div
                   key={item.id}
@@ -132,15 +133,18 @@ export default function Choose({ hideBanner = false }: ChooseProps) {
                   </p>
                 </div>
               ))}
-            </div>
+            </ScrollReveal>
 
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:hidden">
-            {items.map((item) => (
-              <div
+            {items.map((item, i) => (
+              <ScrollReveal
                 key={item.id}
                 className="flex flex-col items-center rounded-2xl border border-white/5 bg-slate-900/60 p-5 text-center"
+                direction="up"
+                index={i}
+                staggerChildren={0.08}
               >
                 <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full border border-amber-400/40 bg-black/40">
                   {getIconComponent(item.icon)}
@@ -153,7 +157,7 @@ export default function Choose({ hideBanner = false }: ChooseProps) {
                 <p className="max-w-[260px] text-xs leading-relaxed text-slate-400 md:text-sm">
                   {item.description}
                 </p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 

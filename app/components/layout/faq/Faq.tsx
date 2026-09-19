@@ -16,6 +16,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import type { TravelFaqData } from "@/type/typeSection";
 import { RiQuestionMark } from "react-icons/ri";
@@ -64,7 +65,7 @@ export default function Faq() {
       <section className="relative w-full py-16 px-4 sm:px-6 lg:px-10 xl:px-14 max-w-[1400px] mx-auto">
         
         {/* HEADER SECTION WITH LEFT & RIGHT SPEECH BUBBLES */}
-        <div className="relative mb-14 text-center max-w-3xl mx-auto">
+        <ScrollReveal className="relative mb-14 text-center max-w-3xl mx-auto" direction="up">
           
           {/* Left Speech Bubble */}
           <div className="hidden md:flex absolute md:w-[200px] md:h-[100px] -left-44 top-10 md:top-15 items-center gap-2  border-2 border-amber-400/80 rounded-2xl p-3 shadow-xl transform -rotate-12 z-10">
@@ -105,13 +106,13 @@ export default function Faq() {
           <p className="text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed max-w-xl mx-auto">
             {faqData.header.subtitle}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* FAQ GRID CONTENT */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 items-start">
           
           {/* LEFT SIDE: Features List + Travel Card Image */}
-          <div className="lg:col-span-4 flex flex-col gap-6">
+          <ScrollReveal className="lg:col-span-4 flex flex-col gap-6" direction="left">
             
             {/* Feature Cards Column */}
             <div className="bg-[#080d1a] md:-mt-4 border-2 border-gray-700 rounded-2xl p-4 flex flex-col gap-3">
@@ -148,10 +149,10 @@ export default function Faq() {
               </div>
             </div>
 
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT SIDE: 10 FAQ Accordion Items */}
-          <div className="lg:col-span-8 flex flex-col gap-3">
+          <ScrollReveal className="lg:col-span-8 flex flex-col gap-3" direction="right">
             {faqData.faqs.map((faq, index) => {
               const isOpen = openIndex === index;
               return (
@@ -193,12 +194,12 @@ export default function Faq() {
                 </div>
               );
             })}
-          </div>
+          </ScrollReveal>
 
         </div>
 
         {/* 3. FAQ BOTTOM HELP / SUPPORT BAR */}
-        <div className="mt-12  border-2 border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-2xl">
+        <ScrollReveal className="mt-12  border-2 border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-2xl" direction="up">
           
           <div className="flex  gap-4 text-center sm:text-left">
             <div className=" flex items-center justify-center text-amber-400 shrink-0 hidden sm:flex">
@@ -251,7 +252,7 @@ export default function Faq() {
             </Link>
           </div>
 
-        </div>
+        </ScrollReveal>
 
       </section>
 

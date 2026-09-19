@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import type { TravelBlogData, TravelBlogPost } from "@/type/typeSection";
 
@@ -34,7 +35,7 @@ export default function Blog() {
       <section className="relative w-full py-8 md:py-12">
         <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10 xl:px-14">
           <div className="relative mb-5">
-            <div className="relative z-10 flex flex-col items-center text-center ">
+            <ScrollReveal className="relative z-10 flex flex-col items-center text-center " direction="up">
               {badge && (
                 <span className="mb-2 inline-block text-xs font-medium uppercase tracking-[0.25em] text-amber-400">
                   {badge}
@@ -51,13 +52,15 @@ export default function Blog() {
                   {desc}
                 </p>
               )} */}
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* BLOG GRID: 1-col mobile, 2-col tablet, 3-col desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allPosts.map((post) => (
-              <BlogCard key={post.id} post={post} />
+            {allPosts.map((post, i) => (
+              <ScrollReveal key={post.id} direction="up" index={i} staggerChildren={0.08}>
+                <BlogCard post={post} />
+              </ScrollReveal>
             ))}
           </div>
         </div>

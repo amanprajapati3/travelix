@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { ArrowLeft, MapPin } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import type { TravelTeamMember } from "@/type/typeSection";
@@ -14,7 +17,7 @@ export default function TeamDetail({ member }: { member: TravelTeamMember }) {
   return (
     <section className="mx-auto max-w-312.5 px-2 py-10 sm:px-6 lg:px-10 lg:py-16">
       <div className="grid overflow-hidden rounded-xl border border-cyan-900 bg-[#061b20] lg:grid-cols-[minmax(300px,440px)_1fr]">
-        <div className="relative min-h-90 overflow-hidden rounded-2xl sm:min-h-115">
+        <ScrollReveal className="relative min-h-90 overflow-hidden rounded-2xl sm:min-h-115" direction="left">
           <div className="pointer-events-none absolute inset-3">
             <div className="absolute bottom-0 left-0 top-0 w-[7%] bg-amber-300/90" />
 
@@ -37,9 +40,9 @@ export default function TeamDetail({ member }: { member: TravelTeamMember }) {
             sizes="(max-width: 1024px) 100vw, 440px"
             className="z-10 rounded-xl object-cover p-5 sm:p-7"
           />
-        </div>
+        </ScrollReveal>
 
-        <div className="flex flex-col justify-center p-3 sm:p-10">
+        <ScrollReveal className="flex flex-col justify-center p-3 sm:p-10" direction="right">
           <p className="text-sm md:text-base font-bold uppercase tracking-[0.2em] text-amber-300">
             Our Team
           </p>
@@ -48,7 +51,7 @@ export default function TeamDetail({ member }: { member: TravelTeamMember }) {
           <p className="mt-4 text-sm sm:text-base uppercase tracking-wide text-slate-300">
             {member.role}
           </p>
-          <dl className="mt-4 grid gap-1 text-sm sm:text-lg sm:grid-cols-[90px_1fr]">
+          <dl className="mt-4  grid gap-1 text-sm sm:text-lg grid-cols-[90px_1fr]">
             <dt className="font-semibold text-white">Name:</dt>
             <dd className="text-white sm:ml-5">{member.name}</dd>
             <dt className="font-semibold text-white">Experience:</dt>
@@ -76,10 +79,10 @@ export default function TeamDetail({ member }: { member: TravelTeamMember }) {
               );
             })}
           </div>
-        </div>
+        </ScrollReveal>
       </div>
 
-      <div className="mt-5 rounded-xl border border-cyan-900 bg-[#061b20] p-3 sm:p-10">
+      <ScrollReveal className="mt-5 rounded-xl border border-cyan-900 bg-[#061b20] p-3 sm:p-10" direction="up">
         <h2 className="flex items-center gap-3 text-xl font-bold sm:text-2xl md:text-4xl">
           <span className="h-8 w-1 bg-amber-400" />
           Biography
@@ -87,7 +90,7 @@ export default function TeamDetail({ member }: { member: TravelTeamMember }) {
         <p className="mt-5 max-w-5xl text-sm sm:text-lg leading-7 text-white">
           {member.bio}
         </p>
-      </div>
+      </ScrollReveal>
 
       <Link
         href="/team"

@@ -8,6 +8,7 @@ import { IoAirplane } from "react-icons/io5";
 import { site as siteData } from "@/data";
 import type { TravelBannerData } from "@/type/typeSection";
 import { Allura } from "next/font/google";
+import ScrollReveal from "../shared/ScrollReveal";
 
 const allura = Allura({
   subsets: ["latin"],
@@ -47,7 +48,7 @@ export default function Banner() {
       : [caption || ""];
 
   return (
-    <section className="relative h-[100svh] w-full overflow-hidden bg-[#05060a] text-white">
+    <section className="relative h-[70vh] w-full overflow-hidden bg-[#05060a] text-white">
       {/* BACKGROUND IMAGE */}
       {mainImage?.src && (
         <Image
@@ -75,7 +76,7 @@ export default function Banner() {
         <div className="grid w-full grid-cols-1 gap-2 lg:grid-cols-12 lg:gap-0">
           
           {/* LEFT SIDE */}
-          <div className="relative z-40 flex md:mt-24 mt-28 flex-col items-start justify-center text-left lg:col-span-5 lg:pl-10">
+          <ScrollReveal className="relative z-40 flex md:mt-24 mt-28 flex-col items-start justify-center text-left lg:col-span-5 lg:pl-10" direction="left">
             {/* Badge */}
             {badge && (
               <span className="mb-2 text-[10px] font-medium uppercase tracking-[0.25em] text-white/70 sm:mb-3 sm:text-xs">
@@ -131,10 +132,10 @@ export default function Banner() {
                 })}
               </div>
             )}
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT SIDE */}
-          <div className="relative flex min-h-0 items-center justify-end lg:col-span-7 lg:h-full">
+          <ScrollReveal className="relative flex min-h-0 items-center justify-end lg:col-span-7 lg:h-full" direction="right">
             
             {/* SCRIPT CAPTION */}
             {captionLines.length > 0 && (
@@ -228,7 +229,7 @@ export default function Banner() {
                 })}
               </div>
             )}
-          </div>
+          </ScrollReveal>
         </div>
       </div>
 

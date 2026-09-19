@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import ScrollReveal from "../../shared/ScrollReveal";
 import {
   ArrowRight,
   CalendarDays,
@@ -31,19 +34,19 @@ export default function Sitemap() {
   return (
     <section className="bg-[#011014] px-4 py-10 text-white sm:px-6 md:py-14 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="mx-auto mb-8 max-w-2xl text-center">
+        <ScrollReveal className="mx-auto mb-8 max-w-2xl text-center" direction="up">
           <div className="flex items-center justify-center gap-3 text-[13px] font-bold uppercase tracking-[0.3em] text-amber-400">
             <span className="h-px w-5 bg-amber-400" /> {site.sitemap.eyebrow} <span className="h-px w-5 bg-amber-400" />
           </div>
           <h1 className="mt-2 text-3xl font-bold sm:text-4xl">{site.sitemap.title.normal} <span className="text-amber-400">{site.sitemap.title.highlighted}</span></h1>
           <p className="mt-2 text-sm sm:text-base leading-6 text-slate-100">{site.sitemap.description}</p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
-          {groups.map((group) => {
+          {groups.map((group, i) => {
             const Icon = icons[group.icon as keyof typeof icons] ?? Compass;
             return (
-              <div key={group.title} className="rounded-lg border border-cyan-900/80 bg-[#03191e]/80 p-4">
+              <ScrollReveal key={group.title} className="rounded-lg border border-cyan-900/80 bg-[#03191e]/80 p-4" direction="up" index={i} staggerChildren={0.08}>
                 <div className="flex items-center gap-3">
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-300 text-slate-950"><Icon className="h-6 w-6" /></span>
                   <div><h2 className="text-base md:text-lg font-bold text-white">{group.title}</h2><div className="mt-1 h-0.5 w-8 bg-amber-400" /></div>
@@ -57,7 +60,7 @@ export default function Sitemap() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </ScrollReveal>
             );
           })}
         </div>

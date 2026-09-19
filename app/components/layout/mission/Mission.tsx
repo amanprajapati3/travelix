@@ -16,6 +16,7 @@ import { RiPlaneLine } from "react-icons/ri";
 import Banner from "../../shared/Banner"; // Adjust path to your reusable Banner component
 import CtaBanner from "../../shared/CtaBanner";
 import Stats from "../../shared/Stats";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import type { TravelMissionData } from "@/type/typeSection";
 
@@ -191,7 +192,7 @@ export default function Mission() {
         <div className="mx-auto  max-w-[1300px] px-4 sm:px-6 lg:px-10 xl:px-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-center">
             {/* LEFT: Tilted Image with Amber Backing & Brush Badge */}
-            <div className="lg:col-span-6 relative flex justify-center pb-10 order-2 lg:order-1">
+            <ScrollReveal className="lg:col-span-6 relative flex justify-center pb-10 order-2 lg:order-1" direction="left">
               <TiltedPhotoCard
                 image={missionSection.image}
                 alt={missionSection.title.normal}
@@ -220,10 +221,10 @@ export default function Mission() {
                   </span>
                 </div>
               </div>
-            </div>
+          </ScrollReveal>
 
             {/* RIGHT: Content & Large Feature Circles */}
-            <div className="lg:col-span-6 flex flex-col order-1 lg:order-2">
+            <ScrollReveal className="lg:col-span-6 flex flex-col order-1 lg:order-2" direction="right">
               <SectionHeader
                 icon={RiTargetFill}
                 eyebrow={missionSection.badge}
@@ -242,7 +243,7 @@ export default function Mission() {
                   <FeatureCircle key={feature.id} icon={feature.icon} title={feature.title} />
                 ))}
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -252,7 +253,7 @@ export default function Mission() {
         <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10 xl:px-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-center">
             {/* LEFT: Content & Large Feature Circles */}
-            <div className="lg:col-span-6 flex flex-col order-1 lg:order-1">
+            <ScrollReveal className="lg:col-span-6 flex flex-col order-1 lg:order-1" direction="left">
               <SectionHeader
                 icon={Eye}
                 eyebrow={visionSection.badge}
@@ -270,10 +271,10 @@ export default function Mission() {
                   <FeatureCircle key={feature.id} icon={feature.icon} title={feature.title} />
                 ))}
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* RIGHT: Tilted Image with Script Text Directly On The Photo (no brush bg) */}
-            <div className="lg:col-span-6 relative flex justify-center pb-10 order-2 lg:order-2">
+            <ScrollReveal className="lg:col-span-6 relative flex justify-center pb-10 order-2 lg:order-2" direction="right">
               <TiltedPhotoCard
                 image={visionSection.image}
                 alt={visionSection.title.normal}
@@ -295,7 +296,7 @@ export default function Mission() {
                 </p>
                 <span className="block mt-2 h-[3px] w-16 bg-amber-400 rounded-full shadow-[0_0_10px_rgba(251,191,36,0.8)]" />
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

@@ -18,6 +18,7 @@ import {
   CalendarRange,
 } from "lucide-react";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import type { TravelEnquiryData } from "@/type/typeSection";
 
@@ -102,7 +103,7 @@ export default function Enquiry() {
       <section className="relative w-full py-12 md:py-16 px-4 sm:px-6 lg:px-10 xl:px-14 max-w-[1320px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8  items-start">
           {/* LEFT COLUMN: WHITE FORM CARD (FIRST ON MOBILE/TABLET & DESKTOP LEFT) */}
-          <div className="lg:col-span-7 xl:col-span-7 bg-white text-slate-900 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl border border-slate-100">
+          <ScrollReveal className="lg:col-span-7 xl:col-span-7 bg-white text-slate-900 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl border border-slate-100" direction="left">
             {/* Form Header */}
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-1.5">
@@ -370,10 +371,10 @@ export default function Enquiry() {
                 <ArrowRight className="h-4 w-4" />
               </button>
             </form>
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT COLUMN: INFO SIDEBAR (BELOW ON MOBILE/TABLET & DESKTOP RIGHT) */}
-          <div className="lg:col-span-5 xl:col-span-5 space-y-8">
+          <ScrollReveal className="lg:col-span-5 xl:col-span-5 space-y-8" direction="right">
             {/* Why Enquire With Us */}
             <div className="border-2 border-gray-700 rounded-xl py-3 px-8">
               <div className="flex items-center gap-2 mb-2">
@@ -432,7 +433,7 @@ export default function Enquiry() {
                 ))}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>

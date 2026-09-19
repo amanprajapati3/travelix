@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Banner from "../../shared/Banner";
 import CtaBanner from "../../shared/CtaBanner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { getPackageFilters, site } from "@/data";
 import type { TravelPackageItem, TravelPackagesData } from "@/type/typeSection";
 
@@ -136,12 +137,15 @@ export default function Package() {
     setSortBy("Popularity");
   };
 
-  const renderCard = (pkg: TravelPackageItem) => {
+  const renderCard = (pkg: TravelPackageItem, index: number = 0) => {
     const isFavorite = favorites.includes(pkg.id);
     return (
-      <article
+      <ScrollReveal
         key={pkg.id}
         className={`group overflow-hidden rounded-xl border border-cyan-900/70 bg-[#001820] shadow-[0_10px_28px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/70 ${layout === "list" ? "sm:flex" : ""}`}
+        direction="up"
+        index={index}
+        staggerChildren={0.06}
       >
         <div
           className={`relative overflow-hidden ${layout === "list" ? "sm:w-[38%]" : "h-[180px] sm:h-[190px]"}`}
@@ -214,7 +218,7 @@ export default function Package() {
             </Link>
           </div>
         </div>
-      </article>
+      </ScrollReveal>
     );
   };
 
@@ -310,7 +314,7 @@ export default function Package() {
           </div>
         </div>
         <div className="grid gap-5 lg:grid-cols-[30%_minmax(0,70%)] xl:grid-cols-[25%_minmax(0,70%)]">
-          <aside className="hidden self-start rounded-lg border-2 border-cyan-900/80 bg-[#001820] p-3.5 lg:block">
+          <ScrollReveal className="hidden self-start rounded-lg border-2 border-cyan-900/80 bg-[#001820] p-3.5 lg:block" direction="left">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-base font-bold">Search Tour</h2>
             </div>
@@ -423,9 +427,9 @@ export default function Package() {
             >
               Clear Filters
             </button>
-          </aside>
+          </ScrollReveal>
           <div className="min-w-0">
-            <div className="mb-3 flex flex-col gap-3 rounded-lg border border-cyan-900/70 bg-[#001820] p-3 sm:flex-row sm:items-center sm:justify-between">
+            <ScrollReveal className="mb-3 flex flex-col gap-3 rounded-lg border border-cyan-900/70 bg-[#001820] p-3 sm:flex-row sm:items-center sm:justify-between" direction="up">
               <span className="text-sm text-slate-300">
                 Showing{" "}
                 <strong className="text-white">
@@ -437,7 +441,7 @@ export default function Package() {
                 </strong>{" "}
                 tours
               </span>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center sm:gap-2">
                 <label className="flex flex-1 items-center gap-2 text-sm text-slate-400 lg:hidden">
                   <Search className="h-3.5 w-3.5 text-amber-400" />
                   <input
@@ -453,7 +457,7 @@ export default function Package() {
                 <select
                   value={sortBy}
                   onChange={(event) => setSortBy(event.target.value)}
-                  className="rounded border border-cyan-900 bg-[#011014] px-2.5 py-2 text-sm text-white outline-none focus:border-amber-400"
+                  className="rounded hidden sm:block border border-cyan-900 bg-[#011014] px-2.5 py-2 text-sm text-white outline-none focus:border-amber-400"
                 >
                   <option>Popularity</option>
                   <option>Rating</option>
@@ -479,12 +483,12 @@ export default function Package() {
                   </button>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
             {visiblePackages.length ? (
               <div
                 className={`grid gap-3.5 ${layout === "grid" ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1"}`}
               >
-                {visiblePackages.map(renderCard)}
+                {visiblePackages.map((pkg, i) => renderCard(pkg, i))}
               </div>
             ) : (
               <div className="rounded-lg border border-cyan-900 bg-[#001820] px-5 py-16 text-center">

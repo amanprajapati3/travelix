@@ -15,6 +15,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import type { TravelContactData } from "@/type/typeSection";
 import { Caveat } from "next/font/google";
@@ -98,7 +99,7 @@ export default function Contact() {
         </div>
 
         {/* Section Header */}
-        <div className="mb-14 max-w-2xl relative z-10">
+        <ScrollReveal className="mb-14 max-w-2xl relative z-10" direction="up">
           <h2 className=" text-3xl sm:text-4xl md:text-6xl font-bold tracking-wide">
             <span className="text-white">
               {contactData.header.title.normal}
@@ -111,12 +112,12 @@ export default function Contact() {
           <p className="text-white text-xs sm:text-base mt-4 leading-relaxed">
             {contactData.header.subtitle}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Main 7 / 5 split, not 6 / 6 — the left block is visibly wider than the form */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start relative z-10">
           {/* LEFT SIDE (7 cols): Info list + script text beside overlapping photo cards */}
-          <div className="lg:col-span-7">
+          <ScrollReveal className="lg:col-span-7" direction="left">
             <div className="grid grid-cols-1 sm:grid-cols-[230px_1fr] gap-x-4 gap-y-10 items-start">
               {/* Column A: single-column info list + script text underneath */}
               <div className="flex flex-col gap-6">
@@ -186,10 +187,10 @@ export default function Contact() {
                 {/* Image 1: Bottom Left Overlay Card — in front, offset lower-left */}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT SIDE (5 cols): Contact Form with Airplane Trail Asset */}
-          <div className="lg:col-span-5 relative">
+          <ScrollReveal className="lg:col-span-5 relative" direction="right">
             {/* Top Right Script Text & Plane Loop Image */}
             <div className="absolute -top-30 right-20 flex items-center gap-2 pointer-events-none z-20">
               <div className="text-right transform -rotate-[30deg]">
@@ -325,7 +326,7 @@ export default function Contact() {
                 </button>
               </form>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -334,10 +335,13 @@ export default function Contact() {
         <div className=" mx-auto px-4 ">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
             <div className="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-              {contactData.features.map((item) => (
-                <div
+              {contactData.features.map((item, i) => (
+                <ScrollReveal
                   key={item.id}
                   className="  border-r-1 border-gray-800 p-1 flex  gap-1"
+                  direction="up"
+                  index={i}
+                  staggerChildren={0.08}
                 >
                   <div className="h-10 sm:w-14 sm:h-14 w-10 rounded-full bg-amber-gray-800 border border-amber-400/40 flex items-center justify-center text-amber-300 shrink-0">
                     {renderIcon(item.icon)}
@@ -350,7 +354,7 @@ export default function Contact() {
                       {item.description}
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
 

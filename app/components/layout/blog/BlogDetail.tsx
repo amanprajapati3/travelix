@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, UserRound } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
 import type {
   TravelBlogDetail,
   TravelBlogPost,
@@ -21,7 +24,7 @@ export default function BlogDetail({
   return (
     <section className="mx-auto max-w-[1300px] px-4 py-10 sm:px-6 md:py-14 lg:px-10">
       <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_310px] lg:gap-10">
-        <article className="min-w-0">
+        <ScrollReveal className="min-w-0" direction="left">
           <div className="flex items-center gap-3 text-[13px] font-bold uppercase tracking-[0.2em] text-amber-300">
             <span className="h-0.5 w-5 bg-amber-300" /> Blog Details
           </div>
@@ -71,9 +74,9 @@ export default function BlogDetail({
           <blockquote className="mt-7 rounded-lg border-l-4 border-amber-400 bg-[#061b20] px-5 py-4 text-sm sm:text-base leading-6 text-slate-200">
             {detail.quote}
           </blockquote>
-        </article>
+        </ScrollReveal>
 
-        <aside className="space-y-5 lg:sticky lg:top-6">
+        <ScrollReveal className="space-y-5 lg:sticky lg:top-6" direction="right">
           <div className="rounded-lg border-2 border-cyan-900 bg-[#061b20] p-2 sm:p-3">
             <h2 className="text-base font-bold">Recent Posts</h2>
             <div className="mt-2 h-0.5 w-7 bg-amber-400" />
@@ -135,7 +138,7 @@ export default function BlogDetail({
             </div>
 
           </div>
-        </aside>
+        </ScrollReveal>
       </div>
     </section>
   );

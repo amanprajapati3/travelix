@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import ScrollReveal from "../../shared/ScrollReveal";
 import {
   ArrowRight,
   CarFront,
@@ -20,7 +23,7 @@ export default function ServiceDetail({ service }: { service: TravelServiceItem 
   return (
     <section className="mx-auto max-w-[1300px] px-4 py-10 sm:px-6 md:py-14 lg:px-10">
       <div className="grid items-center gap-8 lg:grid-cols-[1fr_1.08fr] lg:gap-12">
-        <div>
+        <ScrollReveal direction="left">
           <div className="flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.2em] text-amber-400">
             <span className="h-0.5 w-4 bg-amber-300" /> {service.detail.eyebrow}
           </div>
@@ -42,9 +45,9 @@ export default function ServiceDetail({ service }: { service: TravelServiceItem 
           <Link href="/enquiry" className="mt-6 inline-flex items-center gap-3 rounded-full bg-amber-300 px-5 py-3 text-sm font-bold text-slate-950 transition-colors hover:bg-amber-300">
             Plan This Journey <ArrowRight className="h-4 w-4" />
           </Link>
-        </div>
+        </ScrollReveal>
 
-        <div className="relative min-h-[300px] sm:min-h-[410px]">
+        <ScrollReveal className="relative min-h-[300px] sm:min-h-[410px]" direction="right">
           <div className="absolute -left-3 -top-3 h-36 w-32 rounded-xl bg-amber-300 sm:h-44 sm:w-36" />
           <div className="relative z-10 h-[300px] overflow-hidden rounded-xl border border-cyan-900 sm:h-[410px]">
             <Image src={service.image} alt={service.title} fill priority sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover" />
@@ -54,14 +57,14 @@ export default function ServiceDetail({ service }: { service: TravelServiceItem 
               <div className="mt-2 h-0.5 w-8 bg-amber-300" />
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
 
-      <article className="mt-8 rounded-xl border border-cyan-900 bg-[#061b20] p-6 sm:p-8">
+      <ScrollReveal className="mt-8 rounded-xl border border-cyan-900 bg-[#061b20] p-6 sm:p-8" direction="up">
         <h2 className="flex items-center gap-3 text-lg font-bold sm:text-xl md:text-2xl"><span className="h-1 w-5 bg-amber-400" /> Overview</h2>
         <p className="mt-4 text-sm leading-6 text-white sm:text-base">{service.detail.overview}</p>
         <p className="mt-3 text-sm leading-6 text-white sm:text-base">{service.detail.overviewExtra}</p>
-      </article>
+      </ScrollReveal>
     </section>
   );
 }

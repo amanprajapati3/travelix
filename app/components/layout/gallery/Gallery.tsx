@@ -12,6 +12,7 @@ import {
   Clock,
 } from "lucide-react";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import type { TravelGalleryData } from "@/type/typeSection";
 
@@ -240,7 +241,7 @@ export default function Gallery() {
       {/* 2. IMAGE GALLERY SECTION */}
       <section className="relative w-full pt-12 sm:pt-16 pb-4 px-4 sm:px-6 lg:px-10 xl:px-14 max-w-[1400px] mx-auto">
         {/* HEADING (same style as partners page) */}
-        <div className="relative z-10 mb-8 text-center max-w-3xl mx-auto">
+        <ScrollReveal className="relative z-10 mb-8 text-center max-w-3xl mx-auto" direction="up">
           <p className="text-amber-400 font-bold text-md tracking-widest uppercase mb-0">
             {imageSection.eyebrow}
           </p>
@@ -252,7 +253,7 @@ export default function Gallery() {
           <p className="text-white text-md leading-relaxed max-w-2xl mx-auto">
             {imageSection.subtitle}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* IMAGE GRID / MOBILE SLIDER */}
         <div
@@ -268,7 +269,7 @@ export default function Gallery() {
               className="group relative w-full sm:w-auto shrink-0 snap-start overflow-hidden rounded-xl bg-[#071116] border border-white/5 hover:border-amber-400/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer"
               aria-label={`View ${img.alt}`}
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
+              <ScrollReveal className="relative aspect-[4/3] w-full overflow-hidden rounded-xl" direction="up" index={index} staggerChildren={0.05}>
                 <Image
                   src={img.src}
                   alt={img.alt}
@@ -295,7 +296,7 @@ export default function Gallery() {
                     </p>
                   </div>
                 )}
-              </div>
+              </ScrollReveal>
             </button>
           ))}
         </div>
@@ -321,7 +322,7 @@ export default function Gallery() {
       {/* 3. VIDEO GALLERY SECTION */}
       <section className="relative w-full pt-10 sm:pt-14 pb-16 px-4 sm:px-6 lg:px-10 xl:px-14 max-w-[1400px] mx-auto border-t border-white/5 mt-8">
         {/* HEADING */}
-        <div className="relative z-10 mb-8 text-center max-w-3xl mx-auto">
+        <ScrollReveal className="relative z-10 mb-8 text-center max-w-3xl mx-auto" direction="up">
           <p className="text-amber-400 font-bold text-md tracking-widest uppercase mb-0">
             {videoSection.eyebrow}
           </p>
@@ -333,7 +334,7 @@ export default function Gallery() {
           <p className="text-white text-md leading-relaxed max-w-2xl mx-auto">
             {videoSection.subtitle}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* VIDEO GRID / MOBILE SLIDER */}
         <div
@@ -349,7 +350,7 @@ export default function Gallery() {
               className="group relative w-full sm:w-auto shrink-0 snap-start overflow-hidden rounded-xl bg-[#071116] border border-white/5 hover:border-amber-400/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer"
               aria-label={`Play ${video.title || `video ${index + 1}`}`}
             >
-              <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+              <ScrollReveal className="relative aspect-video w-full overflow-hidden rounded-xl" direction="up" index={index} staggerChildren={0.05}>
                 <Image
                   src={video.thumbnail}
                   alt={video.title || `Video ${index + 1}`}
@@ -379,7 +380,7 @@ export default function Gallery() {
                     </span>
                   )}
                 </div>
-              </div>
+              </ScrollReveal>
             </button>
           ))}
         </div>

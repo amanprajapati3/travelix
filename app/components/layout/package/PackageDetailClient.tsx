@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import ScrollReveal from "../../shared/ScrollReveal";
 import {
   ArrowRight,
   CalendarDays,
@@ -125,7 +126,7 @@ export default function PackageDetailClient({
       <div className="min-w-0 ">
         {/*  Title / price row  */}
         <div className="mb-0 grid gap-6 md:grid-cols-[minmax(0,1fr)_300px] ">
-          <div className="max-w-[600px]">
+          <ScrollReveal className="max-w-[600px]" direction="left">
             <h1 className="text-3xl font-bold leading-tight sm:text-5xl">
               {packageItem.title}
             </h1>
@@ -154,9 +155,9 @@ export default function PackageDetailClient({
                 value={`${packageItem.rating} (${packageItem.reviews})`}
               />
             </div>
-          </div>
+          </ScrollReveal>
 
-          <aside className="rounded-xl md:relative sm:w-[400px] md:w-full md:right-0 md:top-8 sticky top-0 border-2 border-cyan-900 bg-[#001820] py-5 px-10 shadow-[0_12px_30px_rgba(0,0,0,0.2)]">
+          <ScrollReveal className="rounded-xl md:relative sm:w-[400px] md:w-full md:right-0 md:top-8 sticky top-0 border-2 border-cyan-900 bg-[#001820] py-5 px-10 shadow-[0_12px_30px_rgba(0,0,0,0.2)]" direction="right">
             <p className="text-sm text-slate-300">Starting From</p>
             <p className="mt-1 text-3xl font-bold text-amber-400">
               ${packageItem.price}
@@ -178,10 +179,10 @@ export default function PackageDetailClient({
               />
               <Benefit icon={<Phone />} text="24/7 Customer Support" />
             </div>
-          </aside>
+          </ScrollReveal>
         </div>
         {/*  Gallery hero + thumbnails  */}
-        <div className="mb-7 mt-10 md:mt-0 md:max-w-[840px] grid gap-5 md:grid-cols-[minmax(0,1fr)_140px]">
+        <ScrollReveal className="mb-7 mt-10 md:mt-0 md:max-w-[840px] grid gap-5 md:grid-cols-[minmax(0,1fr)_140px]" direction="up">
           <button
             type="button"
             onClick={() => openLightbox(activeImage)}
@@ -249,7 +250,7 @@ export default function PackageDetailClient({
               );
             })}
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Tabs */}
         <nav
@@ -398,7 +399,7 @@ export default function PackageDetailClient({
             <SectionHeading>Detailed Itinerary</SectionHeading>
             <div className="space-y-3">
               {tour.itinerary.map((item, index) => (
-                <div key={item.day} className="flex gap-3">
+                <ScrollReveal key={item.day} className="flex gap-3" direction="up" index={index} staggerChildren={0.05}>
                   <div className="relative flex w-14 shrink-0 justify-center">
                     <span className="z-10 flex h-11 w-11 items-center justify-center rounded-full bg-amber-400 text-xs font-bold text-slate-950">
                       {item.day}
@@ -416,7 +417,7 @@ export default function PackageDetailClient({
                       {item.description}
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </section>

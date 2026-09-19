@@ -2,6 +2,7 @@
 
 import React from "react";
 import { FileText, Settings, Calendar, Plane } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data"; // Adjust import path to match your project
 import type { TravelProcessData, TravelProcessItem } from "@/type/typeSection";
 
@@ -36,7 +37,7 @@ export default function Process() {
         <div className="relative bg-[#070a10] border border-slate-800/80 rounded-3xl p-6  shadow-2xl overflow-hidden">
           
           {/* HEADER SECTION */}
-          <div className="flex flex-col items-center text-center mb-3">
+          <ScrollReveal className="flex flex-col items-center text-center mb-3" direction="up">
             {badge && (
               <span className="mb-3 inline-block text-sm sm:text-md font-semibold  tracking-[0.25em] text-amber-400">
                 {badge}
@@ -48,7 +49,7 @@ export default function Process() {
             </h2>
             {/* Yellow Underline Accent */}
             <div className="h-1.5 w-20 bg-amber-400 rounded-full mt-1"></div>
-          </div>
+          </ScrollReveal>
 
           {/* STEPS LAYOUT CONTAINER */}
           <div className="relative">
@@ -68,10 +69,13 @@ export default function Process() {
               </svg>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 relative z-10">
-              {steps.map((step: TravelProcessItem) => (
-                <div
+              {steps.map((step: TravelProcessItem, i) => (
+                <ScrollReveal
                   key={step.id}
                   className="flex flex-col items-center  text-center md:text-left group"
+                  direction="up"
+                  index={i}
+                  staggerChildren={0.1}
                 >
                   {/* CIRCULAR ICON BADGE */}
                   <div className="relative flex items-center justify-center w-[96px] h-[96px] rounded-full border-2 border-amber-400 bg-[#0b0f17] shadow-xl mb-3 transition-transform duration-300 group-hover:scale-105">
@@ -97,7 +101,7 @@ export default function Process() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
 

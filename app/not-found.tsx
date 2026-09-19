@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Home, ArrowRight } from "lucide-react";
+import ScrollReveal from "./components/shared/ScrollReveal";
 import { site } from "@/data";
 import type { TravelNotFoundData } from "@/type/typeSection";
 
@@ -44,7 +45,7 @@ export default function NotFound() {
 
       {/* CONTENT CONTAINER */}
       <div className="relative z-10 w-full max-w-[1320px] mx-auto px-6 sm:px-10 mt-30 lg:px-24 py-16">
-        <div className="max-w-2xl">
+        <ScrollReveal className="max-w-2xl" direction="up">
           {/* Eyebrow */}
           <p className="text-amber-400 font-extrabold text-sm sm:text-base tracking-widest uppercase ">
             {data.eyebrow}
@@ -116,7 +117,7 @@ export default function NotFound() {
             <span>{data.button.label}</span>
             <ArrowRight className="h-6 w-6" />
           </Link>
-        </div>
+        </ScrollReveal>
       </div>
     </main>
   );

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { User, MessageSquare, ArrowRight } from "lucide-react";
 import { site } from "@/data"; // Adjust import path to match your project structure
 import type { TravelBlogData, TravelBlogPost } from "@/type/typeSection"; // Adjust import path
+import ScrollReveal from "../shared/ScrollReveal";
 
 const blogData: TravelBlogData = site.blog;
 
@@ -29,7 +30,7 @@ export default function BlogSection() {
               className="object-contain object-left-top opacity-40"
             />{" "}
           </div>{" "}
-          <div className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left">
+          <ScrollReveal className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left" direction="up">
             {" "}
             {badge && (
               <span className="mb-2 inline-block text-xs font-medium uppercase tracking-[0.25em] text-amber-400">
@@ -52,7 +53,7 @@ export default function BlogSection() {
                 {desc}{" "}
               </p>
             )}{" "}
-          </div>{" "}
+          </ScrollReveal>{" "}
         </div>
 
       <div className="absolute bottom-0 right-0">
@@ -62,7 +63,7 @@ export default function BlogSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
           {/* LEFT SIDE: HUGE FEATURED POST CARD (Takes 7 cols on Desktop) */}
           {featuredPost && (
-            <div className="lg:col-span-7 bg-[#0b0f17] rounded-3xl overflow-hidden border border-white/5 shadow-2xl flex flex-col h-fit group">
+            <ScrollReveal className="lg:col-span-7 bg-[#0b0f17] rounded-3xl overflow-hidden border border-white/5 shadow-2xl flex flex-col h-fit group" direction="left">
               {/* Image Container */}
               <div className="relative w-full h-[270px]  overflow-hidden">
                 <Image
@@ -122,11 +123,11 @@ export default function BlogSection() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           )}
 
           {/* RIGHT SIDE: THREE STACKED CARDS (Takes 5 cols on Desktop) */}
-          <div className="lg:col-span-5 flex flex-col gap-2">
+          <ScrollReveal className="lg:col-span-5 flex flex-col gap-2" direction="right">
             {posts &&
               posts.slice(0, 3).map((post: TravelBlogPost) => (
                 <div
@@ -180,7 +181,7 @@ export default function BlogSection() {
                   </div>
                 </div>
               ))}
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

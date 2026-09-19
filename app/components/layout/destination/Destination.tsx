@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Search, MapPin, Calendar, ArrowRight } from "lucide-react";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import CtaBanner from "../../shared/CtaBanner";
 import { site } from "@/data";
 import type {
@@ -78,10 +79,13 @@ export default function Destination() {
     }
   };
 
-  const renderDestinationCard = (dest: TravelDestinationItem) => (
-    <div
+  const renderDestinationCard = (dest: TravelDestinationItem, index: number = 0) => (
+    <ScrollReveal
       key={dest.id}
       className="group relative h-[280px] rounded-[24px] overflow-hidden border border-amber-400/20 shadow-xl flex flex-col justify-end  transition-all duration-300 hover:border-amber-400 shrink-0 w-full sm:w-auto"
+      direction="up"
+      index={index}
+      staggerChildren={0.06}
     >
       {/* Background Image */}
       <Image
@@ -118,7 +122,7 @@ export default function Destination() {
             <ArrowRight className="h-5 w-5 stroke-[2.5]" />
             </Link> */}
       </div>
-    </div>
+    </ScrollReveal>
   );
 
   return (
@@ -135,7 +139,7 @@ export default function Destination() {
 
       {/* 2. SEARCH FILTER BAR SECTION */}
       <section className="relative z-20 max-w-[1200px] mx-auto px-4 py-8 md:py-12 mb-0">
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-20 items-stretch">
+        <ScrollReveal className="flex flex-col sm:flex-row gap-4 sm:gap-20 items-stretch" direction="up">
           {/* Dropdowns row — stays side-by-side even on mobile */}
           <div className="flex flex-row gap-3 sm:gap-4 flex-1">
             {/* Dropdown 1: Destination Type */}
@@ -195,14 +199,14 @@ export default function Destination() {
             <Search className="h-4 w-4 stroke-[2.5]" />
             <span>Search Destinations</span>
           </button>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* 3. POPULAR DOMESTIC DESTINATIONS SECTION */}
       <section className="relative w-full">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10 xl:px-14">
           {/* Section Header */}
-          <div className="flex  flex-col sm:flex-row sm:items-end justify-between mb-4 gap-4">
+          <ScrollReveal className="flex  flex-col sm:flex-row sm:items-end justify-between mb-4 gap-4" direction="up">
             <div className="flex gap-5 justify-between">
               {/* <div className="flex items-center gap-2 mb-2">
                 <span className="w-6 h-[2px] bg-amber-400" />
@@ -230,13 +234,13 @@ export default function Destination() {
                 {destinationData.viewAllLink.label}
               </Link> */}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Desktop & Tablet Grid / Mobile Slider */}
           <div className="relative">
             {/* Desktop / Tablet Grid (Hidden on mobile) */}
             <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5  gap-6">
-              {filteredDomestic.map((dest) => renderDestinationCard(dest))}
+              {filteredDomestic.map((dest, i) => renderDestinationCard(dest, i))}
             </div>
 
             {/* Mobile Slider (Visible only on mobile) */}
@@ -246,9 +250,9 @@ export default function Destination() {
                 className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4"
                 style={{ scrollbarWidth: "none" }}
               >
-                {filteredDomestic.map((dest) => (
+                {filteredDomestic.map((dest, i) => (
                   <div key={dest.id} className="min-w-full snap-center">
-                    {renderDestinationCard(dest)}
+                    {renderDestinationCard(dest, i)}
                   </div>
                 ))}
               </div>
@@ -277,7 +281,7 @@ export default function Destination() {
       <section className="relative w-full py-16">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10 xl:px-14">
           {/* Section Header */}
-          <div className="flex  flex-col sm:flex-row sm:items-end justify-between mb-4 gap-4">
+          <ScrollReveal className="flex  flex-col sm:flex-row sm:items-end justify-between mb-4 gap-4" direction="up">
             <div className="flex gap-5 justify-between">
               {/* <div className="flex items-center gap-2 mb-2">
                 <span className="w-6 h-[2px] bg-amber-400" />
@@ -305,13 +309,13 @@ export default function Destination() {
                 {destinationData.viewAllLink.label}
               </Link> */}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Desktop & Tablet Grid / Mobile Slider */}
           <div className="relative">
             {/* Desktop / Tablet Grid (Hidden on mobile) */}
             <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5  gap-6">
-              {filteredInternational.map((dest) => renderDestinationCard(dest))}
+              {filteredInternational.map((dest, i) => renderDestinationCard(dest, i))}
             </div>
 
             {/* Mobile Slider (Visible only on mobile) */}
@@ -321,9 +325,9 @@ export default function Destination() {
                 className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4"
                 style={{ scrollbarWidth: "none" }}
               >
-                {filteredInternational.map((dest) => (
+                {filteredInternational.map((dest, i) => (
                   <div key={dest.id} className="min-w-full snap-center">
-                    {renderDestinationCard(dest)}
+                    {renderDestinationCard(dest, i)}
                   </div>
                 ))}
               </div>

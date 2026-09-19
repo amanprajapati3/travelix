@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { site } from "@/data";
 import type { TravelCtaBannerData } from "@/type/typeSection";
+import ScrollReveal from "./ScrollReveal";
 
 export default function CtaBanner() {
   const ctaData: TravelCtaBannerData = site.ctaBanner;
@@ -17,7 +18,7 @@ export default function CtaBanner() {
     <section className="relative w-full bg-[#050811] py-8 text-white">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         {/* MAIN CONTAINER WITH THIN GOLDEN/AMBER BORDER */}
-        <div className="relative w-full overflow-hidden rounded-2xl border border-[#facc15]/30 bg-[#080d1a] shadow-2xl min-h-[150px] flex items-center">
+        <ScrollReveal className="relative w-full overflow-hidden rounded-2xl border border-[#facc15]/30 bg-[#080d1a] shadow-2xl min-h-[150px] flex items-center" direction="up">
           
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
@@ -82,7 +83,7 @@ export default function CtaBanner() {
 
           </div>
 
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

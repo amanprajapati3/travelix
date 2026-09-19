@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { site } from "@/data";
 import type { TravelCtaBannerData, TravelCtaStat } from "@/type/typeSection";
+import ScrollReveal from "./ScrollReveal";
 
 // Animated Counter Hook
 function AnimatedCounter({ value, duration = 1800 }: { value: string; duration?: number }) {
@@ -80,10 +81,13 @@ export default function Stats() {
       {/* Main Content (Elevated above background layers) */}
       <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {ctaData.stats.map((stat: TravelCtaStat) => (
-            <div
+          {ctaData.stats.map((stat: TravelCtaStat, i) => (
+            <ScrollReveal
               key={stat.id}
               className="relative flex items-center justify-between rounded-xl border border-white/10 bg-[#080808] px-6 py-5 shadow-xl transition-all duration-300 hover:border-[#facc15]/30"
+              direction="up"
+              index={i}
+              staggerChildren={0.1}
             >
               {/* Left Side Image Icon */}
               <div className="flex shrink-0 items-center justify-center p-2">
@@ -115,7 +119,7 @@ export default function Stats() {
                   {stat.label}
                 </span>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

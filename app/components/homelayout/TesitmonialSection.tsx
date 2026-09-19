@@ -9,6 +9,7 @@ import type {
   TravelTestimonialData,
   TravelTestimonialItem,
 } from "@/type/typeSection"; // Adjust import path
+import ScrollReveal from "../shared/ScrollReveal";
 
 // Initialize Allura font
 const allura = Allura({
@@ -104,7 +105,7 @@ export default function TestimonialSection() {
 
       <div className="relative z-10 mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10 xl:px-14">
         {/* HEADER SECTION */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-8 gap-8">
+        <ScrollReveal className="flex flex-col md:flex-row md:items-end md:justify-between mb-8 gap-8" direction="up">
           <div className="text-center md:text-left max-w-xl mx-auto md:mx-0">
             {/* Badge */}
             {badge && (
@@ -138,7 +139,7 @@ export default function TestimonialSection() {
               </span>
             )}
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* TESTIMONIAL CAROUSEL CONTAINER */}
         <div className="relative px-1">
@@ -148,12 +149,14 @@ export default function TestimonialSection() {
             onScroll={handleScroll}
             className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           >
-            {testimonialItems.map((item) => (
+            {testimonialItems.map((item, i) => (
               <div
                 key={item.id}
                 className="testimonial-card flex-shrink-0 w-full md:w-[calc(50%-12px)] mr-6 last:mr-0 snap-start"
               >
-                <TestimonialCard item={item} />
+                <ScrollReveal direction="up" index={i} staggerChildren={0.1}>
+                  <TestimonialCard item={item} />
+                </ScrollReveal>
               </div>
             ))}
           </div>

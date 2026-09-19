@@ -7,6 +7,7 @@ import { IoCarSportOutline } from "react-icons/io5";
 
 import { site } from "@/data";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import type { TravelServiceItem, TravelServicesData } from "@/type/typeSection";
 
 const servicesData: TravelServicesData = site.services;
@@ -78,7 +79,7 @@ export default function Service() {
             )}
 
             <section className="mx-auto max-w-[1280px] px-4 py-8 sm:px-6 md:py-12 lg:px-8">
-                <div className="mb-8 text-center md:mb-10">
+                <ScrollReveal className="mb-8 text-center md:mb-10" direction="up">
                     <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">
                         {servicesData.badge}
                     </span>
@@ -86,11 +87,13 @@ export default function Service() {
                         {servicesData.title}
                     </h1>
                     <div className="w-[90px] h-1 bg-amber-300 mx-auto mt-3"></div>
-                </div>
+                </ScrollReveal>
 
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {servicesData.services.map((service) => (
-                        <ServiceCard key={service.id} service={service} />
+                    {servicesData.services.map((service, i) => (
+                        <ScrollReveal key={service.id} direction="up" index={i} staggerChildren={0.08}>
+                            <ServiceCard service={service} />
+                        </ScrollReveal>
                     ))}
                 </div>
             </section>

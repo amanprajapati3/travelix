@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Banner from "../../shared/Banner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site } from "@/data";
 import type { TravelTeamData, TravelTeamMember } from "@/type/typeSection";
 
@@ -68,8 +71,10 @@ export default function Team() {
         </div> */}
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-          {teamData.members.map((member) => (
-            <TeamCard key={member.id} member={member} />
+          {teamData.members.map((member, i) => (
+            <ScrollReveal key={member.id} direction="up" index={i} staggerChildren={0.08}>
+              <TeamCard member={member} />
+            </ScrollReveal>
           ))}
         </div>
       </section>
