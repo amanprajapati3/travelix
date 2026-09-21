@@ -23,6 +23,7 @@ import { site, type TravelEnquiryData } from "@/data";
 
 export default function Enquiry() {
   const enquiryData: TravelEnquiryData = site.enquiry;
+  const enquiryOptions = site.destinations.enquiryOptions;
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -232,12 +233,11 @@ export default function Enquiry() {
                       <option value="" disabled>
                         Where would you like to go?
                       </option>
-                      <option value="bali">Bali, Indonesia</option>
-                      <option value="paris">Paris, France</option>
-                      <option value="tokyo">Tokyo, Japan</option>
-                      <option value="dubai">Dubai, UAE</option>
-                      <option value="swiss">Swiss Alps, Switzerland</option>
-                      <option value="maldives">Maldives</option>
+                      {enquiryOptions.destinations.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -281,11 +281,11 @@ export default function Enquiry() {
                       <option value="" disabled>
                         Select tour type
                       </option>
-                      <option value="family">Family Package</option>
-                      <option value="honeymoon">Honeymoon Special</option>
-                      <option value="adventure">Adventure & Trekking</option>
-                      <option value="luxury">Luxury Cruise</option>
-                      <option value="custom">Custom Itinerary</option>
+                      {enquiryOptions.tourTypes.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -307,10 +307,11 @@ export default function Enquiry() {
                       <option value="" disabled>
                         Select your budget
                       </option>
-                      <option value="1000">$500 - $1,000</option>
-                      <option value="2500">$1,000 - $2,500</option>
-                      <option value="5000">$2,500 - $5,000</option>
-                      <option value="5000+">$5,000+</option>
+                      {enquiryOptions.budgets.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>

@@ -194,6 +194,7 @@ export interface TravelTourFaqItem {
 
 export interface TravelTourDetails {
   overview: string;
+  overviewDescription: string;
   difficulty: string;
   highlights: string[];
   itinerary: TravelTourItineraryItem[];

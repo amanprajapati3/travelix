@@ -1,6 +1,7 @@
 {
   "maldives-paradise-escape": {
     "overview": "Sail into a turquoise island escape with unhurried beach days, warm lagoon swims and sunset moments made for switching off.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Private island beaches",
@@ -65,6 +66,7 @@
   },
   "dubai-luxury-journey": {
     "overview": "Experience Dubai at its most dazzling, from skyline views and golden desert dunes to elegant dining and generous Arabian hospitality.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Burj Khalifa views",
@@ -129,6 +131,7 @@
   },
   "canadian-nature-tour": {
     "overview": "Breathe in the wild beauty of Banff with glacier-fed lakes, pine forests, mountain viewpoints and quiet moments in the Canadian Rockies.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Moderate",
     "highlights": [
       "Banff National Park",
@@ -193,6 +196,7 @@
   },
   "delhi-heritage-trail": {
     "overview": "Uncover Delhi through grand Mughal landmarks, colourful bazaars, peaceful gardens and the stories of a city shaped by centuries.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Red Fort",
@@ -257,6 +261,7 @@
   },
   "delhi-to-agra-cultural-journey": {
     "overview": "Travel through the heart of northern India, connecting Delhi and Agra through legendary monuments, living craft traditions and local flavours.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Taj Mahal sunrise",
@@ -321,6 +326,7 @@
   },
   "kerala-backwater-retreat": {
     "overview": "Slow down among Kerala’s palm-lined waterways with a houseboat stay, fragrant spices, coastal food and the gentle rhythm of village life.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Alleppey houseboat",
@@ -385,6 +391,7 @@
   },
   "kerala-coastal-wellness-escape": {
     "overview": "Restore your rhythm on Kerala’s coast with Ayurveda, quiet beaches, tropical gardens and nourishing food shaped by local traditions.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Ayurvedic consultation",
@@ -449,6 +456,7 @@
   },
   "himachal-himalayan-trek": {
     "overview": "Follow pine forests, high valleys and dramatic Himalayan paths on an active journey led by experienced local guides.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Challenging",
     "highlights": [
       "High-altitude trails",
@@ -513,6 +521,7 @@
   },
   "himachal-valley-discovery": {
     "overview": "Discover Himachal at a comfortable pace through river valleys, hillside villages, forest trails and peaceful mountain viewpoints.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Moderate",
     "highlights": [
       "Scenic valley drives",
@@ -577,6 +586,7 @@
   },
   "goa-sun-and-sand": {
     "overview": "Find your easygoing Goa with golden beaches, colourful markets, Portuguese lanes, fresh seafood and time to simply wander.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Golden beaches",
@@ -641,6 +651,7 @@
   },
   "goa-coastal-adventure": {
     "overview": "Bring more energy to your coast escape with hidden coves, river adventures, forest paths and Goa’s lively evenings.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Moderate",
     "highlights": [
       "Kayaking adventure",
@@ -705,6 +716,7 @@
   },
   "kashmir-lakes-and-valleys": {
     "overview": "Glide across Kashmir’s still lakes and travel through flower-filled valleys beneath snowcapped peaks on a journey of quiet beauty.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Dal Lake shikara ride",
@@ -769,6 +781,7 @@
   },
   "kashmir-winter-wonderland": {
     "overview": "Step into a snow-bright Kashmir of cosy stays, mountain views, winter walks and exhilarating experiences in the north.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Moderate",
     "highlights": [
       "Snow-covered Gulmarg",
@@ -833,6 +846,7 @@
   },
   "rajasthan-royal-route": {
     "overview": "Move through Rajasthan’s royal cities, desert forts and colourful bazaars while experiencing the warm hospitality of the north-west.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Jaipur forts",
@@ -897,6 +911,7 @@
   },
   "rajasthan-desert-safari": {
     "overview": "Cross golden dunes, share stories around a desert campfire and discover the quiet beauty of Rajasthan’s Thar Desert.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Moderate",
     "highlights": [
       "Camel safari",
@@ -961,6 +976,7 @@
   },
   "bali-family-adventure": {
     "overview": "Give every generation something to love with Bali’s beaches, gentle adventures, cultural discoveries and welcoming family-friendly stays.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Family beach time",
@@ -1025,6 +1041,7 @@
   },
   "bali-wellness-escape": {
     "overview": "Reset among Bali’s rainforest mornings, restorative rituals, temple visits and sunsets that make space for a slower, lighter rhythm.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Yoga and meditation",
@@ -1089,6 +1106,7 @@
   },
   "paris-art-and-cuisine": {
     "overview": "See Paris through its galleries, neighbourhood cafés, riverside walks and the everyday details that make the city timeless.",
+    "overviewDescription": "With experienced local hosts, comfortable accommodation and a thoughtfully paced route, this package makes it easy to enjoy the destination with confidence.",
     "difficulty": "Easy",
     "highlights": [
       "Louvre highlights",

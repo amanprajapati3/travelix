@@ -34,6 +34,7 @@ type TourFaq = { question: string; answer: string };
 type TourDetails = {
   gallery: string[];
   overview: string;
+  overviewDescription: string;
   difficulty: string;
   highlights: string[];
   itinerary: TourItineraryItem[];
@@ -282,14 +283,10 @@ export default function PackageDetailClient({
               <section id="overview" className="scroll-mt-8">
                 <SectionHeading>Overview</SectionHeading>
                 <p className="max-w-3xl leading-relaxed text-white">
-                  {tour.overview} With experienced local hosts, comfortable
-                  accommodation and a thoughtfully paced route, this package
-                  makes it easy to enjoy the destination with confidence.
+                  {tour.overview} {tour.overviewDescription}
                 </p> <br />
                 <p className="max-w-3xl leading-relaxed text-white">
-                  {tour.overview} With experienced local hosts, comfortable
-                  accommodation and a thoughtfully paced route, this package
-                  makes it easy to enjoy the destination with confidence.
+                  {tour.overview} {tour.overviewDescription}
                 </p>
                 <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
                   <InfoCard

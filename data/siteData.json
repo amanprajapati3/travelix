@@ -239,6 +239,20 @@
               "highlighted": "Destinations"
             },
             "desc": "From serene beaches to vibrant cities, find your next adventure.",
+            "domesticSection": {
+              "title": {
+                "normal": "Popular",
+                "highlighted": "Domestic Destinations"
+              },
+              "description": "Explore the incredible beauty of India, from mountains to beaches, historical cities to spiritual destinations."
+            },
+            "internationalSection": {
+              "title": {
+                "normal": "Popular",
+                "highlighted": "International Destinations"
+              },
+              "description": "Explore remarkable international destinations, from vibrant cities to serene beaches and unforgettable cultural experiences."
+            },
             "viewAllLink": {
               "label": "View All",
               "href": "/destination"
@@ -259,6 +273,29 @@
                 "Europe",
                 "North America",
                 "Middle East"
+              ]
+            },
+            "enquiryOptions": {
+              "destinations": [
+                { "value": "bali", "label": "Bali, Indonesia" },
+                { "value": "paris", "label": "Paris, France" },
+                { "value": "tokyo", "label": "Tokyo, Japan" },
+                { "value": "dubai", "label": "Dubai, UAE" },
+                { "value": "swiss", "label": "Swiss Alps, Switzerland" },
+                { "value": "maldives", "label": "Maldives" }
+              ],
+              "tourTypes": [
+                { "value": "family", "label": "Family Package" },
+                { "value": "honeymoon", "label": "Honeymoon Special" },
+                { "value": "adventure", "label": "Adventure & Trekking" },
+                { "value": "luxury", "label": "Luxury Cruise" },
+                { "value": "custom", "label": "Custom Itinerary" }
+              ],
+              "budgets": [
+                { "value": "1000", "label": "$500 - $1,000" },
+                { "value": "2500", "label": "$1,000 - $2,500" },
+                { "value": "5000", "label": "$2,500 - $5,000" },
+                { "value": "5000+", "label": "$5,000+" }
               ]
             },
             "domesticDestinations": [

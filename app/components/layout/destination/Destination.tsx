@@ -214,15 +214,16 @@ export default function Destination() {
               <h2 className="text-lg sm:2xl md:text-3xl items-center gap-2 flex font-bold tracking-wide">
                 <span className="w-[40px] h-1 rounded-full bg-amber-400"></span>{" "}
                 <span className="text-white">
-                  {destinationData.title.normal}
+                  {destinationData.domesticSection.title.normal}
                 </span>{" "}
-                <span className="text-amber-400">Domestic Destinations</span>
+                <span className="text-amber-400">
+                  {destinationData.domesticSection.title.highlighted}
+                </span>
               </h2>
             </div>
             <div className="flex gap-5">
               <p className="text-slate-200  md:max-w-[430px] text-xs font-semibold mt-1 max-w-xl">
-                Explore the incredible beauty of India, from mountains to
-                beaches, historical cities to spiritual destinations.
+                {destinationData.domesticSection.description}
               </p>
               {/* <Link
                 href={destinationData.viewAllLink.href}
@@ -289,15 +290,16 @@ export default function Destination() {
               <h2 className="text-lg sm:text-xl md:text-3xl items-center gap-2 flex font-bold tracking-wide">
                 <span className="w-[40px] h-1 rounded-full bg-amber-400"></span>{" "}
                 <span className="text-white">
-                  {destinationData.title.normal}
+                  {destinationData.internationalSection.title.normal}
                 </span>{" "}
-                <span className="text-amber-400">International Destinations</span>
+                <span className="text-amber-400">
+                  {destinationData.internationalSection.title.highlighted}
+                </span>
               </h2>
             </div>
             <div className="flex gap-5">
               <p className="text-slate-200  md:max-w-[430px] text-xs font-semibold mt-1 max-w-xl">
-                Explore the incredible beauty of India, from mountains to
-                beaches, historical cities to spiritual destinations.
+                {destinationData.internationalSection.description}
               </p>
               {/* <Link
                 href={destinationData.viewAllLink.href}
