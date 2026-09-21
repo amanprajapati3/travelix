@@ -5,10 +5,9 @@ import Link from "next/link";
 import { ArrowRight, Hotel, Map, ShieldCheck } from "lucide-react";
 import { IoCarSportOutline } from "react-icons/io5";
 
-import { site } from "@/data";
+import { site, type TravelServiceItem, type TravelServicesData } from "@/data";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import type { TravelServiceItem, TravelServicesData } from "@/type/typeSection";
 
 const servicesData: TravelServicesData = site.services;
 
@@ -34,6 +33,7 @@ function ServiceCard({ service }: { service: TravelServiceItem }) {
                 src={service.image}
                 alt={service.title}
                 fill
+                sizes="100%"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#050811] via-[#050811]/55 to-transparent" />

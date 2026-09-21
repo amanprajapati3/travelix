@@ -1,6 +1,6 @@
 import travelData from "./siteData.json";
 import tourDetails from "./tourDetails.json";
-import type { TravelBlogDetail, TravelSitemapData, TravelTourDetails } from "@/type/typeSection";
+import type { TravelSitemapData, TravelTourDetails } from "@/type/typeSection";
 
 export type RawTravelData = typeof travelData;
 
@@ -48,6 +48,8 @@ export type TravelLegalData =
 export type TravelNotFoundData =
   typeof travelData.TravelIndustries.sections.NotFound.variants.Travel4041;
 export type TravelSitemapSectionData = TravelSitemapData;
+export type SitemapLink =
+  TravelSitemapSectionData["groups"][number]["links"][number];
   export type TravelAwardsData =
   typeof travelData.TravelIndustries.sections.Awards.variants.TravelAwards1;
 export type TravelContactData =
@@ -81,6 +83,8 @@ export type TravelTestimonialItem =
   TravelTestimonialData["testimonialItems"][number];
 export type TravelBlogPost = TravelBlogData["posts"][number];
 export type TravelFeaturedBlogPost = TravelBlogData["featuredPost"];
+export type TravelBlogDetail =
+  typeof travelData.TravelIndustries.sections.Blog.variants.TravelBlog1.blogDetails[number];
 export type TravelFooterColumn = TravelFooterData["columns"][number];
 export type TravelFooterLink = TravelFooterColumn["links"][number];
 export type TravelChooseUsItem = TravelChooseUsData["items"][number];

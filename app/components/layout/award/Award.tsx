@@ -4,8 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { site } from "@/data";
-import type { TravelAwardsData } from "@/type/typeSection";
+import { site, type TravelAwardsData } from "@/data";
 import CtaBanner from "../../shared/CtaBanner";
 import Stats from "../../shared/Stats";
 
@@ -63,6 +62,7 @@ export default function Award() {
                     src={award.image}
                     alt={award.title}
                     fill
+                    sizes="140px"
                     className="object-contain drop-shadow-[0_10px_15px_rgba(0,0,0,0.6)] transform group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -128,6 +128,7 @@ export default function Award() {
                     src={cert.image}
                     alt={cert.title}
                     fill
+                    sizes="100%"
                     className="object-contain p-2 filter drop-shadow group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

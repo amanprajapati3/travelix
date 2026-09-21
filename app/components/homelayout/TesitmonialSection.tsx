@@ -4,11 +4,11 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Allura } from "next/font/google";
-import { site } from "@/data"; // Adjust import path as needed
-import type {
-  TravelTestimonialData,
-  TravelTestimonialItem,
-} from "@/type/typeSection"; // Adjust import path
+import {
+  site,
+  type TravelTestimonialData,
+  type TravelTestimonialItem,
+} from "@/data";
 import ScrollReveal from "../shared/ScrollReveal";
 
 // Initialize Allura font
@@ -95,12 +95,14 @@ export default function TestimonialSection() {
         <Image
           src="/travel/world_map_transparent (2).png"
           alt="background map"
-          fill
+          width={260}
+          height={180}
+          sizes="260px"
           className="object-contain object-left-top"
         />{" "}
       </div>
       <div className="absolute bottom-0 right-0">
-        <img src="/travel/mountain_only_transparent.png" alt="" />
+        <Image src="/travel/mountain_only_transparent.png" alt="" width={203} height={123} />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10 xl:px-14">
@@ -129,6 +131,7 @@ export default function TestimonialSection() {
               alt="plane trail"
               width={200}
               height={60}
+              sizes="200px"
               className="absolute top-5 right-0 md:right-20 opacity-70"
             />
             {tagline && (
@@ -164,14 +167,14 @@ export default function TestimonialSection() {
           {/* Navigation Arrows (Desktop Only) */}
           <button
             onClick={prevSlide}
-            className="hidden md:flex absolute -left-6 lg:-left-16 top-1/2 -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white transition-all border border-white/10 z-20 cursor-pointer"
+            className="hidden md:flex absolute left-0 lg:-left-16 top-1/2 -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white transition-all border border-white/10 z-20 cursor-pointer"
             aria-label="Previous Testimonial"
           >
             <ChevronLeft className="h-6 w-6 text-amber-400" />
           </button>
           <button
             onClick={nextSlide}
-            className="hidden md:flex absolute -right-6 lg:-right-16 top-1/2 -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white transition-all border border-white/10 z-20 cursor-pointer"
+            className="hidden md:flex absolute right-0 lg:-right-16 top-1/2 -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white transition-all border border-white/10 z-20 cursor-pointer"
             aria-label="Next Testimonial"
           >
             <ChevronRight className="h-6 w-6 text-amber-400" />
@@ -217,7 +220,9 @@ export function TestimonialCard({ item }: { item: TravelTestimonialItem }) {
           <Image
             src={item.image}
             alt={item.name}
-            fill
+            width={85}
+            height={85}
+            sizes="90px"
             className="object-cover"
           />
         </div>
@@ -234,7 +239,7 @@ export function TestimonialCard({ item }: { item: TravelTestimonialItem }) {
 
       {/* Quote Text */}
       <blockquote className="flex-grow -mt-4 pl-4 relative">
-        <p className="text-lg text-slate-700 font-semibold leading-relaxed ">
+        <p className="text-lg  sm:min-h-[120px]  min-h-[217px] text-slate-700 font-semibold leading-relaxed ">
           {item.quote}
         </p>
       </blockquote>
@@ -257,7 +262,7 @@ export function TestimonialCard({ item }: { item: TravelTestimonialItem }) {
 
         {/* Mountain Shape SVG (Bottom Right) */}
         <div className="absolute right-2 pt-3 text-amber-400">
-         <img src="/travel/yellow_triangle_transparent (1).png" alt="" />
+         <Image src="/travel/yellow_triangle_transparent (1).png" alt="" width={183} sizes="183px" height={59} />
         </div>
       </div>
     </div>

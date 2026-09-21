@@ -3,10 +3,10 @@
 import React from "react";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import type { LegalPageData } from "@/type/typeSection";
+import { type TravelLegalData } from "@/data";
 
 interface LegalProps {
-  data: LegalPageData;
+  data: TravelLegalData;
 }
 
 export default function Legal({ data }: LegalProps) {

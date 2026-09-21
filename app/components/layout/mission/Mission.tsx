@@ -13,18 +13,12 @@ import {
 import { RiTargetFill } from "react-icons/ri";
 import { RiPlaneLine } from "react-icons/ri";
 
-import Banner from "../../shared/Banner"; // Adjust path to your reusable Banner component
+import Banner from "../../shared/Banner"; 
 import CtaBanner from "../../shared/CtaBanner";
 import Stats from "../../shared/Stats";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { site } from "@/data";
-import type { TravelMissionData } from "@/type/typeSection";
+import { site, type TravelMissionData } from "@/data";
 
-/**
- * Large, high-contrast feature icons.
- * Sized up and given a bolder stroke so they read as the visual anchor
- * of each circle instead of a small centered glyph.
- */
 const getFeatureIcon = (iconName: string) => {
   const commonProps = {
     className: "h-10 w-10 sm:h-12 sm:w-12 text-amber-400",
@@ -48,24 +42,12 @@ const getFeatureIcon = (iconName: string) => {
       return <UsersRound {...commonProps} />;
   }
 };
-
-/**
- * Large badge icon for the two section headers (Target / Eye).
- * Sized to sit beside the badge label + title as one visual block,
- * matching the reference layout (icon spans roughly the height of
- * the label + first title line together).
- */
 const SectionBadgeIcon = ({ icon: Icon }: { icon: React.ElementType }) => (
   <div className="relative h-16 w-16 sm:h-[4.75rem] sm:w-[4.75rem] shrink-0 rounded-full border-2 border-amber-400/60 flex items-center justify-center bg-[#0b0f17] shadow-[0_0_25px_-5px_rgba(251,191,36,0.45)]">
     <Icon className="h-7 w-7 sm:h-12 sm:w-12 text-amber-400" />
   </div>
 );
 
-/**
- * Header row used at the top of both the Mission and Vision columns:
- * a large circular icon sits to the left of the stacked
- * eyebrow label + title, exactly like the reference layout.
- */
 const SectionHeader = ({
   icon,
   eyebrow,
@@ -86,6 +68,7 @@ const SectionHeader = ({
           src="/travel/plane_loop_transparent.png"
           alt=""
           fill
+          sizes="200px"
           className="object-contain"
           aria-hidden
         />
@@ -127,11 +110,6 @@ const FeatureCircle = ({
   </div>
 );
 
-/**
- * Tilted photo card:
- * a solid amber card sits behind the photo, offset and counter-rotated,
- * so it reads as a crisp colored edge peeking out — not a blurred glow.
- */
 const TiltedPhotoCard = ({
   image,
   alt,
@@ -154,7 +132,7 @@ const TiltedPhotoCard = ({
     <div
       className={`relative w-full aspect-[16/11] rounded-[32px] overflow-hidden border-2 border-amber-400/40 shadow-2xl transform ${rotate} bg-slate-900`}
     >
-      <Image src={image} alt={alt} fill className="object-cover object-center" />
+      <Image src={image} sizes="100%" alt={alt} fill className="object-cover object-center" />
       {/* subtle bottom gradient so any overlaid text stays legible */}
       <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
     </div>
@@ -208,6 +186,7 @@ export default function Mission() {
                     src="/travel/yellow_brush_stroke_transparent.png"
                     alt="Brush stroke background"
                     fill
+                    sizes="(min-width: 640px) 280px, 240px"
                     className="object-contain "
                   />
                   <span

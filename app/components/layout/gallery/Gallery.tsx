@@ -13,8 +13,7 @@ import {
 } from "lucide-react";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { site } from "@/data";
-import type { TravelGalleryData } from "@/type/typeSection";
+import { site, type TravelGalleryData } from "@/data";
 
 const SLIDER_GAP = 16;
 
@@ -443,6 +442,7 @@ export default function Gallery() {
                 alt={images[lightboxIndex].alt}
                 width={1600}
                 height={1200}
+                sizes="(min-width: 640px) 85vw, 92vw"
                 className="w-auto max-w-[92vw] sm:max-w-[85vw] h-auto max-h-[75vh] object-contain"
               />
             </div>

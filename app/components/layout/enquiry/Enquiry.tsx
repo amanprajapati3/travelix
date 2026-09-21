@@ -19,8 +19,7 @@ import {
 } from "lucide-react";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { site } from "@/data";
-import type { TravelEnquiryData } from "@/type/typeSection";
+import { site, type TravelEnquiryData } from "@/data";
 
 export default function Enquiry() {
   const enquiryData: TravelEnquiryData = site.enquiry;

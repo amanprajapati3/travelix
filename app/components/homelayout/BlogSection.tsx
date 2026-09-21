@@ -4,8 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { User, MessageSquare, ArrowRight } from "lucide-react";
-import { site } from "@/data"; // Adjust import path to match your project structure
-import type { TravelBlogData, TravelBlogPost } from "@/type/typeSection"; // Adjust import path
+import { site, type TravelBlogData, type TravelBlogPost } from "@/data"; 
 import ScrollReveal from "../shared/ScrollReveal";
 
 const blogData: TravelBlogData = site.blog;
@@ -26,7 +25,9 @@ export default function BlogSection() {
             <Image
               src="/travel/world_map_transparent (2).png"
               alt="background map"
-              fill
+              width={300}
+              height={180}
+              sizes="300px"
               className="object-contain object-left-top opacity-40"
             />{" "}
           </div>{" "}
@@ -57,7 +58,7 @@ export default function BlogSection() {
         </div>
 
       <div className="absolute bottom-0 right-0">
-        <img src="/travel/mountain_only_transparent.png" alt="" />
+        <Image src="/travel/mountain_only_transparent.png" sizes="203px" alt="" width={203} height={123} />
       </div>
         {/* MAIN GRID LAYOUT */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
@@ -70,6 +71,7 @@ export default function BlogSection() {
                   src={featuredPost.image}
                   alt={featuredPost.title}
                   fill
+                  sizes="100vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {featuredPost.tag && (
@@ -140,6 +142,7 @@ export default function BlogSection() {
                       src={post.image}
                       alt={post.title}
                       fill
+                      sizes="(min-width: 640px) 40%, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>

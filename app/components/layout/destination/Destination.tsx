@@ -7,11 +7,7 @@ import { Search, MapPin, Calendar, ArrowRight } from "lucide-react";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
 import CtaBanner from "../../shared/CtaBanner";
-import { site } from "@/data";
-import type {
-  TravelDestinationsData,
-  TravelDestinationItem,
-} from "@/type/typeSection";
+import { site, type TravelDestinationsData, type TravelDestinationItem } from "@/data";
 
 export default function Destination() {
   const destinationData: TravelDestinationsData = site.destinations;
@@ -92,6 +88,7 @@ export default function Destination() {
         src={dest.image}
         alt={dest.name}
         fill
+        sizes="100%"
         className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
       />
 

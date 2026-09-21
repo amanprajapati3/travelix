@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Allura } from "next/font/google";
-import { site } from "@/data";
-import type { TravelOpportunityData } from "@/type/typeSection";
+import { site, type TravelOpportunityData } from "@/data";
 import ScrollReveal from "../shared/ScrollReveal";
 
 const allura = Allura({
@@ -67,6 +66,7 @@ export default function ExploreSection({ hideButton = false }: { hideButton?: bo
                 alt={sideImage.alt}
                 fill
                 quality={100}
+                sizes="(min-width: 640px) 50vw, 100vw"
                 className="object-cover rounded-2xl"
               />
 
@@ -78,8 +78,9 @@ export default function ExploreSection({ hideButton = false }: { hideButton?: bo
                     <Image
                       src="/travel/brush_bg_only.png"
                       alt=""
-                      width={220}
-                      height={100}
+                      width={280}
+                      height={161}
+                      sizes="(min-width: 640px) 220px, 180px"
                       className="w-[180px] sm:w-[220px] h-auto object-contain brightness-90"
                     />
 
@@ -173,7 +174,9 @@ export default function ExploreSection({ hideButton = false }: { hideButton?: bo
                     <Image
                       src={avatar}
                       alt={`Traveler ${idx + 1}`}
-                      fill
+                      width={40}
+                      height={40}
+                      sizes="40px"
                       className="object-cover"
                     />
                   </div>

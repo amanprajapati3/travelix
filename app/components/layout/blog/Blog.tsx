@@ -6,8 +6,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { site } from "@/data";
-import type { TravelBlogData, TravelBlogPost } from "@/type/typeSection";
+import { site, type TravelBlogData, type TravelBlogPost } from "@/data";
 
 const blogData: TravelBlogData = site.blog;
 

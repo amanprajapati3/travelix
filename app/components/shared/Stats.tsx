@@ -94,8 +94,9 @@ export default function Stats() {
                 <Image
                   src={getStatIcon(stat.iconName)}
                   alt=""
-                  width={40}
-                  height={40}
+                  width={80}
+                  height={80}
+                  sizes="80px"
                   className="h-20 w-20 object-contain"
                 />
               </div>

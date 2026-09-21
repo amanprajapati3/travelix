@@ -36,6 +36,7 @@ export default function Banner({
           alt={title}
           fill
           priority
+          sizes="100%"
           className="object-cover object-center brightness-[0.95]"
         />
         {/* Subtle dark gradient overlay to make text pop */}
@@ -48,6 +49,7 @@ export default function Banner({
           src="/travel/plane_loop_transparent.png"
           alt="Plane flight path"
           fill
+          sizes="300px"
           className="object-contain object-right"
         />
       </div>
@@ -108,6 +110,7 @@ export default function Banner({
           src="/travel/bottom_brush_transparent_exact.png"
           alt="Brush border overlay"
           fill
+          sizes="100%"
           className="object-cover object-bottom"
         />
       </div>

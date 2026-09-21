@@ -15,7 +15,7 @@ import {
   Star,
   Users,
 } from "lucide-react";
-import type { TravelServiceItem } from "@/type/typeSection";
+import type { TravelServiceItem } from "@/data";
 
 const icons = { car: CarFront, check: Check, clock: Clock3, headphones: Headphones, heart: Heart, map: Map, shield: ShieldCheck, star: Star, users: Users };
 

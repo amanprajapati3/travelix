@@ -5,8 +5,7 @@ import Image from "next/image";
 import { Calendar, Building2, Compass, Headphones } from "lucide-react";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { site } from "@/data";
-import type { ChooseVariant } from "@/type/typeSection";
+import { site, type TravelChooseUsData } from "@/data";
 
 const getIconComponent = (iconName: string) => {
   switch (iconName) {
@@ -28,7 +27,7 @@ interface ChooseProps {
 }
 
 export default function Choose({ hideBanner = false }: ChooseProps) {
-  const chooseData: ChooseVariant = site.whyChooseUs;
+  const chooseData: TravelChooseUsData = site.whyChooseUs;
 
   if (!chooseData) return null;
 
@@ -97,6 +96,7 @@ export default function Choose({ hideBanner = false }: ChooseProps) {
                     src={centerImage}
                     alt="Traveler adventure"
                     fill
+                    sizes="100%"
                     className="object-cover"
                   />
                 </div>
@@ -106,6 +106,7 @@ export default function Choose({ hideBanner = false }: ChooseProps) {
                     src={brushFrame}
                     alt="Brush frame overlay"
                     fill
+                    sizes="100%"
                     className="object-contain"
                     priority
                   />

@@ -5,7 +5,7 @@ import Link from "next/link";
 import ScrollReveal from "../../shared/ScrollReveal";
 import { ArrowLeft, MapPin } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import type { TravelTeamMember } from "@/type/typeSection";
+import type { TravelTeamMember } from "@/data";
 
 const socialIcons = {
   Facebook: FaFacebookF,

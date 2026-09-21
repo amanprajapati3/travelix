@@ -17,8 +17,7 @@ import {
 } from "lucide-react";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { site } from "@/data";
-import type { TravelFaqData } from "@/type/typeSection";
+import { site, type TravelFaqData } from "@/data";
 import { RiQuestionMark } from "react-icons/ri";
 import { Caveat } from "next/font/google";
 

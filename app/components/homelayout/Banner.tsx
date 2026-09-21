@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Play, X } from "lucide-react";
 import { IoAirplane } from "react-icons/io5";
-import { site as siteData } from "@/data";
-import type { TravelBannerData } from "@/type/typeSection";
+import { site as siteData, type TravelBannerData } from "@/data";
 import { Allura } from "next/font/google";
 import ScrollReveal from "../shared/ScrollReveal";
 

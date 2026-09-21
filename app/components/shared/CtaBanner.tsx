@@ -27,6 +27,7 @@ export default function CtaBanner() {
               alt="CTA Background"
               fill
               quality={100}
+              sizes="100%"
               className="object-cover object-right lg:object-center"
             />
 
@@ -34,7 +35,7 @@ export default function CtaBanner() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#050811] via-[#050811]/90 to-transparent lg:bg-gradient-to-r lg:from-[#050811] lg:via-[#050811]/95 lg:to-transparent z-10" />
           </div>
           <div className="absolute  right-[14%]">
-             <img src="/travel/plane_trail_transparent.png" alt="" />
+             <Image src="/travel/plane_trail_transparent.png" alt="" sizes="287px" width={287} height={182} />
           </div>
 
           {/* CTA CONTENT WRAPPER */}

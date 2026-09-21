@@ -15,8 +15,7 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
-import { getBlogPostSlugs, getDestinationSlugs, getPackageSlugs, getServiceIds, getTeamMemberSlugs, site } from "@/data";
-import type { SitemapLink } from "@/type/typeSection";
+import { getBlogPostSlugs, getDestinationSlugs, getPackageSlugs, getServiceIds, getTeamMemberSlugs, site, type SitemapLink } from "@/data";
 
 const icons = { calendar: CalendarDays, car: CarFront, compass: Compass, "file-text": FileText, "help-circle": HelpCircle, image: Image, "map-pin": MapPin, plane: Plane, "shield-check": ShieldCheck, users: Users };
 

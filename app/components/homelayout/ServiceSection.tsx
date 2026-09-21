@@ -7,8 +7,7 @@ import { ArrowRight, Hotel, ShieldCheck, Map } from "lucide-react";
 import { Allura } from "next/font/google";
 import { IoCarSportOutline } from "react-icons/io5";
 
-import { site } from "@/data";
-import type { TravelServicesData, TravelServiceItem } from "@/type/typeSection";
+import { site, type TravelServicesData, type TravelServiceItem } from "@/data";
 import ScrollReveal from "../shared/ScrollReveal";
 
 const allura = Allura({
@@ -252,6 +251,7 @@ function TabletMobileCard({ service }: { service: TravelServiceItem }) {
           alt={service.title}
           fill
           quality={100}
+          sizes="100vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050811] via-[#050811]/60 to-transparent" />

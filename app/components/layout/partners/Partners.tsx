@@ -6,8 +6,7 @@ import { Caveat } from "next/font/google";
 import { Handshake, Globe, ShieldCheck, Users, Plane } from "lucide-react";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { site } from "@/data";
-import type { TravelPartnersData } from "@/type/typeSection";
+import { site, type TravelPartnersData } from "@/data";
 
 const caveat = Caveat({
   subsets: ["latin"],
@@ -54,6 +53,7 @@ export default function Partners() {
             src={partnersData.images.partnersMap}
             alt="World Map Overlay"
             fill
+            sizes="100%"
             className=""
           />
         </div>
@@ -112,6 +112,7 @@ export default function Partners() {
                     alt={item.name}
                     width={130}
                     height={50}
+                    sizes="(min-width: 640px) 96px, 80px"
                     className="sm:h-24 h-20 w-auto object-contain transition-all duration-300 "
                   />
                 ) : (
@@ -184,6 +185,7 @@ export default function Partners() {
               src={partnersData.images.citySilhouette}
               alt="City Skyline Silhouette"
               fill
+              sizes="100vw"
               className="object-cover object-bottom"
             />
           </div>

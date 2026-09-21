@@ -4,8 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin, Calendar, Star } from "lucide-react";
-import { site } from "@/data";
-import type { TravelPackagesData } from "@/type/typeSection";
+import { site, type TravelPackagesData } from "@/data";
 import { Roboto_Condensed } from "next/font/google";
 import ScrollReveal from "../shared/ScrollReveal";
 

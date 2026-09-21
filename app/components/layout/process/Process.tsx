@@ -3,8 +3,7 @@
 import React from "react";
 import { FileText, Settings, Calendar, Plane } from "lucide-react";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { site } from "@/data"; // Adjust import path to match your project
-import type { TravelProcessData, TravelProcessItem } from "@/type/typeSection";
+import { site, type TravelProcessData, type TravelProcessItem } from "@/data"; // Adjust import path to match your project
 
 // Helper to map icon names to Lucide components
 const getProcessIcon = (iconName: string) => {

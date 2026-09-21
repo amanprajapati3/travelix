@@ -1072,12 +1072,12 @@
               "Unforgettable experiences with complete support"
             ],
             "avatars": [
-              "/personImage/man1.png",
-              "/personImage/men2.png",
-              "/personImage/men3.png",
-              "/personImage/women4.png",
-              "/personImage/women3.png",
-              "/personImage/women1.png"
+              "/people/man1.png",
+              "/people/men2.png",
+              "/people/men3.png",
+              "/people/women4.png",
+              "/people/women2.png",
+              "/people/women1.png"
             ],
             "button": {
               "label": "Read more",
@@ -1146,7 +1146,7 @@
                 "id": 1,
                 "name": "Rohit Sharma",
                 "role": "Delhi, India",
-                "image": "/personImage/men3.png",
+                "image": "/people/men3.png",
                 "quote": "Our trip to Bali was simply amazing! Everything from hotels to airport transfers was perfectly arranged. The team was very supportive throughout the journey. Highly recommended!",
                 "rating": 5
               },
@@ -1154,7 +1154,7 @@
                 "id": 2,
                 "name": "Priya Mehta",
                 "role": "Mumbai, India",
-                "image": "/personImage/women1.png",
+                "image": "/people/women1.png",
                 "quote": "It was a hassle-free and memorable experience. The tour package was well planned and covered all major attractions. Great service, professional team and quick support. Will definitely travel again!",
                 "rating": 5
               },
@@ -1162,7 +1162,7 @@
                 "id": 3,
                 "name": "Amit Kumar",
                 "role": "Bangalore, India",
-                "image": "/personImage/man1.png",
+                "image": "/people/man1.png",
                 "quote": "Excellent planning by the team for our Golden Triangle tour. Hotels were top-notch and the driver was very courteous. It exceeded our expectations in terms of service and quality.",
                 "rating": 5
               },
@@ -1170,7 +1170,7 @@
                 "id": 4,
                 "name": "Sarah Chen",
                 "role": "Singapore",
-                "image": "/personImage/women2.png",
+                "image": "/people/women2.png",
                 "quote": "The customized itinerary for Vietnam was perfect for our family. We loved the blend of culture and relaxation. The local guides were exceptional. A truly unforgettable holiday.",
                 "rating": 4
               },
@@ -1178,7 +1178,7 @@
                 "id": 5,
                 "name": "Kenji Tanaka",
                 "role": "Tokyo, Japan",
-                "image": "/personImage/men2.png",
+                "image": "/people/men2.png",
                 "quote": "Smooth coordination for our trip across Europe. Rail tickets, stays, and sightseeing were all perfectly organized. We didn't face a single issue. Will book again soon.",
                 "rating": 5
               },
@@ -1186,7 +1186,7 @@
                 "id": 6,
                 "name": "Fatima Al Fassi",
                 "role": "Dubai, UAE",
-                "image": "/personImage/women3.png",
+                "image": "/people/women3.png",
                 "quote": "A wonderful experience in Switzerland. The scenery was breathtaking and the arrangements were flawless. The booking process was easy and the support team was very responsive.",
                 "rating": 5
               }

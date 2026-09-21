@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { IoAirplane } from "react-icons/io5";
-import { site as siteData } from "@/data";
-import type { TravelDestinationsData } from "@/type/typeSection";
+import { site as siteData, type TravelDestinationsData } from "@/data";
 import ScrollReveal from "../shared/ScrollReveal";
 
 const destinationsData: TravelDestinationsData = siteData.destinations;
@@ -95,9 +94,12 @@ export default function Destination() {
               </h2>
 
               {/* Airplane & Dashed Path */}
-              <img
+              <Image
                 src="/travel/aroplaneheading.png"
                 alt=""
+                width={128}
+                height={96}
+                 sizes="128px"
                 className="hidden sm:block absolute left-full ml-0 top-1/2 -translate-y-1/2 w-32 h-auto"
               />
             </div>
@@ -125,12 +127,12 @@ export default function Destination() {
         </ScrollReveal>
 
         {/* CAROUSEL CONTAINER WITH OUTER ARROWS */}
-        <div className="relative px-0 sm:px-0">
+        <div className="relative mx-auto w-full max-w-[1300px]">
           {/* Left Slider Arrow */}
           <button
             onClick={scrollLeft}
             disabled={isAtStart}
-            className="hidden sm:flex absolute md:-left-[50px] left-0 top-1/2 -translate-y-1/2 z-20 h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-transparent text-white transition-all hover:bg-amber-400 hover:text-black hover:border-amber-400 cursor-pointer shadow-lg disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-white disabled:hover:border-white/20"
+            className="hidden sm:flex absolute -left-10 top-1/2 -translate-y-1/2 z-20 h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-transparent text-white transition-all hover:bg-amber-400 hover:text-black hover:border-amber-400 cursor-pointer shadow-lg disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-white disabled:hover:border-white/20"
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-5 w-5" />
@@ -140,7 +142,7 @@ export default function Destination() {
           <button
             onClick={scrollRight}
             disabled={isAtEnd}
-            className="hidden sm:flex absolute md:-right-[50px] right-0 top-1/2 -translate-y-1/2 z-20 h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-transparent text-white transition-all hover:bg-amber-400 hover:text-black hover:border-amber-400 cursor-pointer shadow-lg disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-white disabled:hover:border-white/20"
+            className="hidden sm:flex absolute -right-8 top-1/2 -translate-y-1/2 z-20 h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-transparent text-white transition-all hover:bg-amber-400 hover:text-black hover:border-amber-400 cursor-pointer shadow-lg disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-white disabled:hover:border-white/20"
             aria-label="Next slide"
           >
             <ChevronRight className="h-5 w-5" />
@@ -186,13 +188,13 @@ export default function Destination() {
                   </div>
 
                   {/* Circular Right Arrow Button */}
-                  <Link
+                  {/* <Link
                     href={destination.slug}
                     className="flex h-8 w-8 sm:h-9 sm:w-9 flex-shrink-0 items-center justify-center rounded-full bg-black text-yellow-400 shadow-md transition-transform duration-300 border  group-hover:scale-110"
                     aria-label={`View details for ${destination.name}`}
                   >
                     <ArrowRight className="h-4 w-4" />
-                  </Link>
+                  </Link> */}
                 </div>
               </ScrollReveal>
             ))}

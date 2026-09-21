@@ -8,7 +8,7 @@ import type {
   TravelBlogDetail,
   TravelBlogPost,
   TravelFeaturedBlogPost,
-} from "@/type/typeSection";
+} from "@/data";
 
 type BlogCardPost = TravelBlogPost | TravelFeaturedBlogPost;
 

@@ -4,9 +4,8 @@ import React from "react";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
 import { Allura } from "next/font/google";
-import { site } from "@/data";
+import { site, type TravelTestimonialData } from "@/data";
 import { TestimonialCard } from "../../homelayout/TesitmonialSection";
-import type { TravelTestimonialData } from "@/type/typeSection";
 import CtaBanner from "../../shared/CtaBanner";
 import Stats from "../../shared/Stats";
 

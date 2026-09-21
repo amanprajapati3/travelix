@@ -16,8 +16,7 @@ import {
 } from "lucide-react";
 import Banner from "../../shared/Banner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { site } from "@/data";
-import type { TravelContactData } from "@/type/typeSection";
+import { site, type TravelContactData } from "@/data";
 import { Caveat } from "next/font/google";
 
 const caveat = Caveat({
@@ -86,6 +85,7 @@ export default function Contact() {
             alt="Mountain Graphic"
             width={500}
             height={500}
+            sizes="500px"
             className="object-contain"
           />
         </div>
@@ -94,6 +94,7 @@ export default function Contact() {
             src={contactData.images.planeLoop}
             alt="Plane Loop"
             fill
+            sizes="300px"
             className="object-contain"
           />
         </div>
@@ -163,6 +164,7 @@ export default function Contact() {
                     src={contactData.images.tiltImage2}
                     alt="Good Travels Brighter Tomorrows"
                     fill
+                    sizes="(min-width: 640px) 340px, 200px"
                     className="object-cover rounded-[20px] "
                   />
                   <div className="absolute -left-30 -bottom-10 w-[170px] sm:w-[195px] h-[170px] sm:h-[195px] rounded-[24px] overflow-hidden border-4 border-white/90 shadow-2xl transform -rotate-3 z-20 transition-all duration-300">
@@ -170,6 +172,7 @@ export default function Contact() {
                       src={contactData.images.tiltImage1}
                       alt="Explore Dream Discover"
                       fill
+                      sizes="(min-width: 640px) 195px, 170px"
                       className="object-cover"
                     />
                   </div>
@@ -364,6 +367,7 @@ export default function Contact() {
                   src={contactData.images.mountainOnly}
                   alt="Mountain"
                   fill
+                  sizes="180px"
                   className="object-contain"
                 />
                 <div className="absolute -rotate-12 inset-0 flex flex-col items-center justify-center transform ">

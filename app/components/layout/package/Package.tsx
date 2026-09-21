@@ -19,8 +19,7 @@ import {
 import Banner from "../../shared/Banner";
 import CtaBanner from "../../shared/CtaBanner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { getPackageFilters, site } from "@/data";
-import type { TravelPackageItem, TravelPackagesData } from "@/type/typeSection";
+import { getPackageFilters, site, type TravelPackageItem, type TravelPackagesData } from "@/data";
 
 const pageSize = 6;
 const packagesData: TravelPackagesData = site.packages;
