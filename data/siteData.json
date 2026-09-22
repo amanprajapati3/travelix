@@ -5,7 +5,8 @@
         "shared": {
           "Topbar": "TravelTopbar1",
           "Header": "TravelHeader1",
-          "Footer": "TravelFooter1"
+          "Footer": "TravelFooter1",
+          "CtaBanner": "TravelCtaBanner1"
         },
         "pages": {
           "home": {
@@ -15,9 +16,162 @@
               { "key": "Packages", "component": "TravelPackages1" },
               { "key": "Services", "component": "TravelServices1" },
               { "key": "Opportunity", "component": "TravelOpportunity1" },
-              { "key": "CtaBanner", "component": "TravelCtaBanner1" },
               { "key": "Testimonial", "component": "TravelTestimonial1" },
               { "key": "Blog", "component": "TravelBlog1" }
+            ]
+          },
+          "about-us": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Opportunity", "component": "TravelOpportunity1" },
+              { "key": "Choose", "component": "TravelChoose1" },
+              { "key": "Destinations", "component": "TravelDestinations1" }
+            ]
+          },
+          "testimonial": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Testimonial", "component": "TravelTestimonial1" }
+            ]
+          },
+          "terms": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Legal", "component": "termsConditions" }
+            ]
+          },
+          "contact": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Contact", "component": "TravelContact1" }
+            ]
+          },
+          "team": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Team", "component": "TravelTeam1" }
+            ]
+          },
+          "team/[slug]": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "TeamDetail", "component": "TravelTeamDetail1" }
+            ]
+          },
+          "sitemap": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Sitemap", "component": "TravelSitemap1" }
+            ]
+          },
+          "service": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Services", "component": "TravelServices1" }
+            ]
+          },
+          "services/[slug]": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "ServiceDetail", "component": "TravelServiceDetail1" }
+            ]
+          },
+          "refund": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Legal", "component": "refundPolicy" }
+            ]
+          },
+          "choose": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Choose", "component": "TravelChoose1" },
+              { "key": "Process", "component": "TravelProcess1" },
+              { "key": "Testimonial", "component": "TravelTestimonial1" }
+            ]
+          },
+          "privacy": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Legal", "component": "privacyPolicy" }
+            ]
+          },
+          "package": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Packages", "component": "TravelPackages1" }
+            ]
+          },
+          "package/[slug]": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "PackageDetail", "component": "TravelPackageDetail1" }
+            ]
+          },
+          "payment": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Legal", "component": "paymentPolicy" }
+            ]
+          },
+          "mission": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Mission", "component": "TravelMission1" }
+            ]
+          },
+          "blog": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Blog", "component": "TravelBlog1" }
+            ]
+          },
+          "blog/[slug]": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "BlogDetail", "component": "TravelBlogDetail1" }
+            ]
+          },
+          "partners": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Partners", "component": "TravelPartners1" },
+              { "key": "Testimonial", "component": "TravelTestimonial1" }
+            ]
+          },
+          "gallery": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Gallery", "component": "TravelGallery1" }
+            ]
+          },
+          "award": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Awards", "component": "TravelAwards1" }
+            ]
+          },
+          "faq": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Faq", "component": "TravelFaq1" }
+            ]
+          },
+          "enquiry": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Enquiry", "component": "TravelEnquiry1" }
+            ]
+          },
+          "destination": {
+            "components": [
+              { "key": "Banner", "component": "TravelBanner1" },
+              { "key": "Destinations", "component": "TravelDestinations1" }
+            ]
+          },
+          "not-found": {
+            "components": [
+              { "key": "NotFound", "component": "Travel4041" }
             ]
           }
         }

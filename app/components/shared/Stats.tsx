@@ -79,7 +79,7 @@ export default function Stats() {
       </div>
 
       {/* Main Content (Elevated above background layers) */}
-      <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mt-10 md:mt-16 z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {ctaData.stats.map((stat: TravelCtaStat, i) => (
             <ScrollReveal
