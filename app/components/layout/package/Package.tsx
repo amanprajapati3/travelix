@@ -2,139 +2,148 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
+// import { useEffect, useMemo } from "react";
 import {
   CalendarDays,
-  ChevronDown,
   ChevronLeft,
   ChevronRight,
-  Grid2X2,
   Heart,
-  List,
   MapPin,
-  Search,
-  SlidersHorizontal,
-  Star,
 } from "lucide-react";
+// import {
+//   ChevronDown,
+//   Grid2X2,
+//   List,
+//   Search,
+//   SlidersHorizontal,
+//   Star,
+// } from "lucide-react";
 import Banner from "../../shared/Banner";
 import CtaBanner from "../../shared/CtaBanner";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { getPackageFilters, site, type TravelPackageItem, type TravelPackagesData } from "@/data";
+import { site, type TravelPackageItem, type TravelPackagesData } from "@/data";
+// import { getPackageFilters } from "@/data";
 
-const pageSize = 6;
+const pageSize = 8;
 const packagesData: TravelPackagesData = site.packages;
-const filterOptions = getPackageFilters();
+// const filterOptions = getPackageFilters();
 
-function toggleValue(values: string[], value: string) {
-  return values.includes(value)
-    ? values.filter((item) => item !== value)
-    : [...values, value];
-}
+// function toggleValue(values: string[], value: string) {
+//   return values.includes(value)
+//     ? values.filter((item) => item !== value)
+//     : [...values, value];
+// }
 
 // Collapsible Filter Section Component with smooth transition
-function FilterSection({
-  title,
-  isOpen,
-  onToggle,
-  children,
-}: {
-  title: string;
-  isOpen: boolean;
-  onToggle: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <fieldset className="border-t border-cyan-900/60 pt-4">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="mb-3 flex cursor-pointer w-full items-center justify-between text-base font-bold text-white focus:outline-none"
-      >
-        <span>{title}</span>
-        <ChevronDown
-          className={`h-4 w-4 text-white/70 transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
-      </button>
-      <div
-        className={`grid transition-all duration-300 ease-in-out ${
-          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        }`}
-      >
-        <div className="overflow-hidden pb-1">{children}</div>
-      </div>
-    </fieldset>
-  );
-}
+// function FilterSection({
+//   title,
+//   isOpen,
+//   onToggle,
+//   children,
+// }: {
+//   title: string;
+//   isOpen: boolean;
+//   onToggle: () => void;
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <fieldset className="border-t border-cyan-900/60 pt-4">
+//       <button
+//         type="button"
+//         onClick={onToggle}
+//         className="mb-3 flex cursor-pointer w-full items-center justify-between text-base font-bold text-white focus:outline-none"
+//       >
+//         <span>{title}</span>
+//         <ChevronDown
+//           className={`h-4 w-4 text-white/70 transition-transform duration-300 ${
+//             isOpen ? "rotate-180" : ""
+//           }`}
+//         />
+//       </button>
+//       <div
+//         className={`grid transition-all duration-300 ease-in-out ${
+//           isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+//         }`}
+//       >
+//         <div className="overflow-hidden pb-1">{children}</div>
+//       </div>
+//     </fieldset>
+//   );
+// }
 
 export default function Package() {
-  const [query, setQuery] = useState("");
-  const [selectedDestinations, setSelectedDestinations] = useState<string[]>(
-    [],
-  );
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
-  const [selectedDurations, setSelectedDurations] = useState<string[]>([]);
-  const [sortBy, setSortBy] = useState("Popularity");
+  // Filter state (disabled — filter/search system commented out)
+  // const [query, setQuery] = useState("");
+  // const [selectedDestinations, setSelectedDestinations] = useState<string[]>(
+  //   [],
+  // );
+  // const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+  // const [selectedDurations, setSelectedDurations] = useState<string[]>([]);
+  // const [sortBy, setSortBy] = useState("Popularity");
   const [currentPage, setCurrentPage] = useState(1);
   const [layout, setLayout] = useState<"grid" | "list">("grid");
   const [favorites, setFavorites] = useState<number[]>([]);
 
-  // Accordion state for each filter section
-  const [isDestinationOpen, setIsDestinationOpen] = useState(true);
-  const [isTourTypesOpen, setIsTourTypesOpen] = useState(true);
-  const [isDurationsOpen, setIsDurationsOpen] = useState(true);
+  // Accordion state for each filter section (disabled)
+  // const [isDestinationOpen, setIsDestinationOpen] = useState(true);
+  // const [isTourTypesOpen, setIsTourTypesOpen] = useState(true);
+  // const [isDurationsOpen, setIsDurationsOpen] = useState(true);
 
-  const filteredPackages = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-    const result = packagesData.packages.filter((pkg) => {
-      const searchable =
-        `${pkg.title} ${pkg.location} ${pkg.destination} ${pkg.tourType}`.toLowerCase();
-      return (
-        (!normalizedQuery || searchable.includes(normalizedQuery)) &&
-        (!selectedDestinations.length ||
-          selectedDestinations.includes(pkg.destination)) &&
-        (!selectedTypes.length || selectedTypes.includes(pkg.tourType)) &&
-        (!selectedDurations.length ||
-          selectedDurations.includes(pkg.durationGroup))
-      );
-    });
-
-    return [...result].sort((first, second) => {
-      if (sortBy === "Price: Low to High")
-        return Number(first.price) - Number(second.price);
-      if (sortBy === "Price: High to Low")
-        return Number(second.price) - Number(first.price);
-      if (sortBy === "Rating")
-        return Number(second.rating) - Number(first.rating);
-      return (
-        Number(second.rating) - Number(first.rating) ||
-        second.reviews - first.reviews
-      );
-    });
-  }, [query, selectedDestinations, selectedTypes, selectedDurations, sortBy]);
+  // Filtering & sorting engine (disabled — filter/search system commented out)
+  // const filteredPackages = useMemo(() => {
+  //   const normalizedQuery = query.trim().toLowerCase();
+  //   const result = packagesData.packages.filter((pkg) => {
+  //     const searchable =
+  //       `${pkg.title} ${pkg.location} ${pkg.destination} ${pkg.tourType}`.toLowerCase();
+  //     return (
+  //       (!normalizedQuery || searchable.includes(normalizedQuery)) &&
+  //       (!selectedDestinations.length ||
+  //         selectedDestinations.includes(pkg.destination)) &&
+  //       (!selectedTypes.length || selectedTypes.includes(pkg.tourType)) &&
+  //       (!selectedDurations.length ||
+  //         selectedDurations.includes(pkg.durationGroup))
+  //     );
+  //   });
+  //
+  //   return [...result].sort((first, second) => {
+  //     if (sortBy === "Price: Low to High")
+  //       return Number(first.price) - Number(second.price);
+  //     if (sortBy === "Price: High to Low")
+  //       return Number(second.price) - Number(first.price);
+  //     if (sortBy === "Rating")
+  //       return Number(second.rating) - Number(first.rating);
+  //     return (
+  //       Number(second.rating) - Number(first.rating) ||
+  //       second.reviews - first.reviews
+  //     );
+  //   });
+  // }, [query, selectedDestinations, selectedTypes, selectedDurations, sortBy]);
+  const filteredPackages = packagesData.packages;
 
   const totalPages = Math.max(1, Math.ceil(filteredPackages.length / pageSize));
   const visiblePackages = filteredPackages.slice(
     (currentPage - 1) * pageSize,
     currentPage * pageSize,
   );
-  const rangeStart = filteredPackages.length
-    ? (currentPage - 1) * pageSize + 1
-    : 0;
-  const rangeEnd = Math.min(currentPage * pageSize, filteredPackages.length);
+  // Result range counter (used by the disabled filter toolbar)
+  // const rangeStart = filteredPackages.length
+  //   ? (currentPage - 1) * pageSize + 1
+  //   : 0;
+  // const rangeEnd = Math.min(currentPage * pageSize, filteredPackages.length);
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [query, selectedDestinations, selectedTypes, selectedDurations, sortBy]);
+  // Reset to page 1 whenever filters change (disabled)
+  // useEffect(() => {
+  //   setCurrentPage(1);
+  // }, [query, selectedDestinations, selectedTypes, selectedDurations, sortBy]);
 
-  const clearFilters = () => {
-    setQuery("");
-    setSelectedDestinations([]);
-    setSelectedTypes([]);
-    setSelectedDurations([]);
-    setSortBy("Popularity");
-  };
+  // const clearFilters = () => {
+  //   setQuery("");
+  //   setSelectedDestinations([]);
+  //   setSelectedTypes([]);
+  //   setSelectedDurations([]);
+  //   setSortBy("Popularity");
+  // };
 
   const renderCard = (pkg: TravelPackageItem, index: number = 0) => {
     const isFavorite = favorites.includes(pkg.id);
@@ -162,10 +171,12 @@ export default function Package() {
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </Link>
+          {/* Price badge (commented out for now)
           <span className="absolute bottom-3 left-3 rounded bg-emerald-600 px-2 py-1 text-sm font-bold text-white shadow-lg">
             ${pkg.price}
             {pkg.priceUnit}
           </span>
+          */}
           <button
             type="button"
             onClick={() =>
@@ -205,10 +216,12 @@ export default function Package() {
             {pkg.description}
           </p>
           <div className="mt-auto flex items-center justify-between gap-2 pt-3">
+            {/* Rating & reviews (commented out for now)
             <span className="flex items-center gap-1 text-sm text-amber-300">
               <Star className="h-3 w-3 fill-amber-300" /> {pkg.rating}{" "}
               <span className="text-slate-500">({pkg.reviews} reviews)</span>
             </span>
+            */}
             <Link
               href={`/package/${pkg.slug}`}
               className="rounded bg-amber-400 px-3 py-1.5 text-sm font-bold text-slate-950 transition-colors hover:bg-amber-300"
@@ -264,6 +277,7 @@ export default function Package() {
     <main className="min-h-screen overflow-hidden bg-[#011014] text-white">
       {packagesData.banner && <Banner {...packagesData.banner} />}
       <section className="mx-auto max-w-[1300px] px-4 py-8 sm:px-6 lg:px-10 lg:py-12">
+        {/* Mobile filter bar (commented out — filter/search system disabled)
         <div className="mb-5 flex flex-col gap-4 lg:hidden">
           <div className="flex items-center gap-2 text-base font-bold">
             <SlidersHorizontal className="h-4 w-4 text-amber-400" /> Filter
@@ -312,7 +326,12 @@ export default function Package() {
             </select>
           </div>
         </div>
+        */}
+        {/* Layout container (filter sidebar column removed)
         <div className="grid gap-5 lg:grid-cols-[30%_minmax(0,70%)] xl:grid-cols-[25%_minmax(0,70%)]">
+        */}
+        <div>
+          {/* Filter & search sidebar (commented out — filter/search system disabled)
           <ScrollReveal className="hidden self-start rounded-lg border-2 border-cyan-900/80 bg-[#001820] p-3.5 lg:block" direction="left">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-base font-bold">Search Tour</h2>
@@ -327,7 +346,7 @@ export default function Package() {
               />
             </label>
 
-            {/* Destination Section */}
+            Destination Section - marker
             <FilterSection
               title="Destination"
               isOpen={isDestinationOpen}
@@ -361,7 +380,7 @@ export default function Package() {
               </div>
             </FilterSection>
 
-            {/* Tour Types Section */}
+            Tour Types Section - marker
             <div className="mt-5">
               <FilterSection
                 title="Tour Types"
@@ -389,7 +408,7 @@ export default function Package() {
               </FilterSection>
             </div>
 
-            {/* Durations Section */}
+            Durations Section - marker
             <div className="mt-5">
               <FilterSection
                 title="Durations"
@@ -427,7 +446,9 @@ export default function Package() {
               Clear Filters
             </button>
           </ScrollReveal>
-          <div className="min-w-0">
+          */}
+          <div className="min-w-0 mt-10">
+            {/* Results toolbar with search, sort & layout toggle (commented out)
             <ScrollReveal className="mb-3 flex flex-col gap-3 rounded-lg border border-cyan-900/70 bg-[#001820] p-3 sm:flex-row sm:items-center sm:justify-between" direction="up">
               <span className="text-sm text-slate-300">
                 Showing{" "}
@@ -483,13 +504,15 @@ export default function Package() {
                 </div>
               </div>
             </ScrollReveal>
+            */}
             {visiblePackages.length ? (
               <div
-                className={`grid gap-3.5 ${layout === "grid" ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1"}`}
+                className={`grid gap-3.5 ${layout === "grid" ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-4" : "grid-cols-1"}`}
               >
                 {visiblePackages.map((pkg, i) => renderCard(pkg, i))}
               </div>
             ) : (
+              /* No tours found (commented out — search disabled)
               <div className="rounded-lg border border-cyan-900 bg-[#001820] px-5 py-16 text-center">
                 <Search className="mx-auto mb-3 h-8 w-8 text-amber-400" />
                 <h2 className="font-bold">No tours found</h2>
@@ -497,6 +520,8 @@ export default function Package() {
                   Try a different search or clear your filters.
                 </p>
               </div>
+              */
+              null
             )}
             {renderPagination()}
           </div>

@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { IoAirplane } from "react-icons/io5";
 import { site as siteData, type TravelDestinationsData } from "@/data";
 import ScrollReveal from "../shared/ScrollReveal";
 
@@ -16,9 +15,8 @@ export default function Destination() {
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
-  if (!destinationsData) return null;
-
-  const { badge, title, desc, viewAllLink, destinations } = destinationsData;
+  const { badge, title, desc, viewAllLink, destinations = [] } =
+    destinationsData ?? {};
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -65,7 +63,10 @@ export default function Destination() {
 
   useEffect(() => {
     handleScroll();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  if (!destinationsData) return null;
 
   return (
     <section className="relative w-full bg-[#05060a] py-16 text-white overflow-hidden">
@@ -162,40 +163,42 @@ export default function Destination() {
                 index={i}
                 staggerChildren={0.08}
               >
-                {/* Destination Image - High quality rendering to eliminate blur */}
-                <Image
-                  src={destination.image}
-                  alt={destination.name}
-                  fill
-                  quality={100}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 16vw"
-                  className=" transition-transform duration-500 group-hover:scale-110"
-                />
+                <Link
+                  href={destination.slug}
+                  className="block h-full w-full"
+                  aria-label={`View details for ${destination.name}`}
+                >
+                  {/* Destination Image - High quality rendering to eliminate blur */}
+                  <Image
+                    src={destination.image}
+                    alt={destination.name}
+                    fill
+                    quality={100}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 16vw"
+                    className=" transition-transform duration-500 group-hover:scale-110"
+                  />
 
-                {/* Dark Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#05060a] via-[#05060a]/30 to-transparent" />
+                  {/* Dark Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#05060a] via-[#05060a]/30 to-transparent" />
 
-                {/* Content at Bottom */}
-                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 flex items-end justify-between z-10">
-                  <div>
-                    {/* Smaller Title Font */}
-                    <h3 className="font-serif text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
-                      {destination.name}
-                    </h3>
-                    <p className="text-[11px] sm:text-xs text-white/70 mt-0.5">
-                      {destination.country}
-                    </p>
+                  {/* Content at Bottom */}
+                  <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 flex items-end justify-between z-10">
+                    <div>
+                      {/* Smaller Title Font */}
+                      <h3 className="font-serif text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
+                        {destination.name}
+                      </h3>
+                      <p className="text-[11px] sm:text-xs text-white/70 mt-0.5">
+                        {destination.country}
+                      </p>
+                    </div>
+
+                    {/* Circular Right Arrow Button */}
+                    <span className="flex h-8 w-8 sm:h-9 sm:w-9 flex-shrink-0 items-center justify-center rounded-full bg-black text-yellow-400 shadow-md transition-transform duration-300 border border-white/15 group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-black group-hover:border-amber-400">
+                      <ArrowRight className="h-4 w-4" />
+                    </span>
                   </div>
-
-                  {/* Circular Right Arrow Button */}
-                  {/* <Link
-                    href={destination.slug}
-                    className="flex h-8 w-8 sm:h-9 sm:w-9 flex-shrink-0 items-center justify-center rounded-full bg-black text-yellow-400 shadow-md transition-transform duration-300 border  group-hover:scale-110"
-                    aria-label={`View details for ${destination.name}`}
-                  >
-                    <ArrowRight className="h-4 w-4" />
-                  </Link> */}
-                </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>

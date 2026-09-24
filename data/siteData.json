@@ -232,8 +232,8 @@
                 "href": "#",
                 "children": [
                   { "label": "About Us", "href": "/about-us" },
-                  { "label": "Choose Us", "href": "/choose" },
-                  { "label": "Mission", "href": "/mission" }
+                  { "label": "Why Choose Us", "href": "/choose" },
+                  { "label": "Mission & Vision", "href": "/mission" }
                 ]
               },
               { "label": "FAQ", "href": "/faq" },
@@ -461,7 +461,12 @@
                 "slug": "/destination/delhi",
                 "type": "Heritage",
                 "region": "Asia",
-                "tags": ["History", "Culture", "Heritage"]
+                "tags": ["History", "Culture", "Heritage"],
+                "description": "The capital city where centuries of history, bustling markets and grand monuments come together.",
+                "paragraphs": [
+                  "Delhi is a living museum that stretches from the 13th-century Qutub Minar and the grand Red Fort to the stately streets of New Delhi designed in the last century. Every corner holds traces of ancient empires, Mughal rulers, and colonial architects, making it one of the most culturally rich capitals in the world.",
+                  "Beyond the monuments, Delhi delights with its vibrant bazaars, spicy street food, and warm hospitality. Wander through Chandni Chowk, sip chai in Connaught Place, and explore India Gate at dusk for a true taste of the city's rhythm."
+                ]
               },
               {
                 "id": 2,
@@ -471,7 +476,12 @@
                 "slug": "/destination/kerala",
                 "type": "Beach",
                 "region": "Asia",
-                "tags": ["Backwaters", "Nature", "Beaches"]
+                "tags": ["Backwaters", "Nature", "Beaches"],
+                "description": "God's Own Country — a lush coastline of backwaters, palm-fringed beaches and misty hill stations.",
+                "paragraphs": [
+                  "Kerala unfurls like a green ribbon along the Arabian Sea, where houseboats drift through the serene backwaters of Alleppey and Kumarakom. The state's beaches, such as Varkala and Kovalam, offer golden sands lapped by gentle waves, while the Western Ghats rise in the east with tea plantations and spice gardens.",
+                  "Beyond nature, Kerala is famous for its Ayurvedic wellness traditions, Kathakali performances, and delicious seafood cuisine. A journey through Kerala is as much a sensory experience as a scenic one — calm, colorful, and unforgettable."
+                ]
               },
               {
                 "id": 3,
@@ -481,7 +491,12 @@
                 "slug": "/destination/himachal-pradesh",
                 "type": "Mountains",
                 "region": "Asia",
-                "tags": ["Mountains", "Adventure", "Scenic"]
+                "tags": ["Mountains", "Adventure", "Scenic"],
+                "description": "A Himalayan paradise of pine forests, snow peaks, rivers and charming hill stations.",
+                "paragraphs": [
+                  "Himachal Pradesh cradles some of the most breathtaking scenery in the Himalayas, from the old-world charm of Manali and Shimla to the tranquil valleys of Kullu and Spiti. Snow-capped summits, gushing rivers, and thick deodar forests create a backdrop that feels plucked from a storybook.",
+                  "Adventurers will love its trekking trails, river rafting, paragliding, and camping under starry skies. Whether you are chasing snowy passes or quiet temple towns, Himachal rewards every traveler with unforgettable high-altitude moments."
+                ]
               },
               {
                 "id": 4,
@@ -491,7 +506,12 @@
                 "slug": "/destination/goa",
                 "type": "Beach",
                 "region": "Asia",
-                "tags": ["Beaches", "Nightlife", "Relaxation"]
+                "tags": ["Beaches", "Nightlife", "Relaxation"],
+                "description": "India's sunshine state — swaying palms, golden beaches, vibrant nightlife and old-world Portuguese charm.",
+                "paragraphs": [
+                  "Goa is a celebration of sun, sand, and sea spread across a coastline dotted with palm trees and laid-back beach shacks. From the packed sands of Baga and Calangute to the quiet shores of Palolem and Agonda, there is a beach for every mood.",
+                  "By night, Goa transforms with live music, beach parties, and bustling flea markets. During the day, explore its UNESCO-listed churches, spice plantations, and forts such as Aguada that echo tales of its Portuguese past."
+                ]
               },
               {
                 "id": 5,
@@ -501,7 +521,12 @@
                 "slug": "/destination/jammu-and-kashmir",
                 "type": "Mountains",
                 "region": "Asia",
-                "tags": ["Lakes", "Mountains", "Serenity"]
+                "tags": ["Lakes", "Mountains", "Serenity"],
+                "description": "Paradise on Earth — mirrored lakes, lush meadows and towering Himalayan peaks.",
+                "paragraphs": [
+                  "Jammu & Kashmir is rightly called paradise, with the shimmering Dal Lake in Srinagar, houseboats bobbing on calm waters, and the saffron fields of Pampore coloring the valleys. Mughal gardens like Shalimar and Nishat add a touch of timeless elegance to the landscape.",
+                  "Venture to Pahalgam for pine-scented meadows or to Gulmarg for snow-covered slopes and gondola rides. The warmth of Kashmiri hospitality, from kahwa tea to handcrafted carpets, makes every visit feel special."
+                ]
               },
               {
                 "id": 6,
@@ -511,7 +536,12 @@
                 "slug": "/destination/uttar-pradesh",
                 "type": "Heritage",
                 "region": "Asia",
-                "tags": ["Heritage", "Spiritual", "Culture"]
+                "tags": ["Heritage", "Spiritual", "Culture"],
+                "description": "The heartland of India's spiritual and cultural heritage, home to the Taj Mahal and sacred river cities.",
+                "paragraphs": [
+                  "Uttar Pradesh is where India's grandest stories unfold, crowned by the sublime Taj Mahal in Agra and the majestic palaces and forts of Fatehpur Sikri. The cities of Varanasi and Ayodhya along the Ganges hold deep spiritual significance, with ghats that have witnessed millennia of devotion.",
+                  "From the vibrant street life of Lucknow's chikankari lanes to the sunlit temples of Mathura and Vrindavan, the state offers a profound journey through faith, art, and imperial history."
+                ]
               },
               {
                 "id": 7,
@@ -521,7 +551,12 @@
                 "slug": "/destination/rajasthan",
                 "type": "Heritage",
                 "region": "Asia",
-                "tags": ["Royalty", "Forts", "Desert"]
+                "tags": ["Royalty", "Forts", "Desert"],
+                "description": "The land of kings — golden forts, palaces, and vast desert dunes steeped in royal grandeur.",
+                "paragraphs": [
+                  "Rajasthan dazzles with its formidable forts and opulent palaces scattered across Jaipur, Jodhpur, Udaipur, and Jaisalmer. Pink, blue, and golden cities each paint a distinct palette, while stepwells and havelis whisper stories of Rajput valor and romance.",
+                  "The Thar Desert invites travelers on camel safaris over rolling dunes, followed by starlit camps and folk performances. Vibrant festivals, block-printed textiles, and savory Rajasthani cuisine complete this royal experience."
+                ]
               },
               {
                 "id": 8,
@@ -531,7 +566,12 @@
                 "slug": "/destination/mumbai",
                 "type": "City Life",
                 "region": "Asia",
-                "tags": ["City Life", "Modern", "Attractions"]
+                "tags": ["City Life", "Modern", "Attractions"],
+                "description": "The city of dreams — a pulsating metropolis of Bollywood glamour, colonial landmarks and ocean drives.",
+                "paragraphs": [
+                  "Mumbai is India's most energetic city, where the iconic Gateway of India stands beside the neo-Gothic Victoria Terminus. It is a city of striking contrasts — glass towers rising above crowded bazaars, and the Arabian Sea meeting the city along the breezy Marine Drive.",
+                  "From savoring street food at Juhu Beach to exploring the art galleries of Kala Ghoda, Mumbai never sleeps. The warmth of its people and the magic of its cinema make it a truly unforgettable urban adventure."
+                ]
               }
             ],
             "destinations": [
@@ -543,7 +583,12 @@
                 "slug": "/destination/bali",
                 "type": "Beach",
                 "region": "Asia",
-                "tags": ["Beach", "Culture", "Nature"]
+                "tags": ["Beach", "Culture", "Nature"],
+                "description": "The Island of the Gods — emerald rice terraces, sacred temples and dreamy beaches.",
+                "paragraphs": [
+                  "Bali is a tropical wonderland where lush green rice terraces cascade toward the sea and misty volcanoes guard the horizon. Ancient temples like Tanah Lot and Uluwatu perch dramatically on cliffs, while the island's spiritual atmosphere is felt in every offering and ceremony.",
+                  "Whether you surf the waves of Uluwatu, wander the artistic streets of Ubud, or relax in a clifftop infinity pool, Bali offers soul-soothing beauty at every turn. Its warm people and vibrant festivals make it a perennial favorite."
+                ]
               },
               {
                 "id": 2,
@@ -553,7 +598,12 @@
                 "slug": "/destination/paris",
                 "type": "City Life",
                 "region": "Europe",
-                "tags": ["History", "Culture", "Art"]
+                "tags": ["History", "Culture", "Art"],
+                "description": "The City of Light — iconic monuments, world-class art and effortless romance.",
+                "paragraphs": [
+                  "Paris needs little introduction: the Eiffel Tower, the Louvre, Notre-Dame, and tree-lined boulevards form the backdrop of a city that has inspired artists for centuries. Its cafes, fashion houses, and riverside bookstalls make every street a delight to wander.",
+                  "By day, explore the treasures of the Louvre and the gardens of the Tuileries; by night, watch the city sparkle from the Trocadero. With its market squares, hidden courtyards, and gourmet patisseries, Paris rewards slow, curious travelers."
+                ]
               },
               {
                 "id": 3,
@@ -563,7 +613,12 @@
                 "slug": "/destination/dubai",
                 "type": "City Life",
                 "region": "Middle East",
-                "tags": ["Luxury", "Shopping", "Modern"]
+                "tags": ["Luxury", "Shopping", "Modern"],
+                "description": "A futuristic desert metropolis of soaring skyscrapers, luxury malls and golden dunes.",
+                "paragraphs": [
+                  "Dubai has transformed itself into a gleaming beacon of the future, with the record-breaking Burj Khalifa, palm-shaped islands, and sprawling luxury malls. Its skyline glitters above the Arabian Gulf, while the old district of Deira offers souks filled with spices and gold.",
+                  "Step beyond the city and the desert awaits — dune bashing, camel rides, and Bedouin-style camps under vast star-filled skies. With year-round sunshine, world-class dining, and endless attractions, Dubai is an exhilarating escape."
+                ]
               },
               {
                 "id": 4,
@@ -573,7 +628,12 @@
                 "slug": "/destination/maldives",
                 "type": "Beach",
                 "region": "Asia",
-                "tags": ["Beaches", "Luxury", "Relaxation"]
+                "tags": ["Beaches", "Luxury", "Relaxation"],
+                "description": "An idyllic archipelago of turquoise lagoons, coral atolls and overwater villas.",
+                "paragraphs": [
+                  "The Maldives is the very picture of paradise, scattered across swaths of impossibly turquoise water. Overwater bungalows, private sandbanks, and vibrant house reefs offer guests a world of sheer tranquility.",
+                  "Snorkel among rainbow-hued fish, glide past whale sharks, or simply watch the sunset with the ocean at your feet. With barefoot luxury and endless horizon views, the Maldives is the ultimate recharge."
+                ]
               },
               {
                 "id": 5,
@@ -583,7 +643,12 @@
                 "slug": "/destination/swiss-alps",
                 "type": "Mountains",
                 "region": "Europe",
-                "tags": ["Mountains", "Lakes", "Adventure"]
+                "tags": ["Mountains", "Lakes", "Adventure"],
+                "description": "Towering alpine peaks, glassy lakes and picture-perfect villages in the heart of Europe.",
+                "paragraphs": [
+                  "The Swiss Alps are a wonderland of snow-capped peaks, hanging valleys, and glacial lakes that mirror the sky. Villages like Interlaken, Zermatt, and Lucerne offer postcard-perfect views framed by the famous Matterhorn.",
+                  "Adventurers can ski, hike, paraglide, or glide aboard scenic mountain trains like the Glacier Express. Whether surrounded by summer's green meadows or winter's white slopes, the Alps deliver breathtaking memories all year round."
+                ]
               },
               {
                 "id": 6,
@@ -593,7 +658,12 @@
                 "slug": "/destination/kyoto",
                 "type": "Heritage",
                 "region": "Asia",
-                "tags": ["Tradition", "Modern", "Unique"]
+                "tags": ["Tradition", "Modern", "Unique"],
+                "description": "Japan's ancient capital — serene temples, bamboo groves and timeless craftsmanship.",
+                "paragraphs": [
+                  "Kyoto is the soul of Japan, home to over a thousand temples, tranquil zen gardens, and the famous golden pavilion of Kinkaku-ji. In spring, cherry blossoms paint Arashiyama and the Philosopher's Path in shades of blush and white.",
+                  "Wander through towering bamboo groves, watch geisha glide through the lanes of Gion, and savor kaiseki cuisine prepared with centuries of tradition. Kyoto blends old Japan with a quiet, refined modernity unlike anywhere else."
+                ]
               },
               {
                 "id": 7,
@@ -603,7 +673,12 @@
                 "slug": "/destination/santorini",
                 "type": "Beach",
                 "region": "Europe",
-                "tags": ["Heritage", "Cuisine", "Scenic"]
+                "tags": ["Heritage", "Cuisine", "Scenic"],
+                "description": "A sun-drenched Greek island of whitewashed villages perched on volcanic cliffs.",
+                "paragraphs": [
+                  "Santorini is renowned for its breathtaking caldera views, where sugar-cube houses and blue-domed churches cling to cliff edges above the Aegean Sea. The villages of Oia and Fira come alive with golden sunsets and winding cobbled lanes.",
+                  "Beyond the scenery, Santorini beckons with volcanic-sand beaches, ancient ruins at Akrotiri, and some of Greece's finest wines grown in terraced vineyards. It is a destination that feels like a dream painted in blue and white."
+                ]
               },
               {
                 "id": 8,
@@ -613,7 +688,12 @@
                 "slug": "/destination/new-york",
                 "type": "City Life",
                 "region": "North America",
-                "tags": ["City Life", "Modern", "Attractions"]
+                "tags": ["City Life", "Modern", "Attractions"],
+                "description": "The city that never sleeps — skyscrapers, Broadway lights and diverse neighborhoods.",
+                "paragraphs": [
+                  "New York pulses with energy from Times Square to Central Park, framed by icons like the Statue of Liberty and the Empire State Building. Its five boroughs offer something for everyone, from world-class museums to street-corner jazz.",
+                  "Savor a slice of pizza in Brooklyn, browse the galleries of SoHo, or take in a Broadway show in the Theater District. With its endless energy and cultural melting pot, New York leaves an indelible mark on every visitor."
+                ]
               }
             ]
           }
@@ -2293,6 +2373,34 @@
                   "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
                   "title": "Sintel",
                   "duration": "14:48"
+                },
+                {
+                  "id": 9,
+                  "thumbnail": "/travel/9.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "Himalayan Trails",
+                  "duration": "03:24"
+                },
+                {
+                  "id": 10,
+                  "thumbnail": "/travel/10.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "Desert Dunes",
+                  "duration": "05:12"
+                },
+                {
+                  "id": 11,
+                  "thumbnail": "/places/bangkok.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "City Lights",
+                  "duration": "02:45"
+                },
+                {
+                  "id": 12,
+                  "thumbnail": "/places/newyork.jpg",
+                  "videoSrc": "https://www.youtube.com/live/6u5QxISQ8JM?si=PtoOGM5oScEzioCq",
+                  "title": "Island Escapes",
+                  "duration": "04:08"
                 }
               ]
             }

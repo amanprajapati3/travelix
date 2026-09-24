@@ -60,7 +60,7 @@ export default function PackageSection() {
             </h2>
 
             {desc && (
-              <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-purple-300/30 sm:text-base md:max-w-[400px] lg:mx-0">
+              <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-white sm:text-base md:max-w-[400px] lg:mx-0">
                 {desc}
               </p>
             )}

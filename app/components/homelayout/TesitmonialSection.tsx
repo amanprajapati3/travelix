@@ -245,9 +245,9 @@ export function TestimonialCard({ item }: { item: TravelTestimonialItem }) {
       </blockquote>
 
       {/* Footer: Stars and Mountain SVG */}
-      <div className="flex items-end justify-between -mt-3 pl-4">
+      <div className="flex items-end justify-between -mt-3 pl-4 mb-8">
         {/* Stars */}
-        <div className="flex py-6 items-center gap-1">
+        {/* <div className="flex py-6 items-center gap-1">
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
@@ -258,10 +258,10 @@ export function TestimonialCard({ item }: { item: TravelTestimonialItem }) {
               }`}
             />
           ))}
-        </div>
+        </div> */}
 
         {/* Mountain Shape SVG (Bottom Right) */}
-        <div className="absolute right-2 pt-3 text-amber-400">
+        <div className="absolute right-2 bottom-0 pt-3 text-amber-400">
          <Image src="/travel/yellow_triangle_transparent (1).png" alt="" width={183} sizes="183px" height={59} />
         </div>
       </div>

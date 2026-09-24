@@ -23,7 +23,7 @@ export default function Sitemap() {
   const groups = site.sitemap.groups.map((group) => {
     let dynamicLinks: SitemapLink[] = [];
     if (group.title === "Tour Packages") dynamicLinks = getPackageSlugs().map((item) => ({ label: item.title, href: `/package/${item.slug}` }));
-    if (group.title === "Destinations") dynamicLinks = getDestinationSlugs().map((item) => ({ label: item.name, href: `/destination#${item.slug}` }));
+    if (group.title === "Destinations") dynamicLinks = getDestinationSlugs().map((item) => ({ label: item.name, href: item.slug }));
     if (group.title === "Our Services") dynamicLinks = getServiceIds().map((item) => ({ label: `${item.title} ${item.highlightedTitle}`, href: `/services/${item.id}` }));
     if (group.title === "Blog") dynamicLinks = getBlogPostSlugs().map((item) => ({ label: item.title, href: `/blog/${item.slug}` }));
     if (group.title === "Our People") dynamicLinks = getTeamMemberSlugs().map((item) => ({ label: item.name, href: `/team/${item.slug}` }));

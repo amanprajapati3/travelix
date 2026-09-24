@@ -6,6 +6,8 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
+  ChevronUp,
   Play,
   ZoomIn,
   Video,
@@ -144,6 +146,38 @@ export default function Gallery() {
   const images = galleryData?.imageSection?.images ?? [];
   const videos = galleryData?.videoSection?.videos ?? [];
 
+  const INITIAL_VISIBLE_IMAGES = Math.ceil(images.length / 2);
+  const INITIAL_VISIBLE_VIDEOS = Math.ceil(videos.length / 2);
+  const IMAGE_LOAD_STEP = 4;
+
+  const [visibleImageCount, setVisibleImageCount] = useState(
+    INITIAL_VISIBLE_IMAGES,
+  );
+  const [visibleVideoCount, setVisibleVideoCount] = useState(
+    INITIAL_VISIBLE_VIDEOS,
+  );
+
+  const displayedImages = images.slice(0, visibleImageCount);
+  const displayedVideos = videos.slice(0, visibleVideoCount);
+
+  const handleLoadMoreImages = () => {
+    setVisibleImageCount((cur) =>
+      Math.min(cur + IMAGE_LOAD_STEP, images.length),
+    );
+  };
+
+  const handleLoadMoreVideos = () => {
+    setVisibleVideoCount(videos.length);
+  };
+
+  const handleViewLessImages = () => {
+    setVisibleImageCount(INITIAL_VISIBLE_IMAGES);
+  };
+
+  const handleViewLessVideos = () => {
+    setVisibleVideoCount(INITIAL_VISIBLE_VIDEOS);
+  };
+
   const showPrevImage = useCallback(() => {
     setLightboxIndex((cur) =>
       cur === null ? cur : (cur - 1 + images.length) % images.length,
@@ -151,9 +185,7 @@ export default function Gallery() {
   }, [images.length]);
 
   const showNextImage = useCallback(() => {
-    setLightboxIndex((cur) =>
-      cur === null ? cur : (cur + 1) % images.length,
-    );
+    setLightboxIndex((cur) => (cur === null ? cur : (cur + 1) % images.length));
   }, [images.length]);
 
   useEffect(() => {
@@ -185,7 +217,7 @@ export default function Gallery() {
 
   const getSliderItemWidth = (slider: HTMLDivElement | null) => {
     const child = slider?.querySelector(":scope > *");
-    return child ? child.clientWidth : slider?.clientWidth ?? 0;
+    return child ? child.clientWidth : (slider?.clientWidth ?? 0);
   };
 
   const handleImageScroll = useCallback(() => {
@@ -194,10 +226,8 @@ export default function Gallery() {
     const itemWidth = getSliderItemWidth(slider);
     if (!itemWidth) return;
     const index = Math.round(slider.scrollLeft / (itemWidth + SLIDER_GAP));
-    setActiveImageDot(
-      Math.min(Math.max(index, 0), images.length - 1),
-    );
-  }, [images.length]);
+    setActiveImageDot(Math.min(Math.max(index, 0), displayedImages.length - 1));
+  }, [displayedImages.length]);
 
   const handleVideoScroll = useCallback(() => {
     const slider = videoSliderRef.current;
@@ -205,8 +235,8 @@ export default function Gallery() {
     const itemWidth = getSliderItemWidth(slider);
     if (!itemWidth) return;
     const index = Math.round(slider.scrollLeft / (itemWidth + SLIDER_GAP));
-    setActiveVideoDot(Math.min(Math.max(index, 0), videos.length - 1));
-  }, [videos.length]);
+    setActiveVideoDot(Math.min(Math.max(index, 0), displayedVideos.length - 1));
+  }, [displayedVideos.length]);
 
   const scrollSliderTo = (
     slider: React.RefObject<HTMLDivElement | null>,
@@ -240,13 +270,18 @@ export default function Gallery() {
       {/* 2. IMAGE GALLERY SECTION */}
       <section className="relative w-full pt-12 sm:pt-16 pb-4 px-4 sm:px-6 lg:px-10 xl:px-14 max-w-[1400px] mx-auto">
         {/* HEADING (same style as partners page) */}
-        <ScrollReveal className="relative z-10 mb-8 text-center max-w-3xl mx-auto" direction="up">
+        <ScrollReveal
+          className="relative z-10 mb-8 text-center max-w-3xl mx-auto"
+          direction="up"
+        >
           <p className="text-amber-400 font-bold text-md tracking-widest uppercase mb-0">
             {imageSection.eyebrow}
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-wide mb-1">
             <span className="text-white">{imageSection.title.normal}</span>{" "}
-            <span className="text-amber-300">{imageSection.title.highlighted}</span>
+            <span className="text-amber-300">
+              {imageSection.title.highlighted}
+            </span>
           </h2>
           <div className="mx-auto bg-amber-300 w-[90px] h-1 my-2"></div>
           <p className="text-white text-md leading-relaxed max-w-2xl mx-auto">
@@ -260,7 +295,7 @@ export default function Gallery() {
           onScroll={handleImageScroll}
           className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible sm:snap-none"
         >
-          {images.map((img, index) => (
+          {displayedImages.map((img, index) => (
             <button
               key={img.id}
               type="button"
@@ -268,7 +303,12 @@ export default function Gallery() {
               className="group relative w-full sm:w-auto shrink-0 snap-start overflow-hidden rounded-xl bg-[#071116] border border-white/5 hover:border-amber-400/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer"
               aria-label={`View ${img.alt}`}
             >
-              <ScrollReveal className="relative aspect-[4/3] w-full overflow-hidden rounded-xl" direction="up" index={index} staggerChildren={0.05}>
+              <ScrollReveal
+                className="relative aspect-[4/3] w-full overflow-hidden rounded-xl"
+                direction="up"
+                index={index}
+                staggerChildren={0.05}
+              >
                 <Image
                   src={img.src}
                   alt={img.alt}
@@ -302,7 +342,7 @@ export default function Gallery() {
 
         {/* PAGINATION DOTS (mobile only) */}
         <div className="sm:hidden flex justify-center gap-2 mt-6">
-          {images.map((img, index) => (
+          {displayedImages.map((img, index) => (
             <button
               key={img.id}
               type="button"
@@ -316,18 +356,52 @@ export default function Gallery() {
             />
           ))}
         </div>
+
+        {/* LOAD MORE / VIEW LESS IMAGES */}
+        {images.length > INITIAL_VISIBLE_IMAGES && (
+          <div className="mt-8 hidden sm:flex justify-center">
+            {visibleImageCount < images.length ? (
+              <button
+                type="button"
+                onClick={handleLoadMoreImages}
+                className="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-[#facc15] pl-6 pr-2 py-2 text-xs sm:text-sm font-extrabold text-[#011014] shadow-xl transition-all duration-300 hover:bg-[#eab308] focus:outline-none focus:ring-2 focus:ring-amber-400"
+              >
+                <span className="tracking-wider">Load More</span>
+                <div className="flex h-9 w-9  items-center justify-center rounded-full bg-[#011014] text-[#facc15] transition-transform duration-300 group-hover:translate-y-1">
+                  <ChevronDown className="h-4 w-4" />
+                </div>
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={handleViewLessImages}
+                className="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-[#facc15] pl-6 pr-2 py-2 text-xs sm:text-sm font-extrabold text-[#011014] shadow-xl transition-all duration-300 hover:bg-[#eab308] focus:outline-none focus:ring-2 focus:ring-amber-400"
+              >
+                <span className="tracking-wider">View Less</span>
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#011014] text-[#facc15] transition-transform duration-300 group-hover:-translate-y-1">
+                  <ChevronUp className="h-4 w-4" />
+                </div>
+              </button>
+            )}
+          </div>
+        )}
       </section>
 
       {/* 3. VIDEO GALLERY SECTION */}
       <section className="relative w-full pt-10 sm:pt-14 pb-16 px-4 sm:px-6 lg:px-10 xl:px-14 max-w-[1400px] mx-auto border-t border-white/5 mt-8">
         {/* HEADING */}
-        <ScrollReveal className="relative z-10 mb-8 text-center max-w-3xl mx-auto" direction="up">
+        <ScrollReveal
+          className="relative z-10 mb-8 text-center max-w-3xl mx-auto"
+          direction="up"
+        >
           <p className="text-amber-400 font-bold text-md tracking-widest uppercase mb-0">
             {videoSection.eyebrow}
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-wide mb-1">
             <span className="text-white">{videoSection.title.normal}</span>{" "}
-            <span className="text-amber-300">{videoSection.title.highlighted}</span>
+            <span className="text-amber-300">
+              {videoSection.title.highlighted}
+            </span>
           </h2>
           <div className="mx-auto bg-amber-300 w-[90px] h-1 my-2"></div>
           <p className="text-white text-md leading-relaxed max-w-2xl mx-auto">
@@ -341,7 +415,7 @@ export default function Gallery() {
           onScroll={handleVideoScroll}
           className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible sm:snap-none"
         >
-          {videos.map((video, index) => (
+          {displayedVideos.map((video, index) => (
             <button
               key={video.id}
               type="button"
@@ -349,7 +423,12 @@ export default function Gallery() {
               className="group relative w-full sm:w-auto shrink-0 snap-start overflow-hidden rounded-xl bg-[#071116] border border-white/5 hover:border-amber-400/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer"
               aria-label={`Play ${video.title || `video ${index + 1}`}`}
             >
-              <ScrollReveal className="relative aspect-video w-full overflow-hidden rounded-xl" direction="up" index={index} staggerChildren={0.05}>
+              <ScrollReveal
+                className="relative aspect-video w-full overflow-hidden rounded-xl"
+                direction="up"
+                index={index}
+                staggerChildren={0.05}
+              >
                 <Image
                   src={video.thumbnail}
                   alt={video.title || `Video ${index + 1}`}
@@ -357,7 +436,6 @@ export default function Gallery() {
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-
 
                 {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -386,7 +464,7 @@ export default function Gallery() {
 
         {/* PAGINATION DOTS (mobile only) */}
         <div className="sm:hidden flex justify-center gap-2 mt-6">
-          {videos.map((video, index) => (
+          {displayedVideos.map((video, index) => (
             <button
               key={video.id}
               type="button"
@@ -400,6 +478,35 @@ export default function Gallery() {
             />
           ))}
         </div>
+
+        {/* LOAD MORE / VIEW LESS VIDEOS */}
+        {videos.length > INITIAL_VISIBLE_VIDEOS && (
+          <div className="mt-8 hidden sm:flex justify-center">
+            {visibleVideoCount < videos.length ? (
+              <button
+                type="button"
+                onClick={handleLoadMoreVideos}
+                className="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-[#facc15] pl-6 pr-2 py-2 text-xs sm:text-sm font-extrabold text-[#011014] shadow-xl transition-all duration-300 hover:bg-[#eab308] focus:outline-none focus:ring-2 focus:ring-amber-400"
+              >
+                <span className="tracking-wider">Load More</span>
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#011014] text-[#facc15] transition-transform duration-300 group-hover:translate-y-1">
+                  <ChevronDown className="h-4 w-4" />
+                </div>
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={handleViewLessVideos}
+                className="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-[#facc15] pl-6 pr-2 py-2 text-xs sm:text-sm font-extrabold text-[#011014] shadow-xl transition-all duration-300 hover:bg-[#eab308] focus:outline-none focus:ring-2 focus:ring-amber-400"
+              >
+                <span className="tracking-wider">View Less</span>
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#011014] text-[#facc15] transition-transform duration-300 group-hover:-translate-y-1">
+                  <ChevronUp className="h-4 w-4" />
+                </div>
+              </button>
+            )}
+          </div>
+        )}
       </section>
 
       {/* 4. IMAGE LIGHTBOX MODAL */}

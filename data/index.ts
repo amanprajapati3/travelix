@@ -120,8 +120,12 @@ export const site = {
   sitemap: sec.Sitemap.variants.TravelSitemap1 as TravelSitemapData,
 };
 
-const destinationItems = sec.Destinations.variants.TravelDestinations1
-  .destinations as TravelDestinationItem[];
+const destinationVariants = sec.Destinations.variants.TravelDestinations1;
+
+const destinationItems = [
+  ...destinationVariants.destinations,
+  ...destinationVariants.domesticDestinations,
+] as TravelDestinationItem[];
 
 const packageItems = sec.Packages.variants.TravelPackages1
   .packages as TravelPackageItem[];

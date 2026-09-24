@@ -83,42 +83,44 @@ export default function Destination() {
       index={index}
       staggerChildren={0.06}
     >
-      {/* Background Image */}
-      <Image
-        src={dest.image}
-        alt={dest.name}
-        fill
-        sizes="100%"
-        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-      />
+      <Link
+        href={dest.slug}
+        className="block h-full w-full"
+        aria-label={`View ${dest.name}`}
+      >
+        {/* Background Image */}
+        <Image
+          src={dest.image}
+          alt={dest.name}
+          fill
+          sizes="100%"
+          className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+        />
 
-      {/* Dark gradient overlay */}
+        {/* Dark gradient overlay */}
 
-      {/* Top Location Pin Badge */}
-      <div className="absolute top-4 left-4 h-10 w-10 rounded-full bg-black/60 backdrop-blur-md border border-amber-400/30 flex items-center justify-center text-white">
-        <MapPin className="h-6 w-6" />
-      </div>
-
-      {/* Bottom Content */}
-      <div className="relative bg-[#001B24] opacity-95 px-3 py-2 z-10 flex items-end justify-between w-full">
-        <div>
-          <h3 className=" text-md font-bold text-white">{dest.name}</h3>
-          {dest.tags && (
-            <p className="text-xs text-slate-300/90 font-medium tracking-wide">
-              {dest.tags.join(" · ")}
-            </p>
-          )}
+        {/* Top Location Pin Badge */}
+        <div className="absolute top-4 left-4 h-10 w-10 rounded-full bg-black/60 backdrop-blur-md border border-amber-400/30 flex items-center justify-center text-white">
+          <MapPin className="h-6 w-6" />
         </div>
 
-        {/* Circular Arrow Button */}
-            {/* <Link
-            href={dest.slug}
-            className="h-7 w-7 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform shrink-0"
-            aria-label={`View ${dest.name}`}
-            >
+        {/* Bottom Content */}
+        <div className="relative bg-[#001B24] opacity-95 px-3 py-2 z-10 flex items-end justify-between w-full">
+          <div>
+            <h3 className=" text-md font-bold text-white">{dest.name}</h3>
+            {dest.tags && (
+              <p className="text-xs text-slate-300/90 font-medium tracking-wide">
+                {dest.tags.join(" · ")}
+              </p>
+            )}
+          </div>
+
+          {/* Circular Arrow Button */}
+          <span className="h-7 w-7 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform shrink-0">
             <ArrowRight className="h-5 w-5 stroke-[2.5]" />
-            </Link> */}
-      </div>
+          </span>
+        </div>
+      </Link>
     </ScrollReveal>
   );
 
@@ -135,11 +137,9 @@ export default function Destination() {
       )}
 
       {/* 2. SEARCH FILTER BAR SECTION */}
-      <section className="relative z-20 max-w-[1200px] mx-auto px-4 py-8 md:py-12 mb-0">
+      {/* <section className="relative z-20 max-w-[1200px] mx-auto px-4 py-8 md:py-12 mb-0">
         <ScrollReveal className="flex flex-col sm:flex-row gap-4 sm:gap-20 items-stretch" direction="up">
-          {/* Dropdowns row — stays side-by-side even on mobile */}
           <div className="flex flex-row gap-3 sm:gap-4 flex-1">
-            {/* Dropdown 1: Destination Type */}
             <div className="relative flex-1">
               <MapPin className="absolute  left-3 sm:left-4  top-1/2 -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-amber-400 pointer-events-none" />
               <select
@@ -164,7 +164,6 @@ export default function Destination() {
               </span>
             </div>
 
-            {/* Dropdown 2: Region */}
             <div className="relative flex-1">
               <Calendar className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-amber-400 pointer-events-none" />
               <select
@@ -188,7 +187,6 @@ export default function Destination() {
             </div>
           </div>
 
-          {/* Search Button */}
           <button
             onClick={handleSearch}
             className="w-full sm:w-auto bg-amber-300 hover:bg-amber-300 text-slate-950 font-bold py-3.5 px-6 sm:px-8 rounded-xl flex items-center justify-center gap-2 shadow-lg transition-all shrink-0 whitespace-nowrap"
@@ -197,10 +195,10 @@ export default function Destination() {
             <span>Search Destinations</span>
           </button>
         </ScrollReveal>
-      </section>
+      </section> */}
 
       {/* 3. POPULAR DOMESTIC DESTINATIONS SECTION */}
-      <section className="relative w-full">
+      <section className="relative w-full mt-12">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10 xl:px-14">
           {/* Section Header */}
           <ScrollReveal className="flex  flex-col sm:flex-row sm:items-end justify-between mb-4 gap-4" direction="up">
