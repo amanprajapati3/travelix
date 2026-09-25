@@ -177,7 +177,7 @@ export default function ExploreSection({ hideButton = false }: { hideButton?: bo
                       width={40}
                       height={40}
                       sizes="40px"
-                      className="object-cover"
+                      className="h-10 w-10 object-cover"
                     />
                   </div>
                 ))}

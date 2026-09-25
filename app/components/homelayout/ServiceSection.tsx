@@ -131,6 +131,7 @@ function TallCard({ service }: { service: TravelServiceItem }) {
           alt={service.title}
           fill
           quality={100}
+          sizes="(min-width: 1024px) 26vw, 100vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050811] via-[#050811]/10 to-transparent" />
@@ -188,6 +189,7 @@ function CenterLandscapeCard({ service }: { service: TravelServiceItem }) {
           alt={service.title}
           fill
           quality={100}
+          sizes="(min-width: 1024px) 48vw, 100vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {/* Gradient fade strictly from the left, keeping image vivid on right */}
@@ -251,7 +253,7 @@ function TabletMobileCard({ service }: { service: TravelServiceItem }) {
           alt={service.title}
           fill
           quality={100}
-          sizes="100vw"
+          sizes="(max-width: 640px) 100vw, 50vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050811] via-[#050811]/60 to-transparent" />

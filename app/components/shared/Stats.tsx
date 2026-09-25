@@ -71,6 +71,7 @@ export default function Stats() {
           src="/travel/2.jpg"
           alt="Stats Background"
           fill
+          sizes="100vw"
           quality={100}
           className="object-cover object-top opacity-30"
         />

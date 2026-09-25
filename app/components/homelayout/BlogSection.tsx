@@ -28,7 +28,7 @@ export default function BlogSection() {
               width={300}
               height={180}
               sizes="300px"
-              className="object-contain object-left-top opacity-40"
+              className="h-[180px] w-[300px] object-contain object-left-top opacity-40"
             />{" "}
           </div>{" "}
           <ScrollReveal className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left" direction="up">
@@ -71,7 +71,7 @@ export default function BlogSection() {
                   src={featuredPost.image}
                   alt={featuredPost.title}
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {featuredPost.tag && (

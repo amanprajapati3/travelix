@@ -85,7 +85,7 @@ export default function Destination() {
     >
       <Link
         href={dest.slug}
-        className="block h-full w-full"
+        className="relative block h-full w-full"
         aria-label={`View ${dest.name}`}
       >
         {/* Background Image */}
@@ -105,7 +105,7 @@ export default function Destination() {
         </div>
 
         {/* Bottom Content */}
-        <div className="relative bg-[#001B24] opacity-95 px-3 py-2 z-10 flex items-end justify-between w-full">
+        <div className="absolute bottom-0 bg-[#001B24] opacity-95 px-3 py-2 z-10 flex items-end justify-between w-full">
           <div>
             <h3 className=" text-md font-bold text-white">{dest.name}</h3>
             {dest.tags && (

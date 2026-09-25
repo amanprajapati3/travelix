@@ -157,6 +157,7 @@ export default function Header() {
                   alt={siteInfo.siteName || "Travelix"}
                   width={140}
                   height={60}
+                  loading="eager"
                   sizes="(max-width: 640px) 120px, 160px"
                   className="h-16 w-auto object-contain sm:h-16 md:h-20"
                 />

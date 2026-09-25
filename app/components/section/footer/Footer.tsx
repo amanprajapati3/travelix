@@ -113,6 +113,7 @@ export default function Footer() {
           src="/travel/1.jpg"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover object-top opacity-35"
           aria-hidden="true"
         />
@@ -134,8 +135,8 @@ export default function Footer() {
                   alt="Travelix"
                   width={140}
                   height={60}
-                  sizes="(min-width: 768px) 100px, 94px"
-                  className="h-16 md:h-20 w-auto object-contain"
+                  sizes="(max-width: 640px) 120px, 160px"
+                  className="h-16 w-auto object-contain sm:h-16 md:h-20"
                 />
               ) : (
                 <>

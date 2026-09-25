@@ -98,7 +98,7 @@ export default function TestimonialSection() {
           width={260}
           height={180}
           sizes="260px"
-          className="object-contain object-left-top"
+          className="h-[180px] w-[260px] object-contain object-left-top"
         />{" "}
       </div>
       <div className="absolute bottom-0 right-0">
@@ -132,7 +132,7 @@ export default function TestimonialSection() {
               width={200}
               height={60}
               sizes="200px"
-              className="absolute top-5 right-0 md:right-20 opacity-70"
+              className="absolute top-5 right-0 h-[60px] w-[200px] md:right-20 opacity-70"
             />
             {tagline && (
               <span

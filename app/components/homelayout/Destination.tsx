@@ -165,7 +165,7 @@ export default function Destination() {
               >
                 <Link
                   href={destination.slug}
-                  className="block h-full w-full"
+                  className="relative block h-full w-full"
                   aria-label={`View details for ${destination.name}`}
                 >
                   {/* Destination Image - High quality rendering to eliminate blur */}
